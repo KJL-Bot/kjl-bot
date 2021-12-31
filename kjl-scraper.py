@@ -58,6 +58,11 @@ def extractProperty(fieldType, tagString, codeString, xml, ns):
     
     propertyArray = xml.xpath(pathString, namespaces=ns)
     
+    propertyTextArray = []
+
+    for property in propertyArray:
+        propertyTextArray.append(property.text)
+
     try:
         property = propertyArray[0].text
         #property = unicodedata.normalize("NFC", titel)
@@ -66,7 +71,7 @@ def extractProperty(fieldType, tagString, codeString, xml, ns):
         if fieldType == "controlfield":
             property = "fail"
 
-    return property
+    return (property , propertyTextArray)
 
 def parse_record(record):
     
@@ -74,46 +79,63 @@ def parse_record(record):
     xml = etree.fromstring(unicodedata.normalize("NFC", str(record)))
     
     #idn
-    idn = extractProperty(fieldType='controlfield', tagString='001', codeString='', xml=xml, ns=ns)
-
-    # last transaction
-    lastTransaction = extractProperty(fieldType='controlfield', tagString='005', codeString='', xml=xml, ns=ns)  
-
-    # titel
-    title = extractProperty(fieldType='datafield', tagString='245', codeString='a', xml=xml, ns=ns)
-
-    # subTitle
-    subTitle = extractProperty(fieldType='datafield', tagString='245', codeString='b', xml=xml, ns=ns)
-
-    # author
-    author = extractProperty(fieldType='datafield', tagString='245', codeString='c', xml=xml, ns=ns)
+    idn,_ = extractProperty(fieldType='controlfield', tagString='001', codeString='', xml=xml, ns=ns)
 
     # ISBN
-    isbn = extractProperty(fieldType='datafield', tagString='020', codeString='9', xml=xml, ns=ns)
+    isbn,_ = extractProperty(fieldType='datafield', tagString='020', codeString='9', xml=xml, ns=ns)
+    
+    # terms of availability
+    termsOfAvailability,_ = extractProperty(fieldType='datafield', tagString='020', codeString='c', xml=xml, ns=ns)
 
-    # publication place
-    publicationPlace = extractProperty(fieldType='datafield', tagString='264', codeString='a', xml=xml, ns=ns)
-
-    # publisher
-    publisher = extractProperty(fieldType='datafield', tagString='264', codeString='b', xml=xml, ns=ns)
- 
-    # publicationYear
-    publicationYear = extractProperty(fieldType='datafield', tagString='264', codeString='c', xml=xml, ns=ns)
+    # last transaction
+    lastTransaction,_ = extractProperty(fieldType='controlfield', tagString='005', codeString='', xml=xml, ns=ns)
 
     # projectedPublicationDate
-    projectedPublicationDate = extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
+    projectedPublicationDate,_ = extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
+
+    # titel
+    title,_ = extractProperty(fieldType='datafield', tagString='245', codeString='a', xml=xml, ns=ns)  
+
+    # subTitle
+    subTitle,_ = extractProperty(fieldType='datafield', tagString='245', codeString='b', xml=xml, ns=ns)
+
+    # titleAuthor
+    titleAuthor,_ = extractProperty(fieldType='datafield', tagString='245', codeString='c', xml=xml, ns=ns) 
+
+    # authorNames 100 a
+    authorName,_ = extractProperty(fieldType='datafield', tagString='100', codeString='a', xml=xml, ns=ns)
+
+    # authorRelatorTerms 100 e
+    authorRelatorTerm,_ = extractProperty(fieldType='datafield', tagString='100', codeString='e', xml=xml, ns=ns)
+
+    # authorRelatorCodes 100 4
+    authorRelatorCode,_ = extractProperty(fieldType='datafield', tagString='100', codeString='4', xml=xml, ns=ns)
+
+    # publication places
+    publicationPlace,_ = extractProperty(fieldType='datafield', tagString='264', codeString='a', xml=xml, ns=ns)
+
+    # publishers
+    publisher,_ = extractProperty(fieldType='datafield', tagString='264', codeString='b', xml=xml, ns=ns)
+ 
+    # publicationYears
+    publicationYear,_ = extractProperty(fieldType='datafield', tagString='264', codeString='c', xml=xml, ns=ns)
+
  
     # assemble results
     meta_dict = {"idn": idn,
                 "isbn": isbn,
+                "lastTransaction": lastTransaction,
+                "projectedPublicationDate": projectedPublicationDate,
                 "title": title,
                 "subTitle": subTitle,
-                "author": author,
+                "titleAuthor": titleAuthor,
+                "authorName": authorName,
+                "authorRelatorTerm": authorRelatorTerm,
                 "publicationPlace": publicationPlace,
                 "publisher": publisher,
                 "publicationYear": publicationYear,
-                "projectedPublicationDate": projectedPublicationDate,
-                "lastTransaction": lastTransaction}
+                "termsOfAvailability": termsOfAvailability,
+                }
 
 
     
