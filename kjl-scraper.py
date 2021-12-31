@@ -66,7 +66,7 @@ def extractProperty(fieldType, tagString, codeString, xml, ns):
 
     try:
         property = propertyArray[0].text
-        #property = unicodedata.normalize("NFC", titel)
+        #property = unicodedata.normalize("NFC", property)
     except:
         property = ""
         if fieldType == "controlfield":
@@ -162,11 +162,13 @@ def scrape():
 
     # store in db
     for book in books: 
-        database.storeBook(book['idn'], book['isbn'], book['title'])
+        database.storeBook(book)
 
     # convert to pandas table
-    df = pd.DataFrame(books)
-    print(df)
+    #df = pd.DataFrame(books)
+    #print(df)
+
+    database.displayBookContent()
 
 if __name__ == '__main__':
     scrape()

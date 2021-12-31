@@ -1,4 +1,5 @@
 import sqlite3
+from datetime import datetime
 
 databaseName = "kjl.db"
 
@@ -7,8 +8,9 @@ def createDB():
     # command
     command = """
     CREATE TABLE IF NOT EXISTS books (
-        idn VARCHAR(10), 
+        idn VARCHAR(10) PRIMARY KEY, 
         isbn VARCHAR(17), 
+        dateAdded DATE,
         title VARCHAR(128)
     );"""
 
@@ -27,15 +29,55 @@ def executeCommand(command):
     # close
     connection.close()
 
-def storeBook(idn, isdn, title):
+    # meta_dict = {"idn": idn,
+    #             "isbn": isbn,
+    #             "lastTransaction": lastTransaction,
+    #             "projectedPublicationDate": projectedPublicationDate,
+    #             "title": title,
+    #             "subTitle": subTitle,
+    #             "titleAuthor": titleAuthor,
+    #             "authorName": authorName,
+    #             "authorRelatorTerm": authorRelatorTerm,
+    #             "publicationPlace": publicationPlace,
+    #             "publisher": publisher,
+    #             "publicationYear": publicationYear,
+    #             "termsOfAvailability": termsOfAvailability,
+    #             }
+
+
+
+def storeBook(book):
 
     # connect    
     connection = sqlite3.connect(databaseName)
     cursor = connection.cursor()   
 
-    command = "INSERT INTO books VALUES (?, ?, ?)"
-    cursor.execute(command, (idn, isdn, title))
+    dateAdded = datetime.utcnow()
+
+    command = "INSERT INTO books (dateAdded, idn, isbn, title) VALUES (?, ?, ?, ?)"
+    
+    try:
+        cursor.execute(command, (dateAdded, book['idn'], book['isbn'], book['title']))
+        print(f"Adding new book. Title: {book['title']}")
+    except:
+        pass
 
     # close
     connection.commit()
+    connection.close()
+
+def displayBookContent():
+
+    # connect    
+    connection = sqlite3.connect(databaseName)
+    cursor = connection.cursor()   
+
+    command = "SELECT * FROM books ORDER BY dateAdded DESC"
+    cursor.execute(command)
+    books = cursor.fetchall()
+
+    for book in books:
+        print(book)
+    
+
     connection.close()
