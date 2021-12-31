@@ -5,6 +5,7 @@ from bs4 import BeautifulSoup as soup
 import unicodedata
 from lxml import etree
 import pandas as pd
+import database
 
 def dnb_sru(query, numberOfRecords=100, returnFirstRecordsOnly = True):
     
@@ -142,6 +143,10 @@ def parse_record(record):
     return meta_dict
 
 def scrape():
+
+    # create DB
+    database.createDB()
+
     print("Scraping...")
 
     #query = 'tit=Klimawandel and location=onlinefree'    
@@ -152,8 +157,15 @@ def scrape():
     records = dnb_sru(query, numberOfRecords=20)
     print(len(records), 'Ergebnisse')
 
-    output = [parse_record(record) for record in records]
-    df = pd.DataFrame(output)
+    # convert to array of dicts
+    books = [parse_record(record) for record in records]
+
+    # store in db
+    for book in books: 
+        database.storeBook(book['idn'], book['isbn'], book['title'])
+
+    # convert to pandas table
+    df = pd.DataFrame(books)
     print(df)
 
 if __name__ == '__main__':
