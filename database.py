@@ -29,21 +29,6 @@ def executeCommand(command):
     # close
     connection.close()
 
-    # meta_dict = {"idn": idn,
-    #             "isbn": isbn,
-    #             "lastTransaction": lastTransaction,
-    #             "projectedPublicationDate": projectedPublicationDate,
-    #             "title": title,
-    #             "subTitle": subTitle,
-    #             "titleAuthor": titleAuthor,
-    #             "authorName": authorName,
-    #             "authorRelatorTerm": authorRelatorTerm,
-    #             "publicationPlace": publicationPlace,
-    #             "publisher": publisher,
-    #             "publicationYear": publicationYear,
-    #             "termsOfAvailability": termsOfAvailability,
-    #             }
-
 
 
 def storeBook(book):
@@ -57,8 +42,8 @@ def storeBook(book):
     command = "INSERT INTO books (dateAdded, idn, isbn, title) VALUES (?, ?, ?, ?)"
     
     try:
-        cursor.execute(command, (dateAdded, book['idn'], book['isbn'], book['title']))
-        print(f"Adding new book. Title: {book['title']}")
+        cursor.execute(command, (dateAdded, book.idn, book.isbns[0].withDashes, book.title))
+        print(f"Adding new book. Title: {book.title}")
     except:
         pass
 
