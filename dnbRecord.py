@@ -38,7 +38,7 @@ class DNBRecord:
         self.lastTransaction = self.extractLastTransaction(record, xml=xml, ns=ns)
 
         # projectedPublicationDate
-        self.projectedPublicationDate,_ = self.extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
+        self.projectedPublicationDate = self.extractProjectedPublicationDate(record, xml=xml, ns=ns)
 
         # titel
         self.title,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='a', xml=xml, ns=ns)  
@@ -126,10 +126,26 @@ class DNBRecord:
         # example: 20220102223003.0
         lastTransactionString,_ = self.extractProperty(fieldType='controlfield', tagString='005', codeString='', xml=xml, ns=ns)
 
+        # localize to UTC
         lastTransaction = datetime.strptime(lastTransactionString, '%Y%m%d%H%M%S.%f')
         timezone = pytz.utc # timezone('America/New_York')
         lastTransactionWithTimeZone = timezone.localize(lastTransaction)
 
-        print(f"{lastTransactionString} -> {lastTransactionWithTimeZone}")
+        # print(f"{lastTransactionString} -> {lastTransactionWithTimeZone}")
 
         return lastTransactionWithTimeZone
+
+    # Returns projected publicationMonth as datetime with the 1first of the month 00:00:00 UTC
+    def extractProjectedPublicationDate(self, record, xml, ns):
+
+        # example: 202112
+        projectedPublicationDateString, _ = self.extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
+
+        # localize to UTC
+        projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
+        timezone = pytz.utc
+        projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
+
+        print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
+
+        return projectedPublicationDateWithTimeZone
