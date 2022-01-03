@@ -1,6 +1,8 @@
 
 import unicodedata
 from lxml import etree
+import pytz
+from datetime import datetime
 
 class ISBN:
 
@@ -33,7 +35,7 @@ class DNBRecord:
         self.isbns = self.extractISBNs(record, xml=xml, ns=ns)
    
         # last transaction
-        self.lastTransaction,_ = self.extractProperty(fieldType='controlfield', tagString='005', codeString='', xml=xml, ns=ns)
+        self.lastTransaction = self.extractLastTransaction(record, xml=xml, ns=ns)
 
         # projectedPublicationDate
         self.projectedPublicationDate,_ = self.extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
@@ -117,3 +119,17 @@ class DNBRecord:
             isbns.append(isbn)
 
         return isbns
+
+    # Returns last transaction as datetime
+    def extractLastTransaction(self, record, xml, ns):
+
+        # example: 20220102223003.0
+        lastTransactionString,_ = self.extractProperty(fieldType='controlfield', tagString='005', codeString='', xml=xml, ns=ns)
+
+        lastTransaction = datetime.strptime(lastTransactionString, '%Y%m%d%H%M%S.%f')
+        timezone = pytz.utc # timezone('America/New_York')
+        lastTransactionWithTimeZone = timezone.localize(lastTransaction)
+
+        print(f"{lastTransactionString} -> {lastTransactionWithTimeZone}")
+
+        return lastTransactionWithTimeZone
