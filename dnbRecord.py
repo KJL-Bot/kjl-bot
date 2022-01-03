@@ -141,14 +141,19 @@ class DNBRecord:
         # example: 202112
         projectedPublicationDateString, _ = self.extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
 
-        # localize to UTC
-        projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
-        timezone = pytz.utc
-        projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
+        if len(projectedPublicationDateString.strip()) > 0:
 
-        #print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
+            # localize to UTC
+            projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
+            timezone = pytz.utc
+            projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
 
-        return projectedPublicationDateWithTimeZone
+            #print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
+
+            return projectedPublicationDateWithTimeZone
+
+        else:
+            return None
 
 
     def extractPersonDetails(self, tagString, record, xml, ns):

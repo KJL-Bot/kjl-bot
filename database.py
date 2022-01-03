@@ -92,7 +92,7 @@ def displayBookContent():
     connection = sqlite3.connect(databaseName)
     cursor = connection.cursor()   
 
-    command = "SELECT idn, isbnWithDashes, addedToSql, lastDnbTransaction, projectedPublicationDate, publicationYear, authorName, title  FROM books ORDER BY idn DESC"
+    command = "SELECT idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM books ORDER BY idn DESC"
     cursor.execute(command)
     books = cursor.fetchall()
 
