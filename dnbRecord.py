@@ -28,14 +28,17 @@ class DNBRecord:
         ns = {"marc":"http://www.loc.gov/MARC21/slim"}
         xml = etree.fromstring(unicodedata.normalize("NFC", str(record)))
         
-        #idn
+        # idn
         self.idn,_ = self.extractProperty(fieldType='controlfield', tagString='001', codeString='', xml=xml, ns=ns)
+
+        # link to dataset
+        self.linkToDataset = f"https://d-nb.info/{self.idn}"
 
         # ISBN
         self.isbns = self.extractISBNs(record, xml=xml, ns=ns)
    
         # last transaction
-        self.lastTransaction = self.extractLastTransaction(record, xml=xml, ns=ns)
+        self.lastDnbTransaction = self.extractLastTransaction(record, xml=xml, ns=ns)
 
         # projectedPublicationDate
         self.projectedPublicationDate = self.extractProjectedPublicationDate(record, xml=xml, ns=ns)
@@ -49,22 +52,19 @@ class DNBRecord:
         # titleAuthor
         self.titleAuthor,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='c', xml=xml, ns=ns) 
 
-        # authorNames 100 a
+        # authorName
         self.authorName,_ = self.extractProperty(fieldType='datafield', tagString='100', codeString='a', xml=xml, ns=ns)
 
-        # authorRelatorTerms 100 e
-        self.authorRelatorTerm,_ = self.extractProperty(fieldType='datafield', tagString='100', codeString='e', xml=xml, ns=ns)
+        # authorDescription 100 a+b+c
+        # self.authorDescription = self.extractPersonDetails(record, '100', xml=xml, ns=ns)
 
-        # authorRelatorCodes 100 4
-        self.authorRelatorCode,_ = self.extractProperty(fieldType='datafield', tagString='100', codeString='4', xml=xml, ns=ns)
-
-        # publication places
+        # publication place
         self.publicationPlace,_ = self.extractProperty(fieldType='datafield', tagString='264', codeString='a', xml=xml, ns=ns)
 
-        # publishers
+        # publisher
         self.publisher,_ = self.extractProperty(fieldType='datafield', tagString='264', codeString='b', xml=xml, ns=ns)
     
-        # publicationYears
+        # publicationYear
         self.publicationYear,_ = self.extractProperty(fieldType='datafield', tagString='264', codeString='c', xml=xml, ns=ns)
 
         
@@ -146,6 +146,22 @@ class DNBRecord:
         timezone = pytz.utc
         projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
 
-        print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
+        #print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
 
         return projectedPublicationDateWithTimeZone
+
+
+    def extractPersonDetails(self, tagString, record, xml, ns):
+        
+        # author: 100
+
+        # authorName 100 a
+        authorName,_ = self.extractProperty(fieldType='datafield', tagString=tagString, codeString='a', xml=xml, ns=ns)
+
+        # authorRelatorTerms 100 e
+        authorRelatorTerm,_ = self.extractProperty(fieldType='datafield', tagString=tagString, codeString='e', xml=xml, ns=ns)
+
+        # authorRelatorCodes 100 4
+        authorRelatorCode,_ = self.extractProperty(fieldType='datafield', tagString=tagString, codeString='4', xml=xml, ns=ns)
+
+        personString = f"{authorName} ({authorRelatorTerm})"

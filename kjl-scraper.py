@@ -14,11 +14,11 @@ def scrape():
     print("Scraping...")
 
     #query = 'tit=Klimawandel and location=onlinefree'    
-    query = "sgt=K and jhr<2022 and jhr >2020 and spr=ger and mat=books sortBy idn/sort.descending"
+    query = "sgt=K and jhr<2023 and jhr >2020 and spr=ger and mat=books sortBy idn/sort.descending"
     #query = "mat=books sortBy idn/sort.descending"
 
 
-    records = dnbapi.dnb_sru(query, numberOfRecords=10)
+    records = dnbapi.dnb_sru(query, numberOfRecords=100)
     print(len(records), 'Ergebnisse')
 
     # convert to array of dicts

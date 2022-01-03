@@ -9,9 +9,27 @@ def createDB():
     command = """
     CREATE TABLE IF NOT EXISTS books (
         idn VARCHAR(10) PRIMARY KEY, 
-        isbn VARCHAR(17), 
-        dateAdded DATE,
-        title VARCHAR(128)
+        linkToDataset VARCHAR(128),
+        
+        isbnWithDashes VARCHAR(20), 
+        isbnNoDashes VARCHAR(20), 
+        isbnTermsOfAvailability VARCHAR(128), 
+
+        addedToSql DATE,
+
+        lastDnbTransaction DATE,
+        projectedPublicationDate DATE,
+        
+        title VARCHAR(128),
+        subTitle VARCHAR(128),
+        titleAuthor VARCHAR(128),
+        
+        authorName VARCHAR(128),
+
+        publicationPlace VARCHAR(128),
+        publisher VARCHAR(128),
+        publicationYear INT(4)
+
     );"""
 
     executeCommand(command)
@@ -37,14 +55,31 @@ def storeBook(book):
     connection = sqlite3.connect(databaseName)
     cursor = connection.cursor()   
 
-    dateAdded = datetime.utcnow()
+    addedToSql = datetime.utcnow()
 
-    command = "INSERT INTO books (dateAdded, idn, isbn, title) VALUES (?, ?, ?, ?)"
+    command = "INSERT INTO books (addedToSql, \
+            idn, linkToDataset, \
+            isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
+            lastDnbTransaction, projectedPublicationDate, \
+            title, subTitle, titleAuthor, \
+            authorName, \
+            publicationPlace, publisher, publicationYear) \
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     
     try:
-        cursor.execute(command, (dateAdded, book.idn, book.isbns[0].withDashes, book.title))
+        cursor.execute(command, \
+            (addedToSql, \
+            book.idn, book.linkToDataset,  \
+            book.isbns[0].withDashes, book.isbns[0].noDashes, book.isbns[0].termsOfAvailability, \
+            book.lastDnbTransaction, book.projectedPublicationDate, \
+            book.title, book.subTitle, book.titleAuthor, \
+            book.authorName, \
+            book.publicationPlace, book.publisher, book.publicationYear)
+            )
+
         print(f"Adding new book. Title: {book.title}")
-    except:
+    except Exception as e:
+        #print(e)
         pass
 
     # close
@@ -57,7 +92,7 @@ def displayBookContent():
     connection = sqlite3.connect(databaseName)
     cursor = connection.cursor()   
 
-    command = "SELECT * FROM books ORDER BY dateAdded DESC"
+    command = "SELECT idn, isbnWithDashes, addedToSql, lastDnbTransaction, projectedPublicationDate, publicationYear, authorName, title  FROM books ORDER BY idn DESC"
     cursor.execute(command)
     books = cursor.fetchall()
 
