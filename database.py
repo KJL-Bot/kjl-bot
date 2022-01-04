@@ -1,11 +1,16 @@
 import sqlite3
 from datetime import datetime
 
-databaseName = "kjl.db"
+databaseName = "/home/pi/developer/kjl/kjl-bot/kjl.db"
 
 def createDB():
 
-    # command
+    createBooksTable()
+    createLogbook()
+
+def createBooksTable():
+
+    # Create books table
     command = """
     CREATE TABLE IF NOT EXISTS books (
         idn VARCHAR(10) PRIMARY KEY, 
@@ -33,6 +38,37 @@ def createDB():
     );"""
 
     executeCommand(command)
+
+def createLogbook():
+    # Create logbook
+    command = """
+    CREATE TABLE IF NOT EXISTS logbook (timestamp DATE PRIMARY KEY, description VARCHAR(128))
+    """
+    executeCommand(command)
+
+
+def logMessage(logMessage):
+
+    utctime = datetime.utcnow()
+    #timezone = pytz.utc
+    #utctime = timezone.localiz(utctime)
+
+    command = "INSERT INTO logbook (timestamp, description) VALUES (?, ?)"
+
+    # connect    
+    connection = sqlite3.connect(databaseName)
+    cursor = connection.cursor()   
+
+    try:
+        cursor.execute(command, (utctime, logMessage))
+    except Exception as e:
+        print(e)
+
+    # close
+    connection.commit()
+    connection.close()
+
+
 
 def executeCommand(command):
 
@@ -66,6 +102,8 @@ def storeBook(book):
             publicationPlace, publisher, publicationYear) \
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     
+    newBookWasAdded = False
+
     try:
         cursor.execute(command, \
             (addedToSql, \
@@ -78,6 +116,8 @@ def storeBook(book):
             )
 
         print(f"Adding new book. Title: {book.title}")
+        newBookWasAdded = True
+
     except Exception as e:
         #print(e)
         pass
@@ -85,6 +125,8 @@ def storeBook(book):
     # close
     connection.commit()
     connection.close()
+
+    return newBookWasAdded
 
 def displayBookContent():
 

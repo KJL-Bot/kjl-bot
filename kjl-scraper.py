@@ -4,7 +4,7 @@
 import database
 import dnbapi
 from dnbRecord import DNBRecord
-import pandas as pd
+#import pandas as pd
 
 def scrape():
 
@@ -28,14 +28,16 @@ def scrape():
         books.append(book)
 
     # store in db
+    newBookCounter = 0
     for book in books: 
-        database.storeBook(book)
+        newBookWasAdded = database.storeBook(book)
+        if newBookWasAdded:
+            newBookCounter += 1
 
-    # convert to pandas table
-    #df = pd.DataFrame(books)
-    #print(df)
+    # log activity
+    database.logMessage(f"Scraped DNB. Added {newBookCounter} new books.")
 
-    database.displayBookContent()
+    #database.displayBookContent()
 
 if __name__ == '__main__':
     scrape()
