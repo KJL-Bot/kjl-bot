@@ -542,3 +542,6 @@ https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve
 Scraping...
 https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=10&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
 10 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=10&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+10 Ergebnisse

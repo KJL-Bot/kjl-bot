@@ -18,7 +18,7 @@ def scrape():
     #query = "mat=books sortBy idn/sort.descending"
 
 
-    records = dnbapi.dnb_sru(query, numberOfRecords=10)
+    records = dnbapi.dnb_sru(query, numberOfRecords=20)
     print(len(records), 'Ergebnisse')
 
     # convert to array of dicts
@@ -38,7 +38,7 @@ def scrape():
     logMessage = f"Scraped DNB. Added {newBookCounter} new books."
     database.logMessage(logMessage)
 
-    #database.displayBookContent()
+    database.displayBookContent()
 
 if __name__ == '__main__':
     scrape()

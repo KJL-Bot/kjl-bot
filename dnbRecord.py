@@ -92,6 +92,10 @@ class DNBRecord:
             if fieldType == "controlfield":
                 property = "fail"
 
+        # replace unwanted characters
+        property = property.replace('\x98', '')
+        property = property.replace('\x9c', '')
+
         return (property , propertyTextArray)
 
 
