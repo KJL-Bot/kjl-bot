@@ -35,7 +35,8 @@ def scrape():
             newBookCounter += 1
 
     # log activity
-    database.logMessage(f"Scraped DNB. Added {newBookCounter} new books.")
+    logMessage = f"Scraped DNB. Added {newBookCounter} new books."
+    database.logMessage(logMessage)
 
     #database.displayBookContent()
 

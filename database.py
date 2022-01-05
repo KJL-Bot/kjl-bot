@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime
 
-databaseName = "/home/pi/developer/kjl/kjl-bot/kjl.db"
+databaseName = "kjl.db"
 
 def createDB():
 
@@ -48,7 +48,7 @@ def createLogbook():
 
 
 def logMessage(logMessage):
-
+    
     utctime = datetime.utcnow()
     #timezone = pytz.utc
     #utctime = timezone.localiz(utctime)
