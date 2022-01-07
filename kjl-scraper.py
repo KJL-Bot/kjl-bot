@@ -35,10 +35,11 @@ def scrape():
             newBookCounter += 1
 
     # log activity
-    logMessage = f"Scraped DNB. Added {newBookCounter} new books."
-    database.logMessage(logMessage)
+    if newBookCounter > 0:
+        logMessage = f"Scraped DNB. Added {newBookCounter} new books."
+        database.logMessage(logMessage)
 
-    database.displayBookContent()
+    # database.displayBookContent()
 
 if __name__ == '__main__':
     scrape()
