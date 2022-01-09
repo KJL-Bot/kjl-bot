@@ -4,9 +4,11 @@
 import database
 import dnbapi
 from dnbRecord import DNBRecord
-#import pandas as pd
+import rssFeed
+import config
 
 def scrape():
+
 
     # create DB
     database.createDB()
@@ -38,6 +40,12 @@ def scrape():
     if newBookCounter > 0:
         logMessage = f"Scraped DNB. Added {newBookCounter} new books."
         database.logMessage(logMessage)
+
+
+    rssEntries = database.generateRSSEntries()
+    rssFeed.generateFeed(rssEntries)
+
+    print(f"Feed URL is: {config.rssFeedUrl}")
 
     # database.displayBookContent()
 

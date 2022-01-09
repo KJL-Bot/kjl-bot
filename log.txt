@@ -16107,3 +16107,631 @@ https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve
 ('1248717252', '978-3-9823493-0-5', '2022-01-05 08:34:53', '2022-01-04 22:30:54', '2022-03-01', 2022, 'Johansson, Juri', 'Von Schildflöten, Herdmännchen und Großmaulnashörnern.')
 ('1248717171', '978-3-96552-336-4', '2022-01-05 08:34:53', '2022-01-04 22:30:53', '2021-12-01', 2021, '', 'Trötsch Der kleine Maulwurf Fensterbuch')
 ('1248717015', '978-3-96552-629-7', '2022-01-05 08:34:53', '2022-01-04 22:30:52', '2021-12-01', 2021, '', 'Trötsch Pettersson und Findus Fensterbuch')
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Adding new book. Title: Außergewöhnliche Abenteuergeschichten von Leseratte Ramona und Kanal Karli
+Adding new book. Title: Glöckchen, Hoppeldine und der Apfelbaum Baumine und andere Erzählungen
+Adding new book. Title: Fridolins abenteuerliche Wanderung
+Adding new book. Title: Bruno und der Käsedieb
+Adding new book. Title: Die drei Freunde vom DWM
+Adding new book. Title: Die drei Freunde vom DWM
+Adding new book. Title: Tiere backen einen Kuchen
+Adding new book. Title: Kräuterhexchen Mimi
+Adding new book. Title: Mendel Rosenbusch
+Adding new book. Title: Grün macht groß
+Adding new book. Title: Der Kluge Hase
+Adding new book. Title: Bejuso, was krähst du so?
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Adding new book. Title: Die Rabenringe
+Scraping...
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 169, in _new_conn
+    conn = connection.create_connection(
+  File "/usr/lib/python3/dist-packages/urllib3/util/connection.py", line 73, in create_connection
+    for res in socket.getaddrinfo(host, port, family, socket.SOCK_STREAM):
+  File "/usr/lib/python3.9/socket.py", line 953, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 699, in urlopen
+    httplib_response = self._make_request(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 382, in _make_request
+    self._validate_conn(conn)
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 1012, in _validate_conn
+    conn.connect()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 353, in connect
+    conn = self._new_conn()
+  File "/usr/lib/python3/dist-packages/urllib3/connection.py", line 181, in _new_conn
+    raise NewConnectionError(
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPSConnection object at 0xb3784ce8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 439, in send
+    resp = conn.urlopen(
+  File "/usr/lib/python3/dist-packages/urllib3/connectionpool.py", line 755, in urlopen
+    retries = retries.increment(
+  File "/usr/lib/python3/dist-packages/urllib3/util/retry.py", line 574, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPSConnectionPool(host='services.dnb.de', port=443): Max retries exceeded with url: /sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xb3784ce8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/pi/developer/kjl/kjl-bot/./kjl-scraper.py", line 45, in <module>
+    scrape()
+  File "/home/pi/developer/kjl/kjl-bot/./kjl-scraper.py", line 21, in scrape
+    records = dnbapi.dnb_sru(query, numberOfRecords=20)
+  File "/home/pi/developer/kjl/kjl-bot/dnbapi.py", line 17, in dnb_sru
+    r = requests.get(base_url, params=params)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 76, in get
+    return request('get', url, params=params, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/api.py", line 61, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 542, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/usr/lib/python3/dist-packages/requests/sessions.py", line 655, in send
+    r = adapter.send(request, **kwargs)
+  File "/usr/lib/python3/dist-packages/requests/adapters.py", line 516, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPSConnectionPool(host='services.dnb.de', port=443): Max retries exceeded with url: /sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending (Caused by NewConnectionError('<urllib3.connection.HTTPSConnection object at 0xb3784ce8>: Failed to establish a new connection: [Errno -3] Temporary failure in name resolution'))
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Adding new book. Title: Konrad oder Das Kind aus der Konservenbüchse
+Adding new book. Title: Der Märchenerzähler
+Adding new book. Title: Mandala Malbuch für Kinder, viele verschiedene Motive, "Baustellenfahrzeuge", Softcover und Hardcover, DIN A4 Format
+Adding new book. Title: Zeitschwestern
+Adding new book. Title: Lerngeschichten mit Wilma Wochenwurm - Neue Geschichten im Frühling
+Adding new book. Title: Astrid Lindgren. Ein Lebensbild
+Adding new book. Title: Mandala Malbuch für Kinder, viele verschiedene Motive,"Osterhase", Softcover und Hardcover, DIN A4 Format
+Adding new book. Title: Irgendwas passiert immer
+Adding new book. Title: Moono und Mump, der Maulwurf - Moono and Mump, the Mole
+Adding new book. Title: Der Sternenhopper
+Adding new book. Title: Rubina aus dem Edelsteintal
+Adding new book. Title: Wums das Wimsel
+Adding new book. Title: Und dann tanzen wir laut
+Adding new book. Title: Der Elefant und die Butterblume
+Adding new book. Title: Moono und Mump, der Maulwurf - Moono i krtica Mump
+Adding new book. Title: Hüter des Klimas
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse
+Scraping...
+https://services.dnb.de/sru/dnb?recordSchema=MARC21-xml&operation=searchRetrieve&version=1.1&maximumRecords=20&query=sgt%3DK+and+jhr%3C2023+and+jhr+%3E2020+and+spr%3Dger+and+mat%3Dbooks+sortBy+idn%2Fsort.descending
+20 Ergebnisse

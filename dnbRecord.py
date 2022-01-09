@@ -132,12 +132,12 @@ class DNBRecord:
 
         # localize to UTC
         lastTransaction = datetime.strptime(lastTransactionString, '%Y%m%d%H%M%S.%f')
-        timezone = pytz.utc # timezone('America/New_York')
-        lastTransactionWithTimeZone = timezone.localize(lastTransaction)
+        #timezone = pytz.utc # timezone('America/New_York')
+        #lastTransactionWithTimeZone = timezone.localize(lastTransaction)
 
         # print(f"{lastTransactionString} -> {lastTransactionWithTimeZone}")
 
-        return lastTransactionWithTimeZone
+        return lastTransaction
 
     # Returns projected publicationMonth as datetime with the 1first of the month 00:00:00 UTC
     def extractProjectedPublicationDate(self, record, xml, ns):
@@ -149,12 +149,12 @@ class DNBRecord:
 
             # localize to UTC
             projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
-            timezone = pytz.utc
-            projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
+            #timezone = pytz.utc
+            #projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
 
             #print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
 
-            return projectedPublicationDateWithTimeZone
+            return projectedPublicationDate
 
         else:
             return None

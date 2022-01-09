@@ -1,12 +1,35 @@
 import sqlite3
-from datetime import datetime
+from datetime import datetime, timedelta
+import uuid
+import rssFeed
+import html
 
 databaseName = "kjl.db"
+
+
+#### General
 
 def createDB():
 
     createBooksTable()
     createLogbook()
+
+def executeCommand(command):
+
+    # connect    
+    connection = sqlite3.connect(databaseName)
+    cursor = connection.cursor()   
+
+    # execute
+    cursor.execute(command)
+    connection.commit()
+
+    # close
+    connection.close()
+
+
+
+######## Books
 
 def createBooksTable():
 
@@ -20,10 +43,10 @@ def createBooksTable():
         isbnNoDashes VARCHAR(20), 
         isbnTermsOfAvailability VARCHAR(128), 
 
-        addedToSql DATE,
+        addedToSql TIMESTAMP,
 
-        lastDnbTransaction DATE,
-        projectedPublicationDate DATE,
+        lastDnbTransaction TIMESTAMP,
+        projectedPublicationDate TIMESTAMP,
         
         title VARCHAR(128),
         subTitle VARCHAR(128),
@@ -39,49 +62,10 @@ def createBooksTable():
 
     executeCommand(command)
 
-def createLogbook():
-    # Create logbook
-    command = """
-    CREATE TABLE IF NOT EXISTS logbook (timestamp DATE PRIMARY KEY, description VARCHAR(128))
-    """
-    executeCommand(command)
-
-
-def logMessage(logMessage):
-    
-    utctime = datetime.utcnow()
-    #timezone = pytz.utc
-    #utctime = timezone.localiz(utctime)
-
-    command = "INSERT INTO logbook (timestamp, description) VALUES (?, ?)"
-
-    # connect    
-    connection = sqlite3.connect(databaseName)
-    cursor = connection.cursor()   
-
-    try:
-        cursor.execute(command, (utctime, logMessage))
-    except Exception as e:
-        print(e)
-
-    # close
-    connection.commit()
-    connection.close()
 
 
 
-def executeCommand(command):
 
-    # connect    
-    connection = sqlite3.connect(databaseName)
-    cursor = connection.cursor()   
-
-    # execute
-    cursor.execute(command)
-    connection.commit()
-
-    # close
-    connection.close()
 
 
 
@@ -143,3 +127,125 @@ def displayBookContent():
     
 
     connection.close()
+
+
+
+########## Logbook
+def createLogbook():
+    # Create logbook
+    command = """
+    CREATE TABLE IF NOT EXISTS logbook (id CHAR(36) PRIMARY KEY, timestamp TIMESTAMP, description VARCHAR(128))
+    """
+    executeCommand(command)
+
+
+
+def addUUIDsToLogbook():
+
+    # connect    
+    connection = sqlite3.connect(databaseName)
+    cursor = connection.cursor()   
+
+    command = "SELECT timestamp FROM logbook WHERE id IS NULL ORDER BY timestamp"
+    cursor.execute(command)
+    lbEntries = cursor.fetchall()
+
+    for lbEntry in lbEntries:
+        timestamp = lbEntry[0]
+        newUUID = str(uuid.uuid4())
+        command = "UPDATE logbook SET id = ? WHERE timestamp = ?"
+        print(f"{timestamp} {newUUID} {command}")
+        
+        try:
+            cursor.execute(command, (newUUID, timestamp))
+        except Exception as e:
+         print(e)
+
+    # close
+    connection.commit()
+    connection.close()
+
+
+def logMessage(logMessage):
+    
+    utctime = datetime.utcnow()
+    newUUID = str(uuid.uuid4())
+
+    #timezone = pytz.utc
+    #utctime = timezone.localiz(utctime)
+
+    command = "INSERT INTO logbook (timestamp, id, description) VALUES (?, ?, ?)"
+
+    # connect    
+    connection = sqlite3.connect(databaseName)
+    cursor = connection.cursor()   
+
+    try:
+        cursor.execute(command, (utctime, newUUID, logMessage))
+    except Exception as e:
+        print(e)
+
+    # close
+    connection.commit()
+    connection.close()
+
+def generateRSSEntries():
+
+    # result are stored here
+    rssEntries = []
+
+    # connect    
+    connection = sqlite3.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+    cursor = connection.cursor()   
+
+    # get logbook entries
+    command = "SELECT timestamp, id, description  FROM logbook ORDER BY timestamp DESC"
+    cursor.execute(command)
+    logbookEntries = cursor.fetchall()
+
+    # go through each entry
+    for logbookEntry in logbookEntries:
+
+        (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
+
+        thirtySecondsEarlier = logBookTimestamp - timedelta(seconds = 30)
+        thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
+
+        # start des Eintrags
+        entryLines = ["New Bücher wurd zur DNB hinzugefügt.", ""]
+
+        # get related books
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
+
+
+        try:
+            cursor.execute(command, (thirtySecondsEarlier, thirtySecondsLater))
+            books = cursor.fetchall()
+
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
+                
+                entryLines.append(f"Title: <b>{title}</b>")
+                entryLines.append(f"Untertitel: {subTitle}")     
+                entryLines.append(f"Author(en): {titleAuthor}")
+                entryLines.append(f"Ort der Publikation: {publicationPlace}")
+                entryLines.append(f"Jahr der Publikation: {publicationYear}")
+                entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
+                entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
+                entryLines.append(f"")
+
+            # Convert lines into string
+            rssContent = '<br>\n'.join(entryLines)
+
+            # create new entry
+            entryTitle = "Neuer DNB Eintrag"
+            rssEntry = rssFeed.rssEntry(id = logBookId, publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
+            rssEntries.append(rssEntry)
+
+        except Exception as e:
+            print(f"Fehler beim suchen der Bücher für logbook Entry mit id {logBookId}.")
+            print(e)
+
+
+    connection.close()
+
+    return rssEntries
