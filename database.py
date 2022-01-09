@@ -44,6 +44,7 @@ def createBooksTable():
         isbnTermsOfAvailability VARCHAR(128), 
 
         addedToSql TIMESTAMP,
+        updatedInSql TIMESTAMP,
 
         lastDnbTransaction TIMESTAMP,
         projectedPublicationDate TIMESTAMP,
@@ -77,22 +78,25 @@ def storeBook(book):
 
     addedToSql = datetime.utcnow()
 
-    command = "INSERT INTO books (addedToSql, \
+    command = "INSERT INTO books (addedToSql, updatedInSql, \
             idn, linkToDataset, \
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
             authorName, \
             publicationPlace, publisher, publicationYear) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     
     newBookWasAdded = False
+    isbnWithDashes = book.isbns[0].withDashes if len(book.isbns) > 0 else None
+    isbnNoDashes = book.isbns[0].noDashes if len(book.isbns) > 0 else None
+    isbnTermsOfAvailability = book.isbns[0].termsOfAvailability if len(book.isbns) > 0 else None
 
     try:
         cursor.execute(command, \
-            (addedToSql, \
+            (addedToSql, addedToSql,\
             book.idn, book.linkToDataset,  \
-            book.isbns[0].withDashes, book.isbns[0].noDashes, book.isbns[0].termsOfAvailability, \
+            isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
             book.authorName, \
@@ -102,8 +106,15 @@ def storeBook(book):
         print(f"Adding new book. Title: {book.title}")
         newBookWasAdded = True
 
+    # ignore feedback on violation of UNIQUE contraint
+    except sqlite3.IntegrityError:
+        pass
+
+    # other errors
     except Exception as e:
-        #print(e)
+        print(f"{type(e).__name__} was raised with error number: {e}")
+        print("Error while inserting new book:")
+        print(e)
         pass
 
     # close
@@ -230,7 +241,8 @@ def generateRSSEntries():
                     entryLines.append(f"<i>{subTitle}</i>")     
                 entryLines.append(f"Von {titleAuthor}")
                 entryLines.append(f"{publicationPlace}, {publicationYear}")
-                entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
+                if projectedPublicationDate is not None:
+                    entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
                 entryLines.append(f"IDN: {idn}")
                 entryLines.append(f"ISBN: {isbnWithDashes}")
