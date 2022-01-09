@@ -211,9 +211,6 @@ def generateRSSEntries():
         thirtySecondsEarlier = logBookTimestamp - timedelta(seconds = 30)
         thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
-        # start des Eintrags
-        entryLines = ["New Bücher wurden zur DNB hinzugefügt.", ""]
-
         # get related books
         command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
 
@@ -222,13 +219,17 @@ def generateRSSEntries():
             cursor.execute(command, (thirtySecondsEarlier, thirtySecondsLater))
             books = cursor.fetchall()
 
+            # start des Eintrags
+            numberOfBooks = len(books)
+            entryLines = [f"Die folgenden {numberOfBooks} Bücher wurden zur DNB hinzugefügt.", ""]
+
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
                 
-                entryLines.append(f"Titel: <b>{title}</b>")
-                entryLines.append(f"Untertitel: {subTitle}")     
-                entryLines.append(f"Author(en): {titleAuthor}")
-                entryLines.append(f"Ort der Publikation: {publicationPlace}")
-                entryLines.append(f"Jahr der Publikation: {publicationYear}")
+                entryLines.append(f"<b>{title}</b>")
+                if len(subTitle.strip()) > 0:
+                    entryLines.append(f"<i>{subTitle}</i>")     
+                entryLines.append(f"Von {titleAuthor}")
+                entryLines.append(f"{publicationPlace}, {publicationYear}")
                 entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
                 entryLines.append(f"IDN: {idn}")
@@ -239,7 +240,7 @@ def generateRSSEntries():
             rssContent = '<br>\n'.join(entryLines)
 
             # create new entry
-            entryTitle = "Neuer DNB Eintrag"
+            entryTitle = f"{numberOfBooks} neue Bücher in DNB Datenbank"
             rssEntry = rssFeed.rssEntry(id = logBookId, publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
             rssEntries.append(rssEntry)
 
