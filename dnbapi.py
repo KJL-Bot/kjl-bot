@@ -15,7 +15,7 @@ def dnb_sru(query, numberOfRecords=100, returnFirstRecordsOnly = True):
          }
     
     r = requests.get(base_url, params=params)
-    print(r.url)
+    #print(r.url)
     xml = soup(r.content, features="lxml")
     records = xml.find_all('record', {'type':'Bibliographic'})
     

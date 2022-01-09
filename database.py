@@ -212,7 +212,7 @@ def generateRSSEntries():
         thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
         # start des Eintrags
-        entryLines = ["New Bücher wurd zur DNB hinzugefügt.", ""]
+        entryLines = ["New Bücher wurden zur DNB hinzugefügt.", ""]
 
         # get related books
         command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
@@ -224,13 +224,15 @@ def generateRSSEntries():
 
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
                 
-                entryLines.append(f"Title: <b>{title}</b>")
+                entryLines.append(f"Titel: <b>{title}</b>")
                 entryLines.append(f"Untertitel: {subTitle}")     
                 entryLines.append(f"Author(en): {titleAuthor}")
                 entryLines.append(f"Ort der Publikation: {publicationPlace}")
                 entryLines.append(f"Jahr der Publikation: {publicationYear}")
                 entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
+                entryLines.append(f"IDN: {idn}")
+                entryLines.append(f"ISBN: {isbnWithDashes}")
                 entryLines.append(f"")
 
             # Convert lines into string

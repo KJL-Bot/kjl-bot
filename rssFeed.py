@@ -2,6 +2,7 @@ from feedgen.feed import FeedGenerator
 import config
 from datetime import datetime
 import pytz
+from pathlib import Path
 
 
 class rssEntry:
@@ -50,6 +51,7 @@ def generateFeed(rssEntries):
 
     fg.rss_file(config.rssFeedFilename, pretty=True) # Write the RSS feed to a file
 
+    return Path(config.rssFeedFilename)
 
 if __name__ == '__main__':
 

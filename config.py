@@ -6,6 +6,8 @@ rssAlternateLink = 'http://artisticengines.com/kjl/index.html'
 rssFeedLogo = 'http://artisticengines.com/kjl/rssFeedLogo.jpg'
 rssFeedFilename = 'kjlbot.xml'
 rssFeedUrl = f'http://artisticengines.com/kjl/{rssFeedFilename}'
-
 rssFeedLanguage = 'de'
+
+ftpServer = 'ftp.artisticengines.com'
+ftpTargetFolder = 'kjl/'
 

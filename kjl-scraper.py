@@ -6,6 +6,7 @@ import dnbapi
 from dnbRecord import DNBRecord
 import rssFeed
 import config
+import ftpCoordinator
 
 def scrape():
 
@@ -21,7 +22,7 @@ def scrape():
 
 
     records = dnbapi.dnb_sru(query, numberOfRecords=20)
-    print(len(records), 'Ergebnisse')
+    #print(len(records), 'Ergebnisse')
 
     # convert to array of dicts
     books = []
@@ -42,9 +43,17 @@ def scrape():
         database.logMessage(logMessage)
 
 
+    # create rss entries
+    print("Creating RSS entries.")
     rssEntries = database.generateRSSEntries()
-    rssFeed.generateFeed(rssEntries)
 
+    # generate and store RSS feed locally
+    print("Generating RSS Feed.")
+    rssFilePath = rssFeed.generateFeed(rssEntries)
+
+    # transfer xml file to FTP server
+    print("Transfering to FTP server.")
+    ftpCoordinator.transferFile(rssFilePath, config.ftpTargetFolder)
     print(f"Feed URL is: {config.rssFeedUrl}")
 
     # database.displayBookContent()
