@@ -233,19 +233,30 @@ def generateRSSEntries():
             # start des Eintrags
             numberOfBooks = len(books)
             entryLines = [f"Die folgenden {numberOfBooks} Bücher wurden zur DNB hinzugefügt.", ""]
+            if numberOfBooks == 1:
+                entryLines = [f"Das folgende Buch wurde zur DNB hinzugefügt.", ""]
 
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
                 
                 entryLines.append(f"<b>{title}</b>")
-                if len(subTitle.strip()) > 0:
-                    entryLines.append(f"<i>{subTitle}</i>")     
-                entryLines.append(f"Von {titleAuthor}")
+                
+                if subTitle is not None:
+                    entryLines.append(f"<i>{subTitle}</i>")  
+
+                if titleAuthor is not None:
+                    entryLines.append(f"Von {titleAuthor}")
+                
                 entryLines.append(f"{publicationPlace}, {publicationYear}")
+                
                 if projectedPublicationDate is not None:
                     entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
+                
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
                 entryLines.append(f"IDN: {idn}")
-                entryLines.append(f"ISBN: {isbnWithDashes}")
+
+                if isbnWithDashes is not None:
+                    entryLines.append(f"ISBN: {isbnWithDashes}")
+                
                 entryLines.append(f"")
 
             # Convert lines into string
@@ -253,6 +264,9 @@ def generateRSSEntries():
 
             # create new entry
             entryTitle = f"{numberOfBooks} neue Bücher in DNB Datenbank"
+            if numberOfBooks == 1:
+                entryTitle = f"Ein neues Buch in DNB Datenbank"   
+
             rssEntry = rssFeed.rssEntry(id = logBookId, publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
             rssEntries.append(rssEntry)
 

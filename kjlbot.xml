@@ -13,7 +13,7 @@
       <link>http://artisticengines.com/kjl/kjlbot.xml</link>
     </image>
     <language>de</language>
-    <lastBuildDate>Sun, 09 Jan 2022 17:13:17 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 09 Jan 2022 17:30:36 +0000</lastBuildDate>
     <item>
       <title>20 neue Bücher in DNB Datenbank</title>
       <description><![CDATA[Die folgenden 20 Bücher wurden zur DNB hinzugefügt.<br>
@@ -171,21 +171,17 @@ IDN: 1249017637<br>
 ISBN: 978-3-7549-3799-0<br>
 <br>
 <b>Prinzessin Lillifee</b><br>
-Von <br>
 Stuttgart, 2021<br>
 DNB Link: <a href="https://d-nb.info/1248949110">https://d-nb.info/1248949110</a><br>
 IDN: 1248949110<br>
-ISBN: None<br>
 <br>
 <b>Mia and me</b><br>
-Von <br>
 Stuttgart, 2021<br>
 DNB Link: <a href="https://d-nb.info/124894898X">https://d-nb.info/124894898X</a><br>
 IDN: 124894898X<br>
-ISBN: None<br>
 ]]></description>
-      <guid isPermaLink="false">776ba85c-7afc-44e1-9c66-164cb9073cf6</guid>
-      <pubDate>Sun, 09 Jan 2022 17:13:17 +0000</pubDate>
+      <guid isPermaLink="false">dce52370-3335-4335-96b2-a29d1bb8ae8e</guid>
+      <pubDate>Sun, 09 Jan 2022 17:27:55 +0000</pubDate>
     </item>
   </channel>
 </rss>

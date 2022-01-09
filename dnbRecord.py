@@ -88,13 +88,14 @@ class DNBRecord:
             property = propertyArray[0].text
             #property = unicodedata.normalize("NFC", property)
         except:
-            property = ""
+            property = None #""
             if fieldType == "controlfield":
                 property = "fail"
 
         # replace unwanted characters
-        property = property.replace('\x98', '')
-        property = property.replace('\x9c', '')
+        if property is not None:
+            property = property.replace('\x98', '')
+            property = property.replace('\x9c', '')
 
         return (property , propertyTextArray)
 
@@ -145,7 +146,7 @@ class DNBRecord:
         # example: 202112
         projectedPublicationDateString, _ = self.extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
 
-        if len(projectedPublicationDateString.strip()) > 0:
+        if projectedPublicationDateString is not None:
 
             # localize to UTC
             projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
