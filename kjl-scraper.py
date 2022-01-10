@@ -21,7 +21,7 @@ def scrape():
     #query = "mat=books sortBy idn/sort.descending"
 
 
-    records = dnbapi.dnb_sru(query, numberOfRecords=20)
+    records = dnbapi.dnb_sru(query, numberOfRecords=50)
     #print(len(records), 'Ergebnisse')
 
     # convert to array of dicts
