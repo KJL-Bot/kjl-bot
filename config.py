@@ -1,3 +1,9 @@
+dnbSearchQuery = "sgt=K and jhr<2023 and jhr >2020 and spr=ger and mat=books sortBy idn/sort.descending"
+#dnbSearchQuery = 'tit=Klimawandel and location=onlinefree'   
+#dnbSearchQuery = "mat=books sortBy idn/sort.descending"
+
+maximumNumberOfRSSEntries = 10
+
 rssFeedId = 'com.artisticengines.kjlbot'
 rssFeedTitle = 'KJL Bot'
 rssFeedSubtitle = "Ein Tracker für Neuerscheinungen im Bereich der Kind- und Jugendbücher."

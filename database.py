@@ -1,5 +1,6 @@
 import sqlite3
 from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
 import uuid
 import rssFeed
 import html
@@ -205,6 +206,10 @@ def generateRSSEntries():
     # result are stored here
     rssEntries = []
 
+    # the first day of the month following  this month (eg. March if we are in Februray)
+    now = datetime.utcnow()
+    firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
+
     # connect    
     connection = sqlite3.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
     cursor = connection.cursor()   
@@ -222,9 +227,9 @@ def generateRSSEntries():
         thirtySecondsEarlier = logBookTimestamp - timedelta(seconds = 30)
         thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
-        # get related books
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
-
+        # get related books with ISDN
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset " +\
+            "FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
 
         try:
             cursor.execute(command, (thirtySecondsEarlier, thirtySecondsLater))
@@ -237,7 +242,21 @@ def generateRSSEntries():
                 entryLines = [f"Das folgende Buch wurde zur DNB hinzugefügt.", ""]
 
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
-                
+
+                # skip entries without ISDN
+                if isbnWithDashes is None:
+                    continue
+
+                # skip entries without expected publication date
+                if projectedPublicationDate is None:
+                    continue
+
+                # skip entries whose projected publication date is too far in the future
+                if projectedPublicationDate > firstDayOfNextMonth:
+                    continue
+
+                #print(f"{idn} {isbnWithDashes} {projectedPublicationDate} {title}")
+
                 entryLines.append(f"<b>{title}</b>")
                 
                 if subTitle is not None:
@@ -252,7 +271,7 @@ def generateRSSEntries():
                     entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
                 
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
-                entryLines.append(f"IDN: {idn}")
+                #entryLines.append(f"IDN: {idn}")
 
                 if isbnWithDashes is not None:
                     entryLines.append(f"ISBN: {isbnWithDashes}")
@@ -269,6 +288,8 @@ def generateRSSEntries():
 
             rssEntry = rssFeed.rssEntry(id = logBookId, publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
             rssEntries.append(rssEntry)
+
+
 
         except Exception as e:
             print(f"Fehler beim suchen der Bücher für logbook Entry mit id {logBookId}.")

@@ -13,317 +13,892 @@
       <link>http://artisticengines.com/kjl/kjlbot.xml</link>
     </image>
     <language>de</language>
-    <lastBuildDate>Mon, 10 Jan 2022 13:30:05 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 07 Feb 2022 08:36:12 +0000</lastBuildDate>
     <item>
-      <title>20 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 20 Bücher wurden zur DNB hinzugefügt.<br>
+      <title>4 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 4 Bücher wurden zur DNB hinzugefügt.<br>
+]]></description>
+      <guid isPermaLink="false">57832952-1354-49e3-aaa6-59634d6c572a</guid>
+      <pubDate>Mon, 31 Jan 2022 19:15:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>42 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 42 Bücher wurden zur DNB hinzugefügt.<br>
 <br>
-<b>Jack/Der kleine Hund Jack</b><br>
-<i>im Fischkrieg</i><br>
+<b>Schlicht: Magie.</b><br>
+<i>Die Zauberflöte - oder: Ein modernes Märchen über den Zauber der Liebe</i><br>
+Von Stefanie Nickel<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250771390">https://d-nb.info/1250771390</a><br>
+ISBN: 978-3-7557-2998-3<br>
+<br>
+<b>Liv & Hugo und die Mamas gehen in den Zoo</b><br>
+Von Paula Lichtinger<br>
+Bröckel, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250771307">https://d-nb.info/1250771307</a><br>
+ISBN: 978-3-00-070829-9<br>
+<br>
+<b>Die Zwillinge vom Edersee</b><br>
+<i>Das Schwert der Elfen</i><br>
+Von Margarete Kunz<br>
+Schrobenhausen, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250771161">https://d-nb.info/1250771161</a><br>
+ISBN: 978-3-947083-53-4<br>
+<br>
+<b>Benji, Gizmo und der Gartenspuk</b><br>
+Von Nicole Hein<br>
+Langenargen, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250771013">https://d-nb.info/1250771013</a><br>
+ISBN: 978-3-96074-524-2<br>
+<br>
+<b>Toki kann das nicht?</b><br>
+Von Tobias Keller<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250770564">https://d-nb.info/1250770564</a><br>
+ISBN: 978-3-7557-8536-1<br>
+<br>
+<b>Papa, warum gingst Du fort?</b><br>
+Von Adam Nümm<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/125077053X">https://d-nb.info/125077053X</a><br>
+ISBN: 978-3-7557-8376-3<br>
+<br>
+<b>Hase Oskar auf der Suche nach der goldenen Blume</b><br>
+Von Anna Barth<br>
+Peißenberg, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250770149">https://d-nb.info/1250770149</a><br>
+ISBN: 978-3-00-069075-4<br>
+<br>
+<b>Evangelos großes Abenteuer</b><br>
+Von Matthias Langkau<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250769922">https://d-nb.info/1250769922</a><br>
+ISBN: 978-3-7557-9648-0<br>
+<br>
+<b>Die Nova Chroniken</b><br>
+<i>Das vergiftete Königreich</i><br>
+Von J. Rysdill<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250769914">https://d-nb.info/1250769914</a><br>
+ISBN: 978-3-7557-4209-8<br>
+<br>
+<b>Du bist schwer in Ordnung, Hannah</b><br>
+<i>Kindergedichte und Lieder über Gott und die Welt</i><br>
+Von Andrej Andreas Peters<br>
+Nürnberg, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250769892">https://d-nb.info/1250769892</a><br>
+ISBN: 978-3-948589-19-6<br>
+<br>
+<b>Aufregung für Fritzi und Marie</b><br>
+Von Gabriele Buchmiller<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250769299">https://d-nb.info/1250769299</a><br>
+ISBN: 978-3-7557-3026-2<br>
+<br>
+<b>Drachenwut</b><br>
+<i>Welt der Elemente 3</i><br>
+Von Alexis Snow<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250769272">https://d-nb.info/1250769272</a><br>
+ISBN: 978-3-7557-7901-8<br>
+<br>
+<b>Die Zeitreiseuhr</b><br>
+<i>Der Fall von Byzanz Teil 3</i><br>
+Von Florian Fink<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250768985">https://d-nb.info/1250768985</a><br>
+ISBN: 978-3-7557-8259-9<br>
+<br>
+<b>Tierkinder. Reiss- und wasserfest für Kinder ab 9 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250768764">https://d-nb.info/1250768764</a><br>
+ISBN: 978-3-8499-4024-9<br>
+<br>
+<b>Globi Shorty Ozean, blau, 98/104</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250768705">https://d-nb.info/1250768705</a><br>
+ISBN: 0-13-097754-3<br>
+<br>
+<b>Globine T-Shirt, hellblau, Glace,122/128</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250768543">https://d-nb.info/1250768543</a><br>
+ISBN: 0-13-097769-1<br>
+<br>
+<b>Globi Pyjama U-Boot, blau, 122/128</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250768500">https://d-nb.info/1250768500</a><br>
+ISBN: 0-13-097765-9<br>
+<br>
+<b>Abschied von der 9b</b><br>
+<i>Band 3</i><br>
+Von Martina Nell<br>
+Techentin b Lübz, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125076839X">https://d-nb.info/125076839X</a><br>
+ISBN: 978-3-941116-14-6<br>
+<br>
+<b>Die Keltensaga um Artun und Eflida/Das Gold von Pyrene</b><br>
+Von Hartmut Danneck<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250768330">https://d-nb.info/1250768330</a><br>
+ISBN: 978-3-7549-4603-9<br>
+<br>
+<b>Leonie und die Zukunftsakademie</b><br>
+Von Martina Theurer<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250768292">https://d-nb.info/1250768292</a><br>
+ISBN: 978-3-7549-4609-1<br>
+<br>
+<b>Globi Pyjama U-Boot, blau, 110/116</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250768225">https://d-nb.info/1250768225</a><br>
+ISBN: 0-13-097764-0<br>
+<br>
+<b>Globi T-Shirt Schwertfisch, blau,110/116</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250768179">https://d-nb.info/1250768179</a><br>
+ISBN: 0-13-097751-9<br>
+<br>
+<b>Globi T-Shirt Schwertfisch, blau, 98/104</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125076808X">https://d-nb.info/125076808X</a><br>
+ISBN: 0-13-097750-0<br>
+<br>
+<b>So lieb hab ich dich, kleiner Bär. Reiss- und wasserfest für Kinder ab 12 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250768004">https://d-nb.info/1250768004</a><br>
+ISBN: 978-3-8499-4030-0<br>
+<br>
+<b>Globi T-Shirt Schwertfisch, blau, 122/128</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767970">https://d-nb.info/1250767970</a><br>
+ISBN: 0-13-097752-7<br>
+<br>
+<b>Globi Shorty Ozean, blau, 122/128</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767962">https://d-nb.info/1250767962</a><br>
+ISBN: 0-13-097756-X<br>
+<br>
+<b>Globine T-Shirt, hellblau, Glace, 98/104</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767954">https://d-nb.info/1250767954</a><br>
+ISBN: 0-13-097767-5<br>
+<br>
+<b>Globine T-Shirt, hellblau, Glace, 110/116</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767938">https://d-nb.info/1250767938</a><br>
+ISBN: 0-13-097768-3<br>
+<br>
+<b>Träum schön, kleiner Hase. Reiss- und wasserfest für Kinder ab 12 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250767652">https://d-nb.info/1250767652</a><br>
+ISBN: 978-3-8499-4028-7<br>
+<br>
+<b>Taufe in der 9b</b><br>
+<i>Band 2</i><br>
+Von Martina Nell<br>
+Techentin b Lübz, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767601">https://d-nb.info/1250767601</a><br>
+ISBN: 978-3-941116-10-8<br>
+<br>
+<b>Globi T-Shirt Schwertfisch, blau, 134/140</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767563">https://d-nb.info/1250767563</a><br>
+ISBN: 0-13-097753-5<br>
+<br>
+<b>Die Farben. Reiss- und wasserfest für Kinder ab 9 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250767490">https://d-nb.info/1250767490</a><br>
+ISBN: 978-3-8499-4027-0<br>
+<br>
+<b>Globi Shorty Ozean, blau, 110/116</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767393">https://d-nb.info/1250767393</a><br>
+ISBN: 0-13-097755-1<br>
+<br>
+<b>Globi Pyjama U-Boot, blau, 134/140</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250767261">https://d-nb.info/1250767261</a><br>
+ISBN: 0-13-097766-7<br>
+<br>
+<b>Fahrzeuge. Reiss- und wasserfest für Kinder ab 9 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250767113">https://d-nb.info/1250767113</a><br>
+ISBN: 978-3-8499-4026-3<br>
+<br>
+<b>Bauernhof. Reiss- und wasserfest für Kinder ab 9 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250767075">https://d-nb.info/1250767075</a><br>
+ISBN: 978-3-8499-4025-6<br>
+<br>
+<b>Ich geh schon aufs Töpfchen. Reiss- und wasserfest für Kinder ab 18 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250766990">https://d-nb.info/1250766990</a><br>
+ISBN: 978-3-8499-4029-4<br>
+<br>
+<b>Globi Shorty Ozean, blau, 134/140</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250766982">https://d-nb.info/1250766982</a><br>
+ISBN: 0-13-097757-8<br>
+<br>
+<b>Globi Pyjama U-Boot, blau, 98/104</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250766958">https://d-nb.info/1250766958</a><br>
+ISBN: 0-13-097758-6<br>
+<br>
+<b>Globine T-Shirt, hellblau,Glace, 134/140</b><br>
+Zürich, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250766877">https://d-nb.info/1250766877</a><br>
+ISBN: 0-13-097770-5<br>
+<br>
+<b>Anton, das kleine Auto. Reiss- und wasserfest für Kinder ab 9 Monaten</b><br>
+<i>Bilderbuch ideal für kleine Kinderhände</i><br>
+Köln, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/125076680X">https://d-nb.info/125076680X</a><br>
+ISBN: 978-3-8499-4031-7<br>
+]]></description>
+      <guid isPermaLink="false">23842e93-06a9-4732-a2f0-b9aed03b7bf6</guid>
+      <pubDate>Tue, 01 Feb 2022 10:15:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>36 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 36 Bücher wurden zur DNB hinzugefügt.<br>
+<br>
+<b>Ich bin Lola</b><br>
+Von Sabrina Gaß<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250856574">https://d-nb.info/1250856574</a><br>
+ISBN: 978-3-7557-0747-9<br>
+<br>
+<b>Maku und Anak Makus Beat im Schneemann</b><br>
+<i>Abenteuergeschichte 8 aus der Welt des Jungen Maku und seiner Schwester Anak</i><br>
+Von Peter Nützi<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250856388">https://d-nb.info/1250856388</a><br>
+ISBN: 978-3-7557-7913-1<br>
+<br>
+<b>Maxe Geschichten Band 3</b><br>
+Von Norman Wisslicen<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250856280">https://d-nb.info/1250856280</a><br>
+ISBN: 978-3-7557-8364-0<br>
+<br>
+<b>Maxe Geschichten Band 2</b><br>
+Von Norman Wisslicen<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125085623X">https://d-nb.info/125085623X</a><br>
+ISBN: 978-3-7557-8407-4<br>
+<br>
+<b>Das Hippo mit dem roten String</b><br>
+Von Rachel Canonico<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250856213">https://d-nb.info/1250856213</a><br>
+ISBN: 978-3-7557-3481-9<br>
+<br>
+<b>Die Göttinger Sieben</b><br>
+<i>Der rote Faden</i><br>
+Von Tobias Schrader<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250856132">https://d-nb.info/1250856132</a><br>
+ISBN: 978-3-7557-4061-2<br>
+<br>
+<b>Golala und Haininchen</b><br>
+<i>Eine Geschichte über Integration</i><br>
+Von Oliver N. Walbach, Judith Neusius<br>
+Saarbrücken, 2021<br>
+Erwartete Publikation laut DNB: 2021-09<br>
+DNB Link: <a href="https://d-nb.info/1250856094">https://d-nb.info/1250856094</a><br>
+ISBN: 978-3-9821182-1-5<br>
+<br>
+<b>Karlchen</b><br>
+Von Corinna Franke<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250856027">https://d-nb.info/1250856027</a><br>
+ISBN: 978-3-7557-4780-2<br>
+<br>
+<b>Einzigartig</b><br>
+Von Leopold Pitters, Ferdinand Pitters<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250855179">https://d-nb.info/1250855179</a><br>
+ISBN: 978-3-7557-8641-2<br>
+<br>
+<b>Der Bademeister von Maushausen</b><br>
+<i>Eine Klabautergeschichte</i><br>
+Von Norman Wisslicen<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250854903">https://d-nb.info/1250854903</a><br>
+ISBN: 978-3-7557-8518-7<br>
+<br>
+<b>Radabar 3</b><br>
+<i>Zauberhafte Krankheit</i><br>
+Von Erwin Sittig<br>
+Hamburg, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250854792">https://d-nb.info/1250854792</a><br>
+ISBN: 978-3-347-53025-6<br>
+<br>
+<b>Mein Bruder ist einfach besonders.</b><br>
+<i>Liebevoll farbig illustriertes pädagogisches Kinderbuch zum Thema Leben mit Behinderung. Ideal zum Vorlesen & für Erstleser</i><br>
+Von Patrick Guttenberger<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250854520">https://d-nb.info/1250854520</a><br>
+ISBN: 978-3-7557-2379-0<br>
+<br>
+<b>Radabar 3</b><br>
+<i>Zauberhafte Krankheit</i><br>
+Von Erwin Sittig<br>
+Hamburg, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250854385">https://d-nb.info/1250854385</a><br>
+ISBN: 978-3-347-53026-3<br>
+<br>
+<b>Doktor Bär</b><br>
+<i>Ein Bilderbuch für Klein und Groß</i><br>
+Von Rudolf Wirth<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250854318">https://d-nb.info/1250854318</a><br>
+ISBN: 978-3-7557-0478-2<br>
+<br>
+<b>Maxe Geschichten Band 1</b><br>
+Von Norman Wisslicen<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250854202">https://d-nb.info/1250854202</a><br>
+ISBN: 978-3-7557-8422-7<br>
+<br>
+<b>Adventskalender "Tomtes Weihnachtsfreuden"</b><br>
+Gilching, 2021<br>
+Erwartete Publikation laut DNB: 2021-06<br>
+DNB Link: <a href="https://d-nb.info/125085413X">https://d-nb.info/125085413X</a><br>
+ISBN: 978-3-7827-9755-9<br>
+<br>
+<b>Nele und ihr Opa</b><br>
+Von Matthias März<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250853915">https://d-nb.info/1250853915</a><br>
+ISBN: 978-3-7557-9940-5<br>
+<br>
+<b>Minecraft Reborn - Band 1</b><br>
+<i>Der Anfang</i><br>
+Von Alex & Rana<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250853699">https://d-nb.info/1250853699</a><br>
+ISBN: 978-3-7557-8374-9<br>
+<br>
+<b>Der kleine Drache wird riesengroß</b><br>
+Von Sabrina Kuhls<br>
+Großkrotzenburg, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250853516">https://d-nb.info/1250853516</a><br>
+ISBN: 978-3-9823935-0-6<br>
+<br>
+<b>Rotschopf Amelie vom Rotleitnerhof</b><br>
+Von Veronika Rumpold<br>
+Glödnitz, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250853451">https://d-nb.info/1250853451</a><br>
+ISBN: 978-3-903303-61-4<br>
+<br>
+<b>PAW Patrol - Eins, zwei, sauber! - Liederbuch mit Sound - Pappbilderbuch mit 6 Melodien und Geräuschen</b><br>
+Lincolnwood, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250853362">https://d-nb.info/1250853362</a><br>
+ISBN: 978-1-5037-6201-5<br>
+<br>
+<b>Disney Winnie Puuh - Pop-up-Buch und Taschenlampe mit 5 Geräuschen</b><br>
+Lincolnwood, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250853338">https://d-nb.info/1250853338</a><br>
+ISBN: 978-1-5037-5920-6<br>
+<br>
+<b>Opas unglaubliche Verwandlung</b><br>
+<i>Zwei verschiedene Phantasie-Geschichten zu ein und derselben Bildergeschichte von Anni Margot Skorupa</i><br>
+Von Ingrid Ursula Stockmann<br>
+Halle, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250853184">https://d-nb.info/1250853184</a><br>
+ISBN: 978-3-96692-079-7<br>
+<br>
+<b>Die schönsten Tierlieder - Liederbuch mit Sound - Pappbilderbuch mit 6 Melodien</b><br>
+Lincolnwood, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250853079">https://d-nb.info/1250853079</a><br>
+ISBN: 978-1-5037-6202-2<br>
+<br>
+<b>Karl - von Gefahren und kleinen Glücksmomenten auf einer nicht gebuchten Reise</b><br>
+<i>Das Leben ist kein Ponyhof</i><br>
+Von Sophie, Lea und Chantal Jugendpsychiatrie<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250852714">https://d-nb.info/1250852714</a><br>
+ISBN: 978-3-7549-4634-3<br>
+<br>
+<b>Meine Mitmachlieder - Liederbuch und Musikspieler - Pappbilderbuch mit 15 beliebten Kinderliedern</b><br>
+Lincolnwood, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250852684">https://d-nb.info/1250852684</a><br>
+ISBN: 978-1-5037-5919-0<br>
+<br>
+<b>Marie und das neugierige Huhn Rike - Abenteuer auf dem Bauernhof</b><br>
+Von Eva Lübbe<br>
+Radeberg, Sachs, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250851912">https://d-nb.info/1250851912</a><br>
+ISBN: 978-3-95753-934-2<br>
+<br>
+<b>Axolotl</b><br>
+<i>Das kleine Wassermonster</i><br>
+Von Elena Rahr, Jette Friedrich<br>
+Weimar, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1250851734">https://d-nb.info/1250851734</a><br>
+ISBN: 978-3-944575-25-4<br>
+<br>
+<b>Opas unglaubliche Verwandlung</b><br>
+<i>Zwei verschiedene Phantasie-Geschichten zu ein und derselben Bildergeschichte von Anni Margot Skorupa</i><br>
+Von Ingrid Ursula Stockmann<br>
+Halle, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1250851645">https://d-nb.info/1250851645</a><br>
+ISBN: 978-3-96692-081-0<br>
+]]></description>
+      <guid isPermaLink="false">98e73064-6c0e-4db7-b973-b9ee0b67af06</guid>
+      <pubDate>Wed, 02 Feb 2022 10:15:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>2 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 2 Bücher wurden zur DNB hinzugefügt.<br>
+]]></description>
+      <guid isPermaLink="false">a37fa5a0-8951-4158-b9ad-99685a0c1b92</guid>
+      <pubDate>Wed, 02 Feb 2022 19:15:07 +0000</pubDate>
+    </item>
+    <item>
+      <title>16 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 16 Bücher wurden zur DNB hinzugefügt.<br>
+<br>
+<b>Bronzeschmuck und Eisenwaffen</b><br>
+<i>Völser Peterbühl-Geschichten aus der Bronze- und Eisenzeit vor 2.500 Jahren</i><br>
+Von Elmar Perkmann<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250937760">https://d-nb.info/1250937760</a><br>
+ISBN: 978-3-7557-4844-1<br>
+<br>
+<b>Die blaue Brille, eine zauberhafte Brille</b><br>
+<i>Erzählung, Auseinandersetzung mit der eigenen Unsicherheit, Selbstzweifeln, Freundschaft, Liebe und Sinnhaftigkeit</i><br>
+Von Dagmar Stimpfig<br>
+Hamburg, 2021<br>
+Erwartete Publikation laut DNB: 2021-11<br>
+DNB Link: <a href="https://d-nb.info/1250937566">https://d-nb.info/1250937566</a><br>
+ISBN: 978-3-347-46864-1<br>
+<br>
+<b>Die blaue Brille, eine zauberhafte Brille</b><br>
+<i>Erzählung, Auseinandersetzung mit der eigenen Unsicherheit, Selbstzweifeln, Freundschaft, Liebe und Sinnhaftigkeit</i><br>
+Von Dagmar Stimpfig<br>
+Hamburg, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250937450">https://d-nb.info/1250937450</a><br>
+ISBN: 978-3-347-46863-4<br>
+<br>
+<b>Echard der Sternendrache</b><br>
+Von Anna-Maria Ziegler<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250937213">https://d-nb.info/1250937213</a><br>
+ISBN: 978-3-7557-4911-0<br>
+<br>
+<b>RoBÄRt</b><br>
+<i>Die Abenteuer eines Tröstebären</i><br>
+Von Ruth Senff<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250937051">https://d-nb.info/1250937051</a><br>
+ISBN: 978-3-7557-3010-1<br>
+<br>
+<b>Der Riese Schmoll</b><br>
+Von Peter Futterschneider, Anke Kemper<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250936969">https://d-nb.info/1250936969</a><br>
+ISBN: 978-3-7557-3790-2<br>
+<br>
+<b>Freunde braucht man immer</b><br>
+<i>Ein kleines Schaf auf Abenteuerreise</i><br>
+Von Ursula Buchwald-Wachendorf<br>
+München, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250936853">https://d-nb.info/1250936853</a><br>
+ISBN: 978-3-7546-2952-9<br>
+<br>
+<b>Klapperdiplapp</b><br>
+<i>Kinder-Vorlese-Tierbilderbuch</i><br>
+Von Sandor Alexandre<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250936462">https://d-nb.info/1250936462</a><br>
+ISBN: 978-3-7407-8717-2<br>
+<br>
+<b>Bezaubernde Ausmalbilder Malen nach Zahlen - Frühling-Ostern</b><br>
+Von Sannah Hinrichs<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125093639X">https://d-nb.info/125093639X</a><br>
+ISBN: 978-3-7557-4858-8<br>
+<br>
+<b>Das Schwein im Fass</b><br>
+<i>Eine zauberhafte Geschichte in Reimform</i><br>
+Von Constanze Endlich<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250936101">https://d-nb.info/1250936101</a><br>
+ISBN: 978-3-7557-0834-6<br>
+<br>
+<b>Die Spinne Adele und andere Geschichten</b><br>
+Von Annette Kraemer<br>
+Langenargen, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250936063">https://d-nb.info/1250936063</a><br>
+ISBN: 978-3-96074-550-1<br>
+<br>
+<b>Der erste Tag nach dir</b><br>
+Von Alex Marongue<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250935997">https://d-nb.info/1250935997</a><br>
+ISBN: 978-3-7557-0868-1<br>
+<br>
+<b>Wie Flaps zu Franz fand</b><br>
+<i>Eine Reise zu Mond und Sonne</i><br>
+Von Sabrina Fischer<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250935873">https://d-nb.info/1250935873</a><br>
+ISBN: 978-3-7557-1504-7<br>
+<br>
+<b>Geschichten von Baby Joe und dem Bären Balduin</b><br>
+Von Annette Kraemer<br>
+Langenargen, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125093561X">https://d-nb.info/125093561X</a><br>
+ISBN: 978-3-96074-201-2<br>
+<br>
+<b>Der Anderswald</b><br>
+<i>Das geheimnisvolle Amulett</i><br>
+Von Andrea von Rymon<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125093544X">https://d-nb.info/125093544X</a><br>
+ISBN: 978-3-7557-9657-2<br>
+<br>
+<b>Hier bin ich Zuhause</b><br>
+Von Raphael Tost<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1250935415">https://d-nb.info/1250935415</a><br>
+ISBN: 978-3-7549-4702-9<br>
+]]></description>
+      <guid isPermaLink="false">09c81a8f-d562-4eb6-aa5f-be251efdb2c7</guid>
+      <pubDate>Thu, 03 Feb 2022 10:15:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>8 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 8 Bücher wurden zur DNB hinzugefügt.<br>
+]]></description>
+      <guid isPermaLink="false">ebac6aea-77f1-4a57-9b61-1128eaa0a096</guid>
+      <pubDate>Thu, 03 Feb 2022 19:15:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>17 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 17 Bücher wurden zur DNB hinzugefügt.<br>
+<br>
+<b>Malbuch Bagger</b><br>
+<i>Fahrzeuge auf der Baustelle zum kreativen Ausmalen</i><br>
+Von Sammabu Edition<br>
+Stadtbergen, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251016898">https://d-nb.info/1251016898</a><br>
+ISBN: 978-3-947229-83-3<br>
+<br>
+<b>Die 7 Weltwunder der Antike für Kinder</b><br>
+<i>Das große Entdecker Buch - Archäologie und Geschichte für Kinder Von den Pyramiden bis zum Koloss von Rhodos</i><br>
+Von Margot Klee<br>
+Hamburg, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1251016758">https://d-nb.info/1251016758</a><br>
+ISBN: 978-3-96967-140-5<br>
+<br>
+<b>Aig und die Zinndiebe</b><br>
+<i>Ein Abenteuer aus der Bronzezeit</i><br>
+Von Fanny Urban<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251016340">https://d-nb.info/1251016340</a><br>
+ISBN: 978-3-7557-4901-1<br>
+<br>
+<b>Das Frühlingsfest kommt! 春节到！</b><br>
+Neutraubling, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251016227">https://d-nb.info/1251016227</a><br>
+ISBN: 978-3-9824270-0-3<br>
+<br>
+<b>Malbuch Mädchen ab 2 Jahren</b><br>
+<i>Mein erster Malspaß im großen Quadrat</i><br>
+Von Sammabu Edition<br>
+Stadtbergen, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251015565">https://d-nb.info/1251015565</a><br>
+ISBN: 978-3-947229-86-4<br>
+<br>
+<b>Packt die Badehosen ein!</b><br>
+<i>Vier Bären-Abenteuer im Sommer</i><br>
+Von Ilona Giesen, Carola Mehring<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125101514X">https://d-nb.info/125101514X</a><br>
+ISBN: 978-3-7557-4886-1<br>
+<br>
+<b>Rettet unsere Märchenwelt</b><br>
+<i>Geschichten für Kinder erzählt und illustriert von Angela Peters</i><br>
+Von Angela Peters<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251015107">https://d-nb.info/1251015107</a><br>
+ISBN: 978-3-7557-6131-0<br>
+<br>
+<b>Entspannt am Smartphone, Tablet und PC für Kinder</b><br>
+Von Michaela Friedrich, Stephan Degle<br>
+Heidelberg, Neckar, 2022<br>
+Erwartete Publikation laut DNB: 2022-01<br>
+DNB Link: <a href="https://d-nb.info/1251015085">https://d-nb.info/1251015085</a><br>
+ISBN: 978-3-942873-60-4<br>
+<br>
+<b>Neue Freunde im Schimmerwald</b><br>
+<i>Funkelfells Abenteuer</i><br>
+Von Monika Nunn<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251014933">https://d-nb.info/1251014933</a><br>
+ISBN: 978-3-7557-6640-7<br>
+<br>
+<b>Urgeschichte auf dem Peterbühl</b><br>
+<i>Arbeitsbuch</i><br>
+Von Elmar Perkmann<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251014771">https://d-nb.info/1251014771</a><br>
+ISBN: 978-3-7557-4839-7<br>
+<br>
+<b>Der kleine Bär und die freche Maus</b><br>
+Von Wolfgang Schrittesser, Mia Schrittesser, Christina Peters<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251014402">https://d-nb.info/1251014402</a><br>
+ISBN: 978-3-7557-9932-0<br>
+<br>
+<b>Thabo. Detektiv & Gentleman 1. Der Nashorn-Fall</b><br>
+Von Kirsten Boie<br>
+Hamburg, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251014399">https://d-nb.info/1251014399</a><br>
+ISBN: 978-3-7512-0275-6<br>
+<br>
+<b>Leona of the past</b><br>
+<i>-Meine und eure Story-</i><br>
 Von Sarah Schäfer<br>
 Berlin, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249062527">https://d-nb.info/1249062527</a><br>
-IDN: 1249062527<br>
-ISBN: 978-3-7549-3855-3<br>
-<br>
-<b>Hüter des Klimas</b><br>
-<i>Die Welt in Not</i><br>
-Von Valérie Guillaume<br>
-Berlin, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249062209">https://d-nb.info/1249062209</a><br>
-IDN: 1249062209<br>
-ISBN: 978-3-7549-3848-5<br>
-<br>
-<b>Konrad oder Das Kind aus der Konservenbüchse</b><br>
-Von Christine Nöstlinger<br>
-Hamburg, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/124901977X">https://d-nb.info/124901977X</a><br>
-IDN: 124901977X<br>
-ISBN: 978-3-7512-0271-8<br>
-<br>
-<b>Der Märchenerzähler</b><br>
-Von Antonia Michaelis<br>
-Hamburg, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249019710">https://d-nb.info/1249019710</a><br>
-IDN: 1249019710<br>
-ISBN: 978-3-7512-0270-1<br>
-<br>
-<b>Mandala Malbuch für Kinder, viele verschiedene Motive, "Baustellenfahrzeuge", Softcover und Hardcover, DIN A4 Format</b><br>
-Von Kai Pfrommer<br>
-Hamburg, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249019680">https://d-nb.info/1249019680</a><br>
-IDN: 1249019680<br>
-ISBN: 978-3-347-52712-6<br>
-<br>
-<b>Zeitschwestern</b><br>
-<i>Ein spannendes Zeitreiseabenteuer mit vielen Illustrationen, Fotos und einem Fragebogen, für Kinder zwischen 8 und 11 Jahren</i><br>
-Von Andrea Schütze<br>
-Hamburg, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249019575">https://d-nb.info/1249019575</a><br>
-IDN: 1249019575<br>
-ISBN: 978-3-347-52153-7<br>
-<br>
-<b>Lerngeschichten mit Wilma Wochenwurm - Neue Geschichten im Frühling</b><br>
-<i>Vorlesegeschichten zum Lernen und Mitmachen für Kinder ab 4 Jahren</i><br>
-Von Susanne Bohne<br>
-Norderstedt, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249019338">https://d-nb.info/1249019338</a><br>
-IDN: 1249019338<br>
-ISBN: 978-3-7557-8268-1<br>
-<br>
-<b>Astrid Lindgren. Ein Lebensbild</b><br>
-Von Margareta Strömstedt<br>
-Hamburg, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249019281">https://d-nb.info/1249019281</a><br>
-IDN: 1249019281<br>
-ISBN: 978-3-7512-0267-1<br>
-<br>
-<b>Mandala Malbuch für Kinder, viele verschiedene Motive,"Osterhase", Softcover und Hardcover, DIN A4 Format</b><br>
-Von Kai Pfrommer<br>
-Hamburg, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249018951">https://d-nb.info/1249018951</a><br>
-IDN: 1249018951<br>
-ISBN: 978-3-347-52577-1<br>
-<br>
-<b>Irgendwas passiert immer</b><br>
-Von Holger Prade<br>
-Norderstedt, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249018773">https://d-nb.info/1249018773</a><br>
-IDN: 1249018773<br>
-ISBN: 978-3-7557-7610-9<br>
-<br>
-<b>Moono und Mump, der Maulwurf - Moono and Mump, the Mole</b><br>
-<i>Ein Bilderbuch in deutscher und englischer Sprache</i><br>
-Von Manfred Luimpöck<br>
-Eisenstadt, 2021<br>
-Erwartete Publikation laut DNB: 2021-10<br>
-DNB Link: <a href="https://d-nb.info/1249018102">https://d-nb.info/1249018102</a><br>
-IDN: 1249018102<br>
-ISBN: 978-3-85253-708-5<br>
-<br>
-<b>Der Sternenhopper</b><br>
-<i>Auf Schatzsuche in Tirol</i><br>
-Von Julia Lippitsch<br>
-Innsbruck, 2021<br>
-Erwartete Publikation laut DNB: 2021-12<br>
-DNB Link: <a href="https://d-nb.info/1249018021">https://d-nb.info/1249018021</a><br>
-IDN: 1249018021<br>
-ISBN: 978-3-9519678-1-3<br>
-<br>
-<b>Rubina aus dem Edelsteintal</b><br>
-Von Ursula Schachschneider<br>
-Kaarst, 2022<br>
 Erwartete Publikation laut DNB: 2022-02<br>
-DNB Link: <a href="https://d-nb.info/1249017912">https://d-nb.info/1249017912</a><br>
-IDN: 1249017912<br>
-ISBN: 978-3-926800-31-2<br>
+DNB Link: <a href="https://d-nb.info/1251013147">https://d-nb.info/1251013147</a><br>
+ISBN: 978-3-7549-4730-2<br>
 <br>
-<b>Wums das Wimsel</b><br>
-Von Sarah Maria Sun<br>
-Dresden, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249017866">https://d-nb.info/1249017866</a><br>
-IDN: 1249017866<br>
-ISBN: 978-3-9822134-4-6<br>
+<b>Meins – nicht meins</b><br>
+Von Liliana Bardijewska<br>
+Weimar, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1251013023">https://d-nb.info/1251013023</a><br>
+ISBN: 978-3-944575-26-1<br>
 <br>
-<b>Und dann tanzen wir laut</b><br>
-Von Melanie Gerber<br>
-Bern, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249017823">https://d-nb.info/1249017823</a><br>
-IDN: 1249017823<br>
-ISBN: 978-3-85580-560-0<br>
-<br>
-<b>Der Elefant und die Butterblume</b><br>
-Von Hans Lang<br>
-Berlin, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/124901770X">https://d-nb.info/124901770X</a><br>
-IDN: 124901770X<br>
-ISBN: 978-3-7549-3813-3<br>
-<br>
-<b>Moono und Mump, der Maulwurf - Moono i krtica Mump</b><br>
-<i>Bilderbuch in deutscher und bosnischer/kroatischer/serbischer Sprache</i><br>
-Von Manfred Luimpöck<br>
-Eisenstadt, 2021<br>
+<b>Hamster Emil und seine Freunde</b><br>
+Von Kurt Schley, Eddie Schwald<br>
+Bottrop, 2021<br>
 Erwartete Publikation laut DNB: 2021-10<br>
-DNB Link: <a href="https://d-nb.info/1249017688">https://d-nb.info/1249017688</a><br>
-IDN: 1249017688<br>
-ISBN: 978-3-85253-707-8<br>
+DNB Link: <a href="https://d-nb.info/1251012558">https://d-nb.info/1251012558</a><br>
+ISBN: 978-3-9813557-8-9<br>
+]]></description>
+      <guid isPermaLink="false">5cbf3732-622d-44d8-8399-cacc69eb6c7f</guid>
+      <pubDate>Fri, 04 Feb 2022 10:15:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>10 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 10 Bücher wurden zur DNB hinzugefügt.<br>
+]]></description>
+      <guid isPermaLink="false">3477fa49-e062-4456-990a-b61eeeab184d</guid>
+      <pubDate>Fri, 04 Feb 2022 19:15:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>8 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 8 Bücher wurden zur DNB hinzugefügt.<br>
 <br>
-<b>Hüter des Klimas</b><br>
-<i>Die Welt in Not</i><br>
-Von Valérie Guillaume<br>
+<b>BELLA Sockenmonster auf Facebook</b><br>
+Von Christl Friedl<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125114036X">https://d-nb.info/125114036X</a><br>
+ISBN: 978-3-7557-7806-6<br>
+<br>
+<b>Nordische Mythologie für Kinder: Entdecke die Helden der nordischen Mythologie - Sagen und Mythen kindgerecht erleben</b><br>
+Von Sven Larsson<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251140025">https://d-nb.info/1251140025</a><br>
+ISBN: 978-3-7557-6701-5<br>
+<br>
+<b>Piep-Mätzchen</b><br>
+Von Anja Ursula Kayser<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125113940X">https://d-nb.info/125113940X</a><br>
+ISBN: 978-3-7557-4875-5<br>
+<br>
+<b>Erwin Esel sucht einen Freund</b><br>
+<i>und andere Aufwachgeschichten</i><br>
+Von Barbara-Marie Mundt<br>
+Norderstedt, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251139213">https://d-nb.info/1251139213</a><br>
+ISBN: 978-3-7557-4860-1<br>
+<br>
+<b>Mein Taufalbum</b><br>
+<i>Zur Erinnerung an Geburt und Taufe. Mit einem Vorwort von Familienseelsorger Toni Fiung und Bildern von Nina Hammerle</i><br>
+Von Ursula Klammer<br>
+Bozen, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1251138608">https://d-nb.info/1251138608</a><br>
+ISBN: 978-88-6839-633-6<br>
+<br>
+<b>Rätsel-Reime für Kinder</b><br>
+<i>Ostern (Teil 5)</i><br>
+Von Andrea Schröder<br>
+Bernau bei Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251138292">https://d-nb.info/1251138292</a><br>
+ISBN: 978-3-98648-010-3<br>
+<br>
+<b>Lucie im Land der sieben Seen</b><br>
+<i>Ein Buch mit traumhaften Fantasiereisen zum entspannten Einschlafen</i><br>
+Von Katrin Nedballa<br>
+Bernau bei Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251138160">https://d-nb.info/1251138160</a><br>
+ISBN: 978-3-944990-89-7<br>
+<br>
+<b>Der tanzende Schneemann</b><br>
+<i>Eine geheimnisvolle Wintergeschichte</i><br>
+Von Iska Laudan<br>
 Berlin, 2022<br>
-Erwartete Publikation laut DNB: 2022-01<br>
-DNB Link: <a href="https://d-nb.info/1249017637">https://d-nb.info/1249017637</a><br>
-IDN: 1249017637<br>
-ISBN: 978-3-7549-3799-0<br>
-<br>
-<b>Prinzessin Lillifee</b><br>
-Stuttgart, 2021<br>
-DNB Link: <a href="https://d-nb.info/1248949110">https://d-nb.info/1248949110</a><br>
-IDN: 1248949110<br>
-<br>
-<b>Mia and me</b><br>
-Stuttgart, 2021<br>
-DNB Link: <a href="https://d-nb.info/124894898X">https://d-nb.info/124894898X</a><br>
-IDN: 124894898X<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251138128">https://d-nb.info/1251138128</a><br>
+ISBN: 978-3-7549-4760-9<br>
 ]]></description>
-      <guid isPermaLink="false">dce52370-3335-4335-96b2-a29d1bb8ae8e</guid>
-      <pubDate>Sun, 09 Jan 2022 17:27:55 +0000</pubDate>
+      <guid isPermaLink="false">933ca303-f0cb-4dcb-bc05-634b072a47f1</guid>
+      <pubDate>Sat, 05 Feb 2022 10:15:05 +0000</pubDate>
     </item>
     <item>
-      <title>20 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 20 Bücher wurden zur DNB hinzugefügt.<br>
+      <title>4 neue Bücher in DNB Datenbank</title>
+      <description><![CDATA[Die folgenden 4 Bücher wurden zur DNB hinzugefügt.<br>
 <br>
-<b>Gartenfreunde 2023 - Postkartenkalender 16x17 cm - Tiere - zum Aufstellen oder Aufhängen - Monatskalendarium - Gadget - Mitbringsel - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249095077">https://d-nb.info/1249095077</a><br>
-IDN: 1249095077<br>
+<b>Insekten, die uns den Tisch decken</b><br>
+Von Lohmann Ulrike<br>
+Rullstorf, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1251219519">https://d-nb.info/1251219519</a><br>
+ISBN: 978-3-948693-08-4<br>
 <br>
-<b>Koalas 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - koala bears - Bildkalender - Wandplaner - Bärenkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249094925">https://d-nb.info/1249094925</a><br>
-IDN: 1249094925<br>
+<b>Die Schüler der Zeit</b><br>
+<i>Das Haus</i><br>
+Von Sidney Michalski<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251219276">https://d-nb.info/1251219276</a><br>
+ISBN: 978-3-7549-4763-0<br>
 <br>
-<b>Katzenbabys 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - Wandkalender - Wandplaner - Katzenkalender</b><br>
-<i>by Sabine Rath</i><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249094100">https://d-nb.info/1249094100</a><br>
-IDN: 1249094100<br>
+<b>Sleeple Hills</b><br>
+<i>Geheimzutat</i><br>
+Von Wyatt Ezvaron<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/125121925X">https://d-nb.info/125121925X</a><br>
+ISBN: 978-3-7549-4771-5<br>
 <br>
-<b>Creative Line Tischaufsteller quer 2023 - Kreativ-Kalender - DIY-Kalender - Kalender zum Basteln - Tischkalender - 20x16</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249094097">https://d-nb.info/1249094097</a><br>
-IDN: 1249094097<br>
-<br>
-<b>Katzen 2023 - Bildkalender 42x29 cm (42x58 cm geöffnet) - Cats - mit Feiertagen (DE/AT/CH) und Platz für Notizen - Wandplaner - Katzenkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249093953">https://d-nb.info/1249093953</a><br>
-IDN: 1249093953<br>
-<br>
-<b>Erdmännchen 2023 - Lesezeichenkalender 5,5x16,5 cm - Suricates - Tierkalender - Lesehilfe - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249093880">https://d-nb.info/1249093880</a><br>
-IDN: 1249093880<br>
-<br>
-<b>Der poetische Katzenkalender 2023 - Bild-Kalender 23,7x34 cm - mit schönen Zitaten - schwarz-weiß - Wandkalender - mit Platz für Notizen - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249093805">https://d-nb.info/1249093805</a><br>
-IDN: 1249093805<br>
-<br>
-<b>Starke Typen 2023 - Bild-Kalender - Poster-Kalender - 60x50</b><br>
-<i>Wildlife Photography</i><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249093708">https://d-nb.info/1249093708</a><br>
-IDN: 1249093708<br>
-<br>
-<b>Kleine Freunde 2023 - Bildkalender 23,7x34 cm - Kalender mit Platz für Notizen - mit vielen Zusatzinformationen - Wandkalender - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249093686">https://d-nb.info/1249093686</a><br>
-IDN: 1249093686<br>
-<br>
-<b>Janosch 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - inkl. Poster - Bildkalender - Wandplaner - Wandkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249093635">https://d-nb.info/1249093635</a><br>
-IDN: 1249093635<br>
-<br>
-<b>Foto-Bastelkalender schwarz XL 2023 - Do it yourself calendar 45x49,5 cm - datiert - Kreativkalender - Foto-Kalender - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249093589">https://d-nb.info/1249093589</a><br>
-IDN: 1249093589<br>
-<br>
-<b>Katzen 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - Cats - Bildkalender - Wandplaner - Katzenkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249093414">https://d-nb.info/1249093414</a><br>
-IDN: 1249093414<br>
-<br>
-<b>Pettersson & Findus 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - mit herausnehmbarem Poster - Wandkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249093279">https://d-nb.info/1249093279</a><br>
-IDN: 1249093279<br>
-<br>
-<b>Foto-Bastel-Familienplaner 2023 - Bastelkalender zum Aufhängen - 19,5x45 cm - datiert - mit 5 Spalten - Fotokalender - Familienkalender - Wandkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249092906">https://d-nb.info/1249092906</a><br>
-IDN: 1249092906<br>
-<br>
-<b>Wölfe 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - Wolves - Bildkalender - Wandplaner - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249092833">https://d-nb.info/1249092833</a><br>
-IDN: 1249092833<br>
-<br>
-<b>Kaninchen 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - Rabbits - Bildkalender - Wandplaner - Wandkalender</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249092434">https://d-nb.info/1249092434</a><br>
-IDN: 1249092434<br>
-<br>
-<b>Foto-Bastelkalender 2023 - 2 in 1: schwarz und weiss - 21 x 29,7 - Do it yourself calendar A4 - datiert - Foto-Kalender - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/124909237X">https://d-nb.info/124909237X</a><br>
-IDN: 124909237X<br>
-<br>
-<b>Foto-Bastelkalender 2023 - 2 in 1: schwarz und weiss - Do it yourself calendar 21x22 cm - datiert - Foto-Kalender - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249091950">https://d-nb.info/1249091950</a><br>
-IDN: 1249091950<br>
-<br>
-<b>Tierbabys 2023 - Broschürenkalender 30x30 cm (30x60 geöffnet) - Kalender mit Platz für Notizen - Baby Animals - Bildkalender - Wandplaner - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-04<br>
-DNB Link: <a href="https://d-nb.info/1249091934">https://d-nb.info/1249091934</a><br>
-IDN: 1249091934<br>
-<br>
-<b>Pferde 2023 - Lesezeichenkalender 5,5x16,5 cm - Horses - Tierkalender - Lesehilfe - Alpha Edition</b><br>
-Kiel, 2022<br>
-Erwartete Publikation laut DNB: 2022-05<br>
-DNB Link: <a href="https://d-nb.info/1249091489">https://d-nb.info/1249091489</a><br>
-IDN: 1249091489<br>
+<b>Starke Geschichten der Schulsozialarbeit/Mina</b><br>
+<i>Starke Geschichten der Schulsozialarbeit</i><br>
+Von Ayse, Leoni, Maike Bayraktar, Ervens, Schmidt<br>
+Berlin, 2022<br>
+Erwartete Publikation laut DNB: 2022-02<br>
+DNB Link: <a href="https://d-nb.info/1251219047">https://d-nb.info/1251219047</a><br>
+ISBN: 978-3-7549-4794-4<br>
 ]]></description>
-      <guid isPermaLink="false">24ee46ac-9736-4796-804a-8147f8763512</guid>
-      <pubDate>Mon, 10 Jan 2022 10:15:03 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ein neues Buch in DNB Datenbank</title>
-      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
-<br>
-<b>Im Zaubertal der Einhörner</b><br>
-Von Daisy Meadows <br>
-Bindlach, 2021-<br>
-DNB Link: <a href="https://d-nb.info/1249113539">https://d-nb.info/1249113539</a><br>
-IDN: 1249113539<br>
-]]></description>
-      <guid isPermaLink="false">433fb4e3-3b05-4d7f-9c76-728f63a088f0</guid>
-      <pubDate>Mon, 10 Jan 2022 13:30:04 +0000</pubDate>
+      <guid isPermaLink="false">a1d00837-ec23-49a4-9912-28fe18f2097d</guid>
+      <pubDate>Sun, 06 Feb 2022 10:15:05 +0000</pubDate>
     </item>
   </channel>
 </rss>

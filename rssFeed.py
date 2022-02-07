@@ -38,6 +38,8 @@ def generateFeed(rssEntries):
 
     timezone = pytz.utc
 
+    entryCounter = 0
+
     for rssEntry in rssEntries:
 
         # localize publcation date
@@ -48,6 +50,11 @@ def generateFeed(rssEntries):
         fe.title(rssEntry.title)
         fe.content(rssEntry.content, type='CDATA')
         fe.published(localizedPublicationDate)
+
+        # exit loop when the maximum number of rssEntries is reached
+        entryCounter += 1
+        if entryCounter >= config.maximumNumberOfRSSEntries:
+            break
 
     fg.rss_file(config.rssFeedFilename, pretty=True) # Write the RSS feed to a file
 
