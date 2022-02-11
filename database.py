@@ -235,11 +235,11 @@ def generateRSSEntries():
             cursor.execute(command, (thirtySecondsEarlier, thirtySecondsLater))
             books = cursor.fetchall()
 
-            # start des Eintrags
-            numberOfBooks = len(books)
-            entryLines = [f"Die folgenden {numberOfBooks} Bücher wurden zur DNB hinzugefügt.", ""]
-            if numberOfBooks == 1:
-                entryLines = [f"Das folgende Buch wurde zur DNB hinzugefügt.", ""]
+            # contains the the data for all the books appearing in the currenty rss entry
+            entryLines = []
+
+            # count the number of valid books
+            bookCounter = 0
 
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
 
@@ -255,38 +255,61 @@ def generateRSSEntries():
                 if projectedPublicationDate > firstDayOfNextMonth:
                     continue
 
-                #print(f"{idn} {isbnWithDashes} {projectedPublicationDate} {title}")
+                # here we know that the book is a valid entry. So we can count it
+                bookCounter += 1
 
+                # start the entry with the title
                 entryLines.append(f"<b>{title}</b>")
                 
+                # skip subtitle if not present
                 if subTitle is not None:
                     entryLines.append(f"<i>{subTitle}</i>")  
 
+                # skip author if not present
                 if titleAuthor is not None:
                     entryLines.append(f"Von {titleAuthor}")
                 
-                entryLines.append(f"{publicationPlace}, {publicationYear}")
+                # add publicationPlace, publisher, publicationYear
+                entryLines.append(f"{publicationPlace}: {publisher}, {publicationYear}")
                 
+                # skip projectedPublicationDate if not present
                 if projectedPublicationDate is not None:
                     entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
                 
+                # add DNB link
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
-                #entryLines.append(f"IDN: {idn}")
 
+                # skip isbn if not present
                 if isbnWithDashes is not None:
                     entryLines.append(f"ISBN: {isbnWithDashes}")
                 
+                # empty line at the end
                 entryLines.append(f"")
+
+            # now, we know how many books we have. skip to next entry if there are no valid books to list in the current entry
+            if bookCounter == 0:
+                continue
+            
+            
+            # Derive entry title and introductory text
+            entryTitle = f"{bookCounter} neue Bücher in DNB Datenbank"
+            introText = f"Die folgenden {bookCounter} Bücher wurden zur DNB hinzugefügt."
+
+            if bookCounter == 1:
+                entryTitle = f"Ein neues Buch in DNB Datenbank"   
+                introText = f"Das folgende Buch wurde zur DNB hinzugefügt."
+            
+            # add introtext at the beginning of the entry, followed by an empty line
+            entryLines.insert(0, introText)
+            entryLines.insert(1, "")
 
             # Convert lines into string
             rssContent = '<br>\n'.join(entryLines)
 
             # create new entry
-            entryTitle = f"{numberOfBooks} neue Bücher in DNB Datenbank"
-            if numberOfBooks == 1:
-                entryTitle = f"Ein neues Buch in DNB Datenbank"   
-
             rssEntry = rssFeed.rssEntry(id = logBookId, publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
+            
+            # append to array of other entries
             rssEntries.append(rssEntry)
 
 
