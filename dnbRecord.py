@@ -146,19 +146,22 @@ class DNBRecord:
         # example: 202112
         projectedPublicationDateString, _ = self.extractProperty(fieldType='datafield', tagString='263', codeString='a', xml=xml, ns=ns)
 
-        if projectedPublicationDateString is not None:
+        # use try: except: but once, projectedPublicationDateString was '20 2.1'
+        try:
+            if projectedPublicationDateString is not None:
 
-            # localize to UTC
-            projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
-            #timezone = pytz.utc
-            #projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
+                # localize to UTC
+                projectedPublicationDate = datetime.strptime(projectedPublicationDateString, '%Y%m')
+                #timezone = pytz.utc
+                #projectedPublicationDateWithTimeZone = timezone.localize(projectedPublicationDate)
 
-            #print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
+                #print(f"{projectedPublicationDateString} -> {projectedPublicationDateWithTimeZone}")
 
-            return projectedPublicationDate
+                return projectedPublicationDate
+        except:
+            pass
 
-        else:
-            return None
+        return None
 
 
     def extractPersonDetails(self, tagString, record, xml, ns):

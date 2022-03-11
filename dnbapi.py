@@ -16,7 +16,7 @@ def dnb_sru(query, numberOfRecords=100, returnFirstRecordsOnly = False):
          }
     
     r = requests.get(base_url, params=params)
-    #print(r.url)
+    print(r.url)
     xml = soup(r.content, features="lxml")
     records = xml.find_all('record', {'type':'Bibliographic'})
     
@@ -35,7 +35,7 @@ def dnb_sru(query, numberOfRecords=100, returnFirstRecordsOnly = False):
             
             params.update({'startRecord': i})
             r = requests.get(base_url, params=params)
-            #print(r.url)
+            print(r.url)
             xml = soup(r.content, features="lxml")
             new_records = xml.find_all('record', {'type':'Bibliographic'})
             records+=new_records
