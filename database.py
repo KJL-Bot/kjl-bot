@@ -58,7 +58,7 @@ def createBooksTable():
 
         publicationPlace VARCHAR(128),
         publisher VARCHAR(128),
-        publicationYear INT(4)
+        publicationYear VARCHAR(16)
 
     );"""
 
