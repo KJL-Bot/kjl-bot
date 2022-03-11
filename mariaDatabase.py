@@ -1,11 +1,35 @@
-import sqlite3
-from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
-import uuid
-import rssFeed
-import html
+#!/usr/bin/python 
+import mariadb 
 
-databaseName = "kjl.db"
+databaseName = "kjl"
+
+def mariaExample():
+
+    conn = mariadb.connect(
+        user="kjl",
+        password="i232kAWLF.",
+        host="localhost",
+        database="test")
+    cur = conn.cursor() 
+
+    #retrieving information 
+    some_name = "Georgi" 
+    cur.execute("SELECT first_name,last_name FROM employees WHERE first_name=?", (some_name,)) 
+
+    for first_name, last_name in cur: 
+        print(f"First name: {first_name}, Last name: {last_name}")
+        
+    #insert information 
+    try: 
+        cur.execute("INSERT INTO employees (first_name,last_name) VALUES (?, ?)", ("Maria","DB")) 
+    except mariadb.Error as e: 
+        print(f"Error: {e}")
+
+    conn.commit() 
+    print(f"Last Inserted ID: {cur.lastrowid}")
+        
+    conn.close()
+
 
 
 #### General
@@ -18,8 +42,12 @@ def createDB():
 def executeCommand(command):
 
     # connect    
-    connection = sqlite3.connect(databaseName)
-    cursor = connection.cursor()   
+    connection = mariadb.connect(
+        user="kjl",
+        password="i232kAWLF.",
+        host="localhost",
+        database=databaseName)
+    cursor = connection.cursor()  
 
     # execute
     cursor.execute(command)
@@ -63,11 +91,6 @@ def createBooksTable():
     );"""
 
     executeCommand(command)
-
-
-
-
-
 
 
 
@@ -328,3 +351,7 @@ def generateRSSEntries():
     connection.close()
 
     return rssEntries
+
+
+if __name__ == '__main__':
+    createDB()
