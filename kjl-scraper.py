@@ -19,7 +19,7 @@ def scrape():
  
     dnbSearchQuery = config.dnbSearchQuery
 
-    records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=50)
+    records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
     #print(len(records), 'Ergebnisse')
 
     # convert to array of dicts

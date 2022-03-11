@@ -1,7 +1,8 @@
-dnbSearchQuery = "sgt=K and jhr<2023 and jhr >2020 and spr=ger and mat=books sortBy idn/sort.descending"
+dnbSearchQuery = "sgt=K and jhr<2023 and jhr>2020 and spr=ger and mat=books sortBy idn/sort.descending"
 #dnbSearchQuery = 'tit=Klimawandel and location=onlinefree'   
 #dnbSearchQuery = "mat=books sortBy idn/sort.descending"
 
+numberOfRetrievedRecords = 10000
 maximumNumberOfRSSEntries = 10
 
 rssFeedId = 'com.artisticengines.kjlbot'
