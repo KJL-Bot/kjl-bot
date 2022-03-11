@@ -1,5 +1,10 @@
 #!/usr/bin/python 
 import mariadb 
+from datetime import datetime, timedelta
+from dateutil.relativedelta import relativedelta
+import uuid
+import rssFeed
+import html
 
 databaseName = "kjl"
 
@@ -39,14 +44,21 @@ def createDB():
     createBooksTable()
     createLogbook()
 
-def executeCommand(command):
-
+def getDatabaseConnection():
+    
     # connect    
     connection = mariadb.connect(
         user="kjl",
         password="i232kAWLF.",
         host="localhost",
         database=databaseName)
+
+    return connection
+
+def executeCommand(command):
+
+    # connect    
+    connection = getDatabaseConnection()
     cursor = connection.cursor()  
 
     # execute
@@ -86,7 +98,7 @@ def createBooksTable():
 
         publicationPlace VARCHAR(128),
         publisher VARCHAR(128),
-        publicationYear INT(4)
+        publicationYear VARCHAR(16)
 
     );"""
 
@@ -97,7 +109,7 @@ def createBooksTable():
 def storeBook(book):
 
     # connect    
-    connection = sqlite3.connect(databaseName)
+    connection = getDatabaseConnection()
     cursor = connection.cursor()   
 
     addedToSql = datetime.utcnow()
@@ -131,14 +143,15 @@ def storeBook(book):
         newBookWasAdded = True
 
     # ignore feedback on violation of UNIQUE contraint
-    except sqlite3.IntegrityError:
+    except mariadb.IntegrityError:
         pass
 
     # other errors
     except Exception as e:
         print(f"{type(e).__name__} was raised with error number: {e}")
         print("Error while inserting new book:")
-        print(e)
+        print(book.linkToDataset)
+        print(book.publicationYear)
         pass
 
     # close
@@ -150,7 +163,7 @@ def storeBook(book):
 def displayBookContent():
 
     # connect    
-    connection = sqlite3.connect(databaseName)
+    connection = getDatabaseConnection()
     cursor = connection.cursor()   
 
     command = "SELECT idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM books ORDER BY idn DESC"
@@ -178,7 +191,7 @@ def createLogbook():
 def addUUIDsToLogbook():
 
     # connect    
-    connection = sqlite3.connect(databaseName)
+    connection = getDatabaseConnection()
     cursor = connection.cursor()   
 
     command = "SELECT timestamp FROM logbook WHERE id IS NULL ORDER BY timestamp"
@@ -212,7 +225,7 @@ def logMessage(logMessage):
     command = "INSERT INTO logbook (timestamp, id, description) VALUES (?, ?, ?)"
 
     # connect    
-    connection = sqlite3.connect(databaseName)
+    connection = getDatabaseConnection()
     cursor = connection.cursor()   
 
     try:
@@ -234,7 +247,8 @@ def generateRSSEntries():
     firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
 
     # connect    
-    connection = sqlite3.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+    # connection = mariadb.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
+    connection = getDatabaseConnection()
     cursor = connection.cursor()   
 
     # get logbook entries

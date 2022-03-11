@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 
-import database
+import mariaDatabase
 import dnbapi
 from dnbRecord import DNBRecord
 import rssFeed
@@ -12,7 +12,7 @@ def scrape():
 
 
     # create DB
-    database.createDB()
+    mariaDatabase.createDB()
 
     print("Scraping...")
 
@@ -31,19 +31,19 @@ def scrape():
     # store in db
     newBookCounter = 0
     for book in books: 
-        newBookWasAdded = database.storeBook(book)
+        newBookWasAdded = mariaDatabase.storeBook(book)
         if newBookWasAdded:
             newBookCounter += 1
 
     # log activity
     if newBookCounter > 0:
         logMessage = f"Scraped DNB. Added {newBookCounter} new books."
-        database.logMessage(logMessage)
+        mariaDatabase.logMessage(logMessage)
 
 
     # create rss entries
     print("Creating RSS entries.")
-    rssEntries = database.generateRSSEntries()
+    rssEntries = mariaDatabase.generateRSSEntries()
 
     # generate and store RSS feed locally
     print("Generating RSS Feed.")
@@ -54,7 +54,7 @@ def scrape():
     ftpCoordinator.transferFile(rssFilePath, config.ftpTargetFolder)
     print(f"Feed URL is: {config.rssFeedUrl}")
 
-    # database.displayBookContent()
+    # mariaDatabase.displayBookContent()
 
 if __name__ == '__main__':
     scrape()
