@@ -34,9 +34,11 @@ def executeCommand(command):
 
 def createBooksTable():
 
+    booksTableName = config.booksTableName
+
     # Create books table
-    command = """
-    CREATE TABLE IF NOT EXISTS books (
+    command = f"""
+    CREATE TABLE IF NOT EXISTS {booksTableName} (
         idn VARCHAR(10) PRIMARY KEY, 
         linkToDataset VARCHAR(128),
         
@@ -77,9 +79,15 @@ def storeBook(book):
     connection = sqlite3.connect(databaseName)
     cursor = connection.cursor()   
 
+    # TBD - match book against relevant publishers
+
+
+
+
+    booksTableName = config.booksTableName
     addedToSql = datetime.utcnow()
 
-    command = "INSERT INTO books (addedToSql, updatedInSql, \
+    command = f"INSERT INTO {booksTableName} (addedToSql, updatedInSql, \
             idn, linkToDataset, \
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             lastDnbTransaction, projectedPublicationDate, \
@@ -130,7 +138,9 @@ def displayBookContent():
     connection = sqlite3.connect(databaseName)
     cursor = connection.cursor()   
 
-    command = "SELECT idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM books ORDER BY idn DESC"
+    booksTableName = config.booksTableName
+
+    command = f"SELECT idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM {booksTableName} ORDER BY idn DESC"
     cursor.execute(command)
     books = cursor.fetchall()
 
@@ -143,10 +153,14 @@ def displayBookContent():
 
 
 ########## Logbook
+
+# Create logbook
 def createLogbook():
-    # Create logbook
-    command = """
-    CREATE TABLE IF NOT EXISTS logbook (id CHAR(36) PRIMARY KEY, timestamp TIMESTAMP, description VARCHAR(128))
+
+    logbookTableName = config.logbookTableName
+
+    command = f"""
+    CREATE TABLE IF NOT EXISTS {logbookTableName} (id CHAR(36) PRIMARY KEY, timestamp TIMESTAMP, description VARCHAR(128))
     """
     executeCommand(command)
 
@@ -156,22 +170,24 @@ def addUUIDsToLogbook():
 
     # connect    
     connection = sqlite3.connect(databaseName)
-    cursor = connection.cursor()   
+    cursor = connection.cursor()  
 
-    command = "SELECT timestamp FROM logbook WHERE id IS NULL ORDER BY timestamp"
+    logbookTableName = config.logbookTableName 
+
+    command = f"SELECT timestamp FROM {logbookTableName} WHERE id IS NULL ORDER BY timestamp"
     cursor.execute(command)
     lbEntries = cursor.fetchall()
 
     for lbEntry in lbEntries:
         timestamp = lbEntry[0]
         newUUID = str(uuid.uuid4())
-        command = "UPDATE logbook SET id = ? WHERE timestamp = ?"
+        command = f"UPDATE {logbookTableName} SET id = ? WHERE timestamp = ?"
         print(f"{timestamp} {newUUID} {command}")
         
         try:
             cursor.execute(command, (newUUID, timestamp))
         except Exception as e:
-         print(e)
+            print(e)
 
     # close
     connection.commit()
@@ -186,7 +202,9 @@ def logMessage(logMessage):
     #timezone = pytz.utc
     #utctime = timezone.localiz(utctime)
 
-    command = "INSERT INTO logbook (timestamp, id, description) VALUES (?, ?, ?)"
+    logbookTableName = config.logbookTableName 
+
+    command = f"INSERT INTO {logbookTableName} (timestamp, id, description) VALUES (?, ?, ?)"
 
     # connect    
     connection = sqlite3.connect(databaseName)
@@ -214,8 +232,11 @@ def generateRSSEntries():
     connection = sqlite3.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
     cursor = connection.cursor()   
 
+    booksTableName = config.booksTableName
+    logbookTableName = config.logbookTableName 
+
     # get logbook entries
-    command = "SELECT timestamp, id, description  FROM logbook ORDER BY timestamp DESC"
+    command = f"SELECT timestamp, id, description  FROM {logbookTableName} ORDER BY timestamp DESC"
     cursor.execute(command)
     logbookEntries = cursor.fetchall()
 
@@ -228,8 +249,8 @@ def generateRSSEntries():
         thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
         # get related books with ISDN
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset " +\
-            "FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
+        command = f"SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+            "FROM {booksTableName} WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
 
         try:
             cursor.execute(command, (thirtySecondsEarlier, thirtySecondsLater))
@@ -241,7 +262,7 @@ def generateRSSEntries():
             # count the number of valid books
             bookCounter = 0
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
 
                 # skip entries without ISDN
                 if isbnWithDashes is None:
@@ -282,6 +303,12 @@ def generateRSSEntries():
                 # skip isbn if not present
                 if isbnWithDashes is not None:
                     entryLines.append(f"ISBN: {isbnWithDashes}")
+
+                # Note whethter we have a match to a relevant publisher
+                if matchesRelevantPublisher:
+                    entryLines.append(f"Relevanter Verlag identifziert mit Datenbank ID {matchesRelevantPublisher}.}")
+                else:
+                    entryLines.append(f"Verlag ist laut Datenbank nicht relevant.)")
                 
                 # empty line at the end
                 entryLines.append(f"")

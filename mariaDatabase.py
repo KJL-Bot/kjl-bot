@@ -1,5 +1,6 @@
 #!/usr/bin/python 
-import mariadb 
+import mariadb
+import publishers 
 from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 import uuid
@@ -98,7 +99,9 @@ def createBooksTable():
 
         publicationPlace VARCHAR(128),
         publisher VARCHAR(128),
-        publicationYear VARCHAR(16)
+        publicationYear VARCHAR(16),
+
+        matchesRelevantPublisher MEDIUMINT
 
     );"""
 

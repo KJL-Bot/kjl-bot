@@ -7,6 +7,7 @@ from dnbRecord import DNBRecord
 import rssFeed
 import config
 import ftpCoordinator
+import publishers
 
 def scrape():
 
@@ -16,7 +17,6 @@ def scrape():
 
     print("Scraping...")
 
- 
     dnbSearchQuery = config.dnbSearchQuery
 
     records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
@@ -34,6 +34,10 @@ def scrape():
         newBookWasAdded = mariaDatabase.storeBook(book)
         if newBookWasAdded:
             newBookCounter += 1
+
+    # match all DB entries against relevant publishers
+    print("Matching to publishers...")
+    publishers.matchBooksToPublishers()
 
     # log activity
     if newBookCounter > 0:
