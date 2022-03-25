@@ -268,7 +268,7 @@ def generateRSSEntries():
         thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
         # get related books with ISDN
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             "FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
 
         try:
@@ -281,7 +281,7 @@ def generateRSSEntries():
             # count the number of valid books
             bookCounter = 0
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
 
                 # skip entries without ISDN
                 if isbnWithDashes is None:
@@ -323,6 +323,11 @@ def generateRSSEntries():
                 if isbnWithDashes is not None:
                     entryLines.append(f"ISBN: {isbnWithDashes}")
                 
+                if matchesRelevantPublisher is not None:
+                    entryLines.append(f"Relevanter Verlag identifiziert: Datenbank ID {matchesRelevantPublisher}")
+                else:
+                    entryLines.append(f"Dier Verlag is laut Datenbank nicht relevant.")
+
                 # empty line at the end
                 entryLines.append(f"")
 
@@ -371,4 +376,6 @@ def generateRSSEntries():
 
 
 if __name__ == '__main__':
-    createDB()
+    # createDB()
+
+    rssEntries = generateRSSEntries()
