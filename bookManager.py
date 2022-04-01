@@ -50,14 +50,14 @@ def storeBook(book, logbookMessageId):
 
     addedToSql = datetime.utcnow()
 
-    command = "INSERT INTO books (addedToSql, updatedInSql, \
+    command = "INSERT INTO books (addedToSql, \
             idn, linkToDataset, \
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
             authorName, \
             publicationPlace, publisher, publicationYear, logbookMessageId) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     
     newBookWasAdded = False
     isbnWithDashes = book.isbns[0].withDashes if len(book.isbns) > 0 else None
@@ -66,7 +66,7 @@ def storeBook(book, logbookMessageId):
 
     try:
         cursor.execute(command, \
-            (addedToSql, addedToSql,\
+            (addedToSql,\
             book.idn, book.linkToDataset,  \
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             book.lastDnbTransaction, book.projectedPublicationDate, \

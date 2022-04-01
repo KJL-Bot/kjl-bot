@@ -46,7 +46,7 @@ def scrape():
 
     # log activity using previously create logbookMessageId
     if newBookCounter > 0:
-        logMessage = f"Scraped DNB. Added {newBookCounter} new books."
+        logMessage = f"Added {newBookCounter} new books."
         #logbookManager.logMessage(logMessage)
         logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
 
