@@ -198,7 +198,8 @@ def generateFeed(rssEntries):
     return Path(config.rssFeedFilename)
 
 if __name__ == '__main__':
-
+    rssEntries = generateRSSEntries()
     generateFeed()
 
 
+    

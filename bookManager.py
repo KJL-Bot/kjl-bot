@@ -15,7 +15,7 @@ def createBooksTable():
         
         isbnWithDashes VARCHAR(20), 
         isbnNoDashes VARCHAR(20), 
-        isbnTermsOfAvailability VARCHAR(128), 
+        isbnTermsOfAvailability VARCHAR(256), 
 
         addedToSql TIMESTAMP,
         updatedInSql TIMESTAMP,
