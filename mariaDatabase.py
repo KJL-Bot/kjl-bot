@@ -326,7 +326,7 @@ def generateRSSEntries():
                 if matchesRelevantPublisher is not None:
                     entryLines.append(f"Relevanter Verlag identifiziert: Datenbank ID {matchesRelevantPublisher}")
                 else:
-                    entryLines.append(f"Dier Verlag is laut Datenbank nicht relevant.")
+                    entryLines.append(f"Dieser Verlag is laut Datenbank nicht relevant.")
 
                 # empty line at the end
                 entryLines.append(f"")
