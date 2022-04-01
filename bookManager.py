@@ -33,7 +33,8 @@ def createBooksTable():
         publisher VARCHAR(128),
         publicationYear VARCHAR(16),
 
-        matchesRelevantPublisher MEDIUMINT
+        matchesRelevantPublisher MEDIUMINT,
+        logbookMessageId MEDIUMINT
 
     );"""
 
@@ -41,7 +42,7 @@ def createBooksTable():
 
 
 
-def storeBook(book):
+def storeBook(book, logbookMessageId):
 
     # connect    
     connection = mariaDatabase.getDatabaseConnection()
@@ -55,8 +56,8 @@ def storeBook(book):
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
             authorName, \
-            publicationPlace, publisher, publicationYear) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            publicationPlace, publisher, publicationYear, logbookMessageId) \
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
     
     newBookWasAdded = False
     isbnWithDashes = book.isbns[0].withDashes if len(book.isbns) > 0 else None
@@ -71,7 +72,7 @@ def storeBook(book):
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
             book.authorName, \
-            book.publicationPlace, book.publisher, book.publicationYear)
+            book.publicationPlace, book.publisher, book.publicationYear, logbookMessageId)
             )
 
         print(f"Adding new book. Title: {book.title}")
@@ -101,7 +102,7 @@ def displayBookContent():
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()   
 
-    command = "SELECT idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM books ORDER BY idn DESC"
+    command = "SELECT logbookMessageId, idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM books ORDER BY idn DESC"
     cursor.execute(command)
     books = cursor.fetchall()
 

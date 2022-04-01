@@ -17,24 +17,26 @@ def scrape():
     bookManager.createBooksTable()
     logbookManager.createLogbook()
 
-
+    # scrape DNB
     print("Scraping...")
 
     dnbSearchQuery = config.dnbSearchQuery
-
     records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
     #print(len(records), 'Ergebnisse')
 
-    # convert to array of dicts
+    # convert to array of books
     books = []
     for record in records:
         book = DNBRecord(xmlRecord = record)
         books.append(book)
 
-    # store in db
+    # prepare lookbook by creating an initial entry (to be updated later)
+    logbookMessageId = logbookManager.createInitialLogbookMessage()
+
+    # store in db and associate each book with the logbookMessageId
     newBookCounter = 0
     for book in books: 
-        newBookWasAdded = bookManager.storeBook(book)
+        newBookWasAdded = bookManager.storeBook(book, logbookMessageId)
         if newBookWasAdded:
             newBookCounter += 1
 
@@ -42,11 +44,11 @@ def scrape():
     print("Matching to publishers...")
     publishers.matchBooksToPublishers()
 
-    # log activity
+    # log activity using previously create logbookMessageId
     if newBookCounter > 0:
         logMessage = f"Scraped DNB. Added {newBookCounter} new books."
-        logbookManager.logMessage(logMessage)
-
+        #logbookManager.logMessage(logMessage)
+        logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
 
     # create rss entries
     print("Creating RSS entries.")
