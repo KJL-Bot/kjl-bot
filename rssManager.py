@@ -55,11 +55,15 @@ def generateRSSEntries():
         thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
         # get related books with ISDN
+        #command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+        #    "FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
+
         command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
-            "FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
+            "FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
+
 
         try:
-            cursor.execute(command, (thirtySecondsEarlier, thirtySecondsLater))
+            cursor.execute(command, (logBookId, ))
             books = cursor.fetchall()
 
             # contains the the data for all the books appearing in the currenty rss entry
@@ -145,7 +149,7 @@ def generateRSSEntries():
             rssContent = '\n'.join(entryLines)
 
             # create new entry
-            entry = RSSEntry(id = logBookId, publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
+            entry = RSSEntry(id = str(logBookId), publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
             
             # append to array of other entries
             rssEntries.append(entry)
