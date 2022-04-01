@@ -1,19 +1,22 @@
 #!/usr/bin/env python3
 
-
+import config
 import mariaDatabase
+import bookManager
+import logbookManager
 import dnbapi
 from dnbRecord import DNBRecord
-import rssFeed
-import config
+import rssManager
 import ftpCoordinator
 import publishers
 
 def scrape():
 
 
-    # create DB
-    mariaDatabase.createDB()
+    # create tables
+    bookManager.createBooksTable()
+    logbookManager.createLogbook()
+
 
     print("Scraping...")
 
@@ -31,7 +34,7 @@ def scrape():
     # store in db
     newBookCounter = 0
     for book in books: 
-        newBookWasAdded = mariaDatabase.storeBook(book)
+        newBookWasAdded = bookManager.storeBook(book)
         if newBookWasAdded:
             newBookCounter += 1
 
@@ -42,23 +45,23 @@ def scrape():
     # log activity
     if newBookCounter > 0:
         logMessage = f"Scraped DNB. Added {newBookCounter} new books."
-        mariaDatabase.logMessage(logMessage)
+        logbookManager.logMessage(logMessage)
 
 
     # create rss entries
     print("Creating RSS entries.")
-    rssEntries = mariaDatabase.generateRSSEntries()
+    rssEntries = rssManager.generateRSSEntries()
 
     # generate and store RSS feed locally
     print("Generating RSS Feed.")
-    rssFilePath = rssFeed.generateFeed(rssEntries)
+    rssFilePath = rssManager.generateFeed(rssEntries)
 
     # transfer xml file to FTP server
     print("Transfering to FTP server.")
     ftpCoordinator.transferFile(rssFilePath, config.ftpTargetFolder)
     print(f"Feed URL is: {config.rssFeedUrl}")
 
-    # mariaDatabase.displayBookContent()
+    # bookManager.displayBookContent()
 
 if __name__ == '__main__':
     scrape()

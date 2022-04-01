@@ -2,6 +2,11 @@ dnbSearchQuery = "sgt=K and jhr<2023 and jhr>2020 and spr=ger and mat=books sort
 #dnbSearchQuery = 'tit=Klimawandel and location=onlinefree'   
 #dnbSearchQuery = "mat=books sortBy idn/sort.descending"
 
+databaseName = "kjl"
+databaseUser="kjl"
+databasePassword="i232kAWLF."
+databaseHost="localhost"
+
 booksTableName = "books"
 logbookTableName = "logbook"
 relevantPublishersTableName = "relevantPublishers"
