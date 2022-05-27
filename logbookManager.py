@@ -42,6 +42,8 @@ def createInitialLogbookMessage():
 # Updates log message text for given messageId.
 def updateLogbookMessageWithId(messageId, logMessage):
 
+    utctime = datetime.utcnow()
+
     command = "UPDATE logbook SET (timestamp, description) VALUES (?, ?) WHERE id = ?"
 
     # connect

@@ -23,8 +23,8 @@ def createBooksTable():
         lastDnbTransaction TIMESTAMP,
         projectedPublicationDate TIMESTAMP,
 
-        title VARCHAR(128),
-        subTitle VARCHAR(128),
+        title VARCHAR(512),
+        subTitle VARCHAR(512),
         titleAuthor VARCHAR(128),
 
         authorName VARCHAR(128),
