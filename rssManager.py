@@ -36,10 +36,10 @@ def generateRSSEntries():
     now = datetime.utcnow()
     firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
 
-    # connect    
+    # connect
     # connection = mariadb.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     # get logbook entries
     command = "SELECT timestamp, id, description  FROM logbook ORDER BY timestamp DESC"
@@ -50,13 +50,6 @@ def generateRSSEntries():
     for logbookEntry in logbookEntries:
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
-
-        #thirtySecondsEarlier = logBookTimestamp - timedelta(seconds = 30)
-        #thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
-
-        # get related books with ISDN
-        #command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
-        #    "FROM books WHERE addedToSql BETWEEN ? AND ? ORDER BY idn DESC"
 
         command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             "FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
@@ -91,29 +84,29 @@ def generateRSSEntries():
 
                 # start the entry with the title
                 entryLines.append(f"<b>{title}</b>")
-                
+
                 # skip subtitle if not present
                 if subTitle is not None:
-                    entryLines.append(f"<i>{subTitle}</i>")  
+                    entryLines.append(f"<i>{subTitle}</i>")
 
                 # skip author if not present
                 if titleAuthor is not None:
                     entryLines.append(f"Von {titleAuthor}")
-                
+
                 # add publicationPlace, publisher, publicationYear
                 entryLines.append(f"{publicationPlace}: {publisher}, {publicationYear}")
-                
+
                 # skip projectedPublicationDate if not present
                 if projectedPublicationDate is not None:
                     entryLines.append(f"Erwartete Publikation laut DNB: {projectedPublicationDate.strftime('%Y-%m')}")
-                
+
                 # add DNB link
                 entryLines.append(f"DNB Link: <a href=\"{linkToDataset}\">{linkToDataset}</a>")
 
                 # skip isbn if not present
                 if isbnWithDashes is not None:
                     entryLines.append(f"ISBN: {isbnWithDashes}")
-                
+
                 if matchesRelevantPublisher is not None:
                     entryLines.append(f"Relevanter Verlag identifiziert: Datenbank ID {matchesRelevantPublisher}")
                 else:
@@ -125,16 +118,16 @@ def generateRSSEntries():
             # now, we know how many books we have. skip to next entry if there are no valid books to list in the current entry
             if bookCounter == 0:
                 continue
-            
-            
+
+
             # Derive entry title and introductory text
             entryTitle = f"{bookCounter} neue Bücher in DNB Datenbank"
             introText = f"Die folgenden {bookCounter} Bücher wurden zur DNB hinzugefügt."
 
             if bookCounter == 1:
-                entryTitle = f"Ein neues Buch in DNB Datenbank"   
+                entryTitle = f"Ein neues Buch in DNB Datenbank"
                 introText = f"Das folgende Buch wurde zur DNB hinzugefügt."
-            
+
             # add introtext at the beginning of the entry, followed by an empty line
             entryLines.insert(0, introText)
             entryLines.insert(1, "")
@@ -150,7 +143,7 @@ def generateRSSEntries():
 
             # create new entry
             entry = RSSEntry(id = str(logBookId), publicationDate = logBookTimestamp, title = entryTitle, content = rssContent)
-            
+
             # append to array of other entries
             rssEntries.append(entry)
 
@@ -185,7 +178,7 @@ def generateFeed(rssEntries):
 
         # localize publcation date
         localizedPublicationDate = timezone.localize(rssEntry.publicationDate)
-   
+
         fe = fg.add_entry()
         fe.id(rssEntry.id)
         fe.title(rssEntry.title)
@@ -204,6 +197,3 @@ def generateFeed(rssEntries):
 if __name__ == '__main__':
     rssEntries = generateRSSEntries()
     generateFeed()
-
-
-    

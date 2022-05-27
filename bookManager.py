@@ -34,7 +34,9 @@ def createBooksTable():
         publicationYear VARCHAR(16),
 
         matchesRelevantPublisher MEDIUMINT,
-        logbookMessageId MEDIUMINT
+        logbookMessageId MEDIUMINT,
+
+        INDEX(logbookMessageId)
 
     );"""
 
