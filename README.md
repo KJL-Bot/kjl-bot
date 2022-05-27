@@ -12,7 +12,7 @@ Allerdings nutze ich, wie ihr unten sehen werdet, meine Domain zum Hosten des RS
 Hier handelt sich aber nur um einen über FTP erreichbaren Webserver, der natürlich erheblich billiger ist als ein kommerzieller Server, der Skripte ausführen kann.
 
 ## Software
-Die Skripte werden alle 15 Minuten automatisch aufgerufen
+Die Skripte werden alle 15 Minuten automatisch über einen cron job aufgerufen. Einstiegspunkt ist `scrape.sh`.
 
 ## Was machen die Skripte?
 ### Diagram
