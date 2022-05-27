@@ -10,23 +10,23 @@ def createBooksTable():
     # Create books table
     command = """
     CREATE TABLE IF NOT EXISTS books (
-        idn VARCHAR(10) PRIMARY KEY, 
+        idn VARCHAR(10) PRIMARY KEY,
         linkToDataset VARCHAR(128),
-        
-        isbnWithDashes VARCHAR(20), 
-        isbnNoDashes VARCHAR(20), 
-        isbnTermsOfAvailability VARCHAR(256), 
+
+        isbnWithDashes VARCHAR(20),
+        isbnNoDashes VARCHAR(20),
+        isbnTermsOfAvailability VARCHAR(256),
 
         addedToSql TIMESTAMP,
         updatedInSql TIMESTAMP,
 
         lastDnbTransaction TIMESTAMP,
         projectedPublicationDate TIMESTAMP,
-        
+
         title VARCHAR(128),
         subTitle VARCHAR(128),
         titleAuthor VARCHAR(128),
-        
+
         authorName VARCHAR(128),
 
         publicationPlace VARCHAR(128),
@@ -44,9 +44,9 @@ def createBooksTable():
 
 def storeBook(book, logbookMessageId):
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     addedToSql = datetime.utcnow()
 
@@ -58,12 +58,16 @@ def storeBook(book, logbookMessageId):
             authorName, \
             publicationPlace, publisher, publicationYear, logbookMessageId) \
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
-    
+
+    # by default, no new book was added
     newBookWasAdded = False
+
+    # extract ISBN
     isbnWithDashes = book.isbns[0].withDashes if len(book.isbns) > 0 else None
     isbnNoDashes = book.isbns[0].noDashes if len(book.isbns) > 0 else None
     isbnTermsOfAvailability = book.isbns[0].termsOfAvailability if len(book.isbns) > 0 else None
 
+    # try inserting new book
     try:
         cursor.execute(command, \
             (addedToSql,\
@@ -98,9 +102,9 @@ def storeBook(book, logbookMessageId):
 
 def displayBookContent():
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     command = "SELECT logbookMessageId, idn, isbnWithDashes, DATETIME(addedToSql), DATETIME(lastDnbTransaction), DATE(projectedPublicationDate), publicationYear, authorName, title  FROM books ORDER BY idn DESC"
     cursor.execute(command)
@@ -108,6 +112,6 @@ def displayBookContent():
 
     for book in books:
         print(book)
-    
+
 
     connection.close()

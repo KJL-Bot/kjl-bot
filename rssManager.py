@@ -51,8 +51,8 @@ def generateRSSEntries():
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        thirtySecondsEarlier = logBookTimestamp - timedelta(seconds = 30)
-        thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
+        #thirtySecondsEarlier = logBookTimestamp - timedelta(seconds = 30)
+        #thirtySecondsLater = logBookTimestamp + timedelta(seconds = 30)
 
         # get related books with ISDN
         #command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\

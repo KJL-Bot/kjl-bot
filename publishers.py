@@ -33,7 +33,7 @@ def importTSV(filename):
             # mappings
             if twitterUrl == '?' or len(twitterUrl) == 0:
                 twitterUrl = None
-            
+
             jlpNominated = convertText2Boolean(jlpNominated)
             jlpAwarded = convertText2Boolean(jlpAwarded)
             kimiAwarded = convertText2Boolean(kimiAwarded)
@@ -45,7 +45,7 @@ def importTSV(filename):
 def convertText2Boolean(text):
     if text == 'ja':
         return True
-    
+
     if text == 'nein':
         return False
 
@@ -63,7 +63,7 @@ def createPublishersTable():
         id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY,
         name VARCHAR(128) UNIQUE NOT NULL,
         webUrl VARCHAR(128),
-        twitterUrl VARCHAR(128), 
+        twitterUrl VARCHAR(128),
         jlpNominated BOOL,
         jlpAwarded BOOL,
         kimiAwarded BOOL
@@ -73,16 +73,16 @@ def createPublishersTable():
 
 def storePublisher(name, webUrl, twitterUrl, jlpNominated, jlpAwarded, kimiAwarded):
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     tableName = config.relevantPublishersTableName
 
     command = f"INSERT INTO {tableName} (name, webUrl, twitterUrl, \
         jlpNominated, jlpAwarded, kimiAwarded) \
         VALUES (?, ?, ?, ?, ?, ?)"
- 
+
     try:
 
         cursor.execute(command, \
@@ -96,7 +96,7 @@ def storePublisher(name, webUrl, twitterUrl, jlpNominated, jlpAwarded, kimiAward
     except mariadb.IntegrityError:
         print(f"Publisher already in database: {name}")
         pass
-    
+
     except Exception as e:
         print(e)
 
@@ -104,11 +104,7 @@ def storePublisher(name, webUrl, twitterUrl, jlpNominated, jlpAwarded, kimiAward
     connection.commit()
     connection.close()
 
-def findPublisherIDWithName(cursor, publisherName):
-
-    # connect    
-    #connection = mariaDatabase.getDatabaseConnection()
-    #cursor = connection.cursor()   
+def findPublisherIDWithName(cursor, publisherName): 
 
     # replace double quotes by single quotes
     publisherName = publisherName.replace('"', "'")
@@ -121,7 +117,7 @@ def findPublisherIDWithName(cursor, publisherName):
 
     if len(books) == 0:
         return None
-    
+
     if len(books) == 1:
         return books[0][0]
 
@@ -132,9 +128,9 @@ def findPublisherIDWithName(cursor, publisherName):
 
 def matchBooksToPublishers():
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     booksTableName = config.booksTableName
 
@@ -181,10 +177,10 @@ if __name__ == '__main__':
     # test matching of publisher name
     publisherName = "FISCHER"
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
     publisherId = findPublisherIDWithName(cursor, publisherName)
     print(f"The publisher {publisherName} has the ID {publisherId}.")
     connection.close()
 
     # whatch whole database to relevant publishers
-    matchBooksToPublishers()    
+    matchBooksToPublishers()

@@ -10,33 +10,6 @@ def createLogbook():
     """
     mariaDatabase.executeCommand(command)
 
-
-# probably obsolete
-# def addUUIDsToLogbook():
-
-#     # connect    
-#     connection = mariaDatabase.getDatabaseConnection()
-#     cursor = connection.cursor()   
-
-#     command = "SELECT timestamp FROM logbook WHERE id IS NULL ORDER BY timestamp"
-#     cursor.execute(command)
-#     lbEntries = cursor.fetchall()
-
-#     for lbEntry in lbEntries:
-#         timestamp = lbEntry[0]
-#         newUUID = str(uuid.uuid4())
-#         command = "UPDATE logbook SET id = ? WHERE timestamp = ?"
-#         print(f"{timestamp} {newUUID} {command}")
-        
-#         try:
-#             cursor.execute(command, (newUUID, timestamp))
-#         except Exception as e:
-#          print(e)
-
-#     # close
-#     connection.commit()
-#     connection.close()
-
 def createInitialLogbookMessage():
 
     utctime = datetime.utcnow()
@@ -44,9 +17,9 @@ def createInitialLogbookMessage():
 
     command = "INSERT INTO logbook (timestamp, description) VALUES (?, ?)"
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     # add new message
     try:
@@ -55,7 +28,7 @@ def createInitialLogbookMessage():
         print(e)
 
     connection.commit()
-    
+
     # get ID of the message we just created
     lastRowId = cursor.lastrowid
 
@@ -66,13 +39,14 @@ def createInitialLogbookMessage():
     return lastRowId
 
 
+# Updates log message text for given messageId.
 def updateLogbookMessageWithId(messageId, logMessage):
 
     command = "UPDATE logbook SET (timestamp, description) VALUES (?, ?) WHERE id = ?"
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     try:
         cursor.execute(command, (utctime, logMessage, messageId))
@@ -84,8 +58,9 @@ def updateLogbookMessageWithId(messageId, logMessage):
     connection.close()
 
 
+# probably obsolete
 def logMessage(logMessage):
-    
+
     utctime = datetime.utcnow()
     #newUUID = str(uuid.uuid4())
 
@@ -94,9 +69,9 @@ def logMessage(logMessage):
 
     command = "INSERT INTO logbook (timestamp, description) VALUES (?, ?)"
 
-    # connect    
+    # connect
     connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()   
+    cursor = connection.cursor()
 
     try:
         cursor.execute(command, (utctime, UUID, logMessage))

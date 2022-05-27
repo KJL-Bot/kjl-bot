@@ -35,7 +35,7 @@ def scrape():
 
     # store in db and associate each book with the logbookMessageId
     newBookCounter = 0
-    for book in books: 
+    for book in books:
         newBookWasAdded = bookManager.storeBook(book, logbookMessageId)
         if newBookWasAdded:
             newBookCounter += 1
