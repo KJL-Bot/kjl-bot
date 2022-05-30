@@ -1,5 +1,5 @@
 dnbSearchQuery = "sgt=K and jhr<2023 and jhr>2020 and spr=ger and mat=books sortBy idn/sort.descending"
-#dnbSearchQuery = 'tit=Klimawandel and location=onlinefree'   
+#dnbSearchQuery = 'tit=Klimawandel and location=onlinefree'
 #dnbSearchQuery = "mat=books sortBy idn/sort.descending"
 
 databaseName = "kjl"
@@ -24,6 +24,8 @@ rssFeedFilename = 'kjlbot.xml'
 rssFeedUrl = f'http://artisticengines.com/kjl/{rssFeedFilename}'
 rssFeedLanguage = 'de'
 
+recentBooksJsonFileName = "recentBooks.json"
+jsonFeedUrl = f'http://artisticengines.com/kjl/{recentBooksJsonFileName}'
+
 ftpServer = 'ftp.artisticengines.com'
 ftpTargetFolder = 'kjl/'
-

@@ -9,6 +9,7 @@ from dnbRecord import DNBRecord
 import rssManager
 import ftpCoordinator
 import publishers
+import jsonExporter
 
 def scrape():
 
@@ -59,9 +60,19 @@ def scrape():
     rssFilePath = rssManager.generateFeed(rssEntries)
 
     # transfer xml file to FTP server
-    print("Transfering to FTP server.")
+    print("Transfering RSS to FTP server.")
     ftpCoordinator.transferFile(rssFilePath, config.ftpTargetFolder)
     print(f"Feed URL is: {config.rssFeedUrl}")
+
+    # create JSON file recent valid books
+    print("Generating JSON Feed.")
+    validBookEntries = jsonExporter.generateValidBookEntries(1000)
+    jsonFilePath = jsonExporter.writeBookEntriesToJSONFile(validBookEntries)
+
+    # transfer xml file to FTP server
+    print("Transfering JSON to FTP server.")
+    ftpCoordinator.transferFile(jsonFilePath, config.ftpTargetFolder)
+    print(f"JSON URL is: {config.jsonFeedUrl}")
 
     # bookManager.displayBookContent()
 
