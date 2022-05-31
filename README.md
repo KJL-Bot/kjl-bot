@@ -53,13 +53,45 @@ Aktualisierungen von Metadaten werden zur Zeit nicht überprüft.
 Jeder neue Eintrag bekommt einen aktuellen Zeitstempel. Zusätzlich speichert die Datenbank, wann die DNB Datenbank das letzte Mal abgefragt wurde.
 
 #### 4. RSS-Feed
-Die Skripte erzeugen einen RSS Feed. Jeder Eintrag enthält dabei eine Liste von Büchern, die bei einer DNB-Abfrage neu hinzugekommen sind.
+Die Skripte erzeugen einen RSS Feed. Jeder Eintrag enthält dabei eine Liste von Büchern, die bei einer DNB-Abfrage neu hinzugekommen sind. Die XML-Datei, die die Daten für den RSS-Feed speichert, wird per FTP auf den Webserver übertragen, und ist unter der URL http://www.artisticengines.com/kjl/kjlbot.xml abgreifbar.
 
-#### 5. Publikation auf Webserver
-Die XML-Datei, die die Daten für den RSS-Feed speichert, wird per FTP auf den Webserver übertragen, der unter der Domaine `artisticengines.com` läuft.
-
+#### 5. JSON-Feed
+Die jüngst erschienenen Bücher werden im JSON format as der Datenbank exportiert. Die Datei wirden ebenfalls per FTP auf den Webserver übertragen und ist dort unter der URL http://artisticengines.com/kjl/recentBooks.json abgreifbar.
 
 ## Wie lässt sich der RSS Feed lesen?
-Die URL des RSS Feeds ist: http://www.artisticengines.com/kjl/kjlbot.xml
+Dieser RSS Feed kann mit jedem RSS Reader dargestellt werden, ich empfehle [NetNewsWire](https://netnewswire.com), der kostenlos ist und für den Mac und iOS zu haben ist.
 
-Dieser Feed kann mit jedem RSS Reader dargestellt werden, ich empfehle [NetNewsWire](https://netnewswire.com), der kostenlos ist und für den Mac und iOS zu haben ist.
+## Format der exportierten JSON Datei
+```
+[
+  {
+    "idn": "1258732912",
+    "title": "Different kinds of Love",
+    "subTitle": "Zweite Chance für die LIebe",
+    "titleAuthor": "Svenja Bartsch",
+    "publicationPlace": "Norderstedt",
+    "publisher": "BoD – Books on Demand",
+    "publicationYear": "2022",
+    "projectedPublicationDate": "2022-05-01",
+    "linkToDataset": "https://d-nb.info/1258732912",
+    "isbnWithDashes": "978-3-7562-0090-0",
+    "addedToSql": "2022-05-30T09:45:05Z",
+    "coverUrl": "https://portal.dnb.de/opac/mvb/cover?isbn=978-3-7562-0090-0&size=l"
+  },
+  {
+    "idn": "1258732866",
+    "title": "Entchen Annabell/Entchen Annabell auf Schatzsuche",
+    "subTitle": "Fünf tierische Freunde erleben ein Abenteuer",
+    "titleAuthor": "M. Markus Ermer",
+    "publicationPlace": "Berlin",
+    "publisher": "epubli",
+    "publicationYear": "2022",
+    "projectedPublicationDate": "2022-05-01",
+    "linkToDataset": "https://d-nb.info/1258732866",
+    "isbnWithDashes": "978-3-7565-0187-8",
+    "addedToSql": "2022-05-30T09:45:05Z",
+    "coverUrl": "https://portal.dnb.de/opac/mvb/cover?isbn=978-3-7565-0187-8&size=l"
+  },
+  ...
+]
+
