@@ -48,8 +48,11 @@ def scrape():
     # log activity using previously create logbookMessageId
     if newBookCounter > 0:
         logMessage = f"Added {newBookCounter} new books."
-        #logbookManager.logMessage(logMessage)
-        logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
+    else:
+        logMessage = f"Scraped DNB with no new results."
+
+    #logbookManager.logMessage(logMessage)
+    logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
 
     # create rss entries
     print("Creating RSS entries.")
