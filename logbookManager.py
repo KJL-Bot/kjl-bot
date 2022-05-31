@@ -44,7 +44,7 @@ def updateLogbookMessageWithId(messageId, logMessage):
 
     utctime = datetime.utcnow()
 
-    command = "UPDATE logbook SET (timestamp, description) VALUES (?, ?) WHERE id = ?"
+    command = "UPDATE logbook SET timestamp = ?, description = ? WHERE id = ?"
 
     # connect
     connection = mariaDatabase.getDatabaseConnection()
