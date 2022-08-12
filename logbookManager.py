@@ -52,6 +52,7 @@ def updateLogbookMessageWithId(messageId, logMessage):
 
     try:
         cursor.execute(command, (utctime, logMessage, messageId))
+        print(f"Logged: {logMessage}")
     except Exception as e:
         print(e)
 
@@ -60,7 +61,7 @@ def updateLogbookMessageWithId(messageId, logMessage):
     connection.close()
 
 
-# probably obsolete
+# Log simple message
 def logMessage(logMessage):
 
     utctime = datetime.utcnow()
@@ -77,6 +78,7 @@ def logMessage(logMessage):
 
     try:
         cursor.execute(command, (utctime, UUID, logMessage))
+        print(f"Logged: {logMessage}")
     except Exception as e:
         print(e)
 

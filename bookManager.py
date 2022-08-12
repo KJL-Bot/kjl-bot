@@ -1,6 +1,7 @@
 import mariaDatabase
 import mariadb
 from datetime import datetime, timedelta
+import logbookManager
 
 
 ######## Books
@@ -76,7 +77,6 @@ def storeBook(book, logbookMessageId):
     keywords = ""
     if len(book.keywords) > 0:
         keywords = ','.join(book.keywords)
-        print(f"Keywords for book detected: {book.linkToDataset} -> {keywords}")
 
     # try inserting new book
     try:

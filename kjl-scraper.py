@@ -41,6 +41,11 @@ def scrape():
         if newBookWasAdded:
             newBookCounter += 1
 
+            # log keywords if there are any
+            if len(book.keywords > 0):
+                message = f"Keywords for book detected: {book.linkToDataset} -> {book.keywords}"
+                logbookManager.logMessage(message)
+
     # match all DB entries against relevant publishers
     print("Matching to publishers...")
     publishers.matchBooksToPublishers()
