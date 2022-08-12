@@ -13,7 +13,7 @@ class ISBN:
 
     def __str__(self):
         return f"{self.noDashes} {self.withDashes} {self.termsOfAvailability}"
-        
+
 
 class DNBRecord:
 
@@ -22,12 +22,12 @@ class DNBRecord:
         self.parseXML()
 
     def parseXML(self):
-        
+
         record = self.xmlRecord
 
         ns = {"marc":"http://www.loc.gov/MARC21/slim"}
         xml = etree.fromstring(unicodedata.normalize("NFC", str(record)))
-        
+
         # idn
         self.idn,_ = self.extractProperty(fieldType='controlfield', tagString='001', codeString='', xml=xml, ns=ns)
 
@@ -36,7 +36,7 @@ class DNBRecord:
 
         # ISBN
         self.isbns = self.extractISBNs(record, xml=xml, ns=ns)
-   
+
         # last transaction
         self.lastDnbTransaction = self.extractLastTransaction(record, xml=xml, ns=ns)
 
@@ -44,13 +44,13 @@ class DNBRecord:
         self.projectedPublicationDate = self.extractProjectedPublicationDate(record, xml=xml, ns=ns)
 
         # titel
-        self.title,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='a', xml=xml, ns=ns)  
+        self.title,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='a', xml=xml, ns=ns)
 
         # subTitle
         self.subTitle,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='b', xml=xml, ns=ns)
 
         # titleAuthor
-        self.titleAuthor,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='c', xml=xml, ns=ns) 
+        self.titleAuthor,_ = self.extractProperty(fieldType='datafield', tagString='245', codeString='c', xml=xml, ns=ns)
 
         # authorName
         self.authorName,_ = self.extractProperty(fieldType='datafield', tagString='100', codeString='a', xml=xml, ns=ns)
@@ -63,11 +63,15 @@ class DNBRecord:
 
         # publisher
         self.publisher,_ = self.extractProperty(fieldType='datafield', tagString='264', codeString='b', xml=xml, ns=ns)
-    
+
         # publicationYear
         self.publicationYear,_ = self.extractProperty(fieldType='datafield', tagString='264', codeString='c', xml=xml, ns=ns)
 
-        
+        # keywords
+        self.keywords = self.extractKeywords(record, xml=xml, ns=ns)
+
+
+
     # fieldType can be 'controlfield' or 'datafield'
     def extractProperty(self, fieldType, tagString, codeString, xml, ns):
 
@@ -77,7 +81,7 @@ class DNBRecord:
         # add code if available
         if len(codeString) > 0:
             pathString += f"/marc:subfield[@code = \'{codeString}\']"
-        
+
         propertyArray = xml.xpath(pathString, namespaces=ns)
         propertyTextArray = []
 
@@ -111,7 +115,7 @@ class DNBRecord:
         isbns = []
 
         for index, _ in enumerate(noDashesArray):
-            
+
             # fill dictionary if data is available
             noDashes = noDashesArray[index] if len(noDashesArray) > index else ""
             withDashes = withDashesArray[index] if len(withDashesArray) > index else ""
@@ -165,7 +169,7 @@ class DNBRecord:
 
 
     def extractPersonDetails(self, tagString, record, xml, ns):
-        
+
         # author: 100
 
         # authorName 100 a
@@ -178,3 +182,14 @@ class DNBRecord:
         authorRelatorCode,_ = self.extractProperty(fieldType='datafield', tagString=tagString, codeString='4', xml=xml, ns=ns)
 
         personString = f"{authorName} ({authorRelatorTerm})"
+
+
+    def extractKeywords(self, record, xml, ns):
+
+        # SUBJECT ADDED ENTRY--TOPICAL TERM: MARC=650, codeString = a
+        # there can be several entries of type MARC 650
+
+        # authorName 100 a
+        _,keywords = self.extractProperty(fieldType='datafield', tagString='650', codeString='a', xml=xml, ns=ns)
+
+        return keywords

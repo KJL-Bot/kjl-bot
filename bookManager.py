@@ -29,6 +29,8 @@ def createBooksTable():
 
         authorName VARCHAR(128),
 
+        keywords VARCHAR(1024),
+
         publicationPlace VARCHAR(128),
         publisher VARCHAR(128),
         publicationYear VARCHAR(16),
@@ -58,8 +60,9 @@ def storeBook(book, logbookMessageId):
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
             authorName, \
+            keywords, \
             publicationPlace, publisher, publicationYear, logbookMessageId) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
     # by default, no new book was added
     newBookWasAdded = False
@@ -68,6 +71,12 @@ def storeBook(book, logbookMessageId):
     isbnWithDashes = book.isbns[0].withDashes if len(book.isbns) > 0 else None
     isbnNoDashes = book.isbns[0].noDashes if len(book.isbns) > 0 else None
     isbnTermsOfAvailability = book.isbns[0].termsOfAvailability if len(book.isbns) > 0 else None
+
+    # concatenate keywords in array to a string
+    keywords = ""
+    if len(book.keywords) > 0:
+        keywords = ','.join(book.keywords)
+        print(f"Keywords for book detected: {book.linkToDataset} -> {keywords}")
 
     # try inserting new book
     try:
@@ -78,6 +87,7 @@ def storeBook(book, logbookMessageId):
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
             book.authorName, \
+            keywords, \
             book.publicationPlace, book.publisher, book.publicationYear, logbookMessageId)
             )
 
