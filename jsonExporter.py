@@ -32,7 +32,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             "FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
 
         try:
@@ -40,7 +40,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
             books = cursor.fetchall()
 
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
 
                 # skip entries without ISDN
                 if isbnWithDashes is None:
@@ -62,6 +62,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if title is not None: book["title"] = title
                 if subTitle is not None: book["subTitle"] = subTitle
                 if titleAuthor is not None: book["titleAuthor"] = titleAuthor
+                if keywords is not None: book["keywords"] = keywords
                 if publicationPlace is not None: book["publicationPlace"] = publicationPlace
                 if publisher is not None: book["publisher"] = publisher
                 if publicationYear is not None: book["publicationYear"] = publicationYear

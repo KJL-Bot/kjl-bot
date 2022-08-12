@@ -51,7 +51,7 @@ def generateRSSEntries():
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             "FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
 
 
@@ -65,7 +65,7 @@ def generateRSSEntries():
             # count the number of valid books
             bookCounter = 0
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
 
                 # skip entries without ISDN
                 if isbnWithDashes is None:
@@ -92,6 +92,11 @@ def generateRSSEntries():
                 # skip author if not present
                 if titleAuthor is not None:
                     entryLines.append(f"Von {titleAuthor}")
+
+                # skip keywords if not present
+                if keywords is not None:
+                    keywordString = ', '.join(keywords.split(','))
+                    entryLines.append(f"Schlagwörter: {keywordString}")
 
                 # add publicationPlace, publisher, publicationYear
                 entryLines.append(f"{publicationPlace}: {publisher}, {publicationYear}")
