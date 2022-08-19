@@ -104,7 +104,7 @@ def storePublisher(name, webUrl, twitterUrl, jlpNominated, jlpAwarded, kimiAward
     connection.commit()
     connection.close()
 
-def findPublisherIDWithName(cursor, publisherName): 
+def findPublisherIDWithName(cursor, publisherName):
 
     # replace double quotes by single quotes
     publisherName = publisherName.replace('"', "'")
@@ -113,17 +113,37 @@ def findPublisherIDWithName(cursor, publisherName):
 
     command = f"""SELECT id FROM {tableName} WHERE name LIKE "%{publisherName}%" """
     cursor.execute(command)
-    books = cursor.fetchall()
+    publishers = cursor.fetchall()
 
-    if len(books) == 0:
+    if len(publishers) == 0:
         return None
 
-    if len(books) == 1:
-        return books[0][0]
+    if len(publishers) == 1:
+        return publishers[0][0]
 
-    if len(books) > 1:
+    if len(publishers) > 1:
         #print(f"There are several publishers matching the name '{publisherName}'. This should not happen.")
-        return books[0][0]
+        return publishers[0][0]
+
+def getAwardsForPublisherWithID(cursor, publisherId):
+
+    # prepare results
+    jplNominated = 0
+    jplAwarded = 0
+    kimiAwarded = 0
+
+    tableName = config.relevantPublishersTableName
+
+    command = f"SELECT jlpNominated, jlpAwarded, kimiAwarded FROM {tableName} WHERE id = ?"
+    cursor.execute(command, (publisherId,))
+    publishers = cursor.fetchall()
+
+    # replace default results with results from database
+    if len(publishers) >= 0:
+        (jlpNominated, jlpAwarded, kimiAwarded) = publishers[0]
+
+    return (jlpNominated, jlpAwarded, kimiAwarded)
+
 
 
 def matchBooksToPublishers():

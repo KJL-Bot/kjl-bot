@@ -5,7 +5,7 @@ import pytz
 from pathlib import Path
 from dateutil.relativedelta import relativedelta
 import mariaDatabase
-
+import publishers
 
 
 class RSSEntry:
@@ -95,8 +95,9 @@ def generateRSSEntries():
 
                 # skip keywords if not present
                 if keywords is not None:
-                    keywordString = ', '.join(keywords.split(','))
-                    entryLines.append(f"Schlagwörter: {keywordString}")
+                    if len(keywords) > 0:
+                        keywordString = ', '.join(keywords.split(','))
+                        entryLines.append(f"Schlagwörter: {keywordString}")
 
                 # add publicationPlace, publisher, publicationYear
                 entryLines.append(f"{publicationPlace}: {publisher}, {publicationYear}")
@@ -112,8 +113,29 @@ def generateRSSEntries():
                 if isbnWithDashes is not None:
                     entryLines.append(f"ISBN: {isbnWithDashes}")
 
+                # if a relevant publisher is matched...
                 if matchesRelevantPublisher is not None:
                     entryLines.append(f"Relevanter Verlag identifiziert: Datenbank ID {matchesRelevantPublisher}")
+
+                    # get awards
+                    (jlpNominated, jlpAwarded, kimiAwarded) = publishers.getAwardsForPublisherWithID(cursor, matchesRelevantPublisher)
+                    awardsMessage = ""
+
+                    if jlpNominated == 1:
+                        awardsMessage += "jlpNominated. "
+
+                    if jlpAwarded == 1:
+                        awardsMessage += "jlpAwarded. "
+
+                    if kimiAwarded == 1:
+                        awardsMessage += "kimiAwarded. "
+
+                    # Remove white spaces
+                    awardsMessage = awardsMessage.strip()
+
+                    # Add line to RSS Feed
+                    entryLines.append(f"Auszeichnungen: {awardsMessage}")
+
                 else:
                     entryLines.append(f"Dieser Verlag is laut Datenbank nicht relevant.")
 
