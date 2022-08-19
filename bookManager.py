@@ -2,7 +2,8 @@ import mariaDatabase
 import mariadb
 from datetime import datetime, timedelta
 import logbookManager
-
+from dateutil.relativedelta import relativedelta
+import config
 
 ######## Books
 
@@ -38,9 +39,10 @@ def createBooksTable():
 
         matchesRelevantPublisher MEDIUMINT,
         publisherJLPNominated TINYINT,
-        publisherJLPAwarded TINYINT,        
+        publisherJLPAwarded TINYINT,
         publisherKimiAwarded TINYINT,
 
+        bookIsRelevant TINYINT,
         logbookMessageId MEDIUMINT,
 
         INDEX(logbookMessageId)
@@ -128,6 +130,55 @@ def displayBookContent():
 
     for book in books:
         print(book)
+
+
+    connection.close()
+
+
+def identifyRelevantBooks():
+
+    # get data limit
+    now = datetime.utcnow()
+    firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
+
+    # connect to DB
+    connection = mariaDatabase.getDatabaseConnection()
+    cursor = connection.cursor()
+
+    # name of the books table
+    booksTableName = config.booksTableName
+
+    # get fields to deternmine whether book is relevant
+    command = f"SELECT idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title FROM {booksTableName} ORDER BY idn DESC"
+    cursor.execute(command)
+    books = cursor.fetchall()
+
+    # go through all books int the DB
+    for (idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title) in books:
+
+        # default: book is relevant
+        bookIsRelevant = True
+
+        # skip entries without ISDN
+        if isbnWithDashes is None:
+            bookIsRelevant = False
+
+        # skip entries without expected publication date
+        if projectedPublicationDate is None:
+            bookIsRelevant = False
+
+        # skip entries whose projected publication date is too far in the future
+        if projectedPublicationDate > firstDayOfNextMonth:
+            bookIsRelevant = False
+
+        # write to DB
+        command = f"UPDATE {booksTableName} SET bookIsRelevant = ? WHERE idn = ?"
+        try:
+            cursor.execute(command, (bookIsRelevant, idn))
+        except Exception as e:
+            print(e)
+
+    connection.commit()
 
 
     connection.close()

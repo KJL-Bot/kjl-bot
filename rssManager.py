@@ -53,7 +53,7 @@ def generateRSSEntries():
 
         command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             ", publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded" +\
-            " FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
+            " FROM books WHERE bookIsRelevant = 1 AND logbookMessageId = ? ORDER BY idn DESC"
 
 
         try:
@@ -69,17 +69,19 @@ def generateRSSEntries():
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate,
             addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
-                # skip entries without ISDN
-                if isbnWithDashes is None:
-                    continue
-
-                # skip entries without expected publication date
-                if projectedPublicationDate is None:
-                    continue
-
-                # skip entries whose projected publication date is too far in the future
-                if projectedPublicationDate > firstDayOfNextMonth:
-                    continue
+                # no longer necessary, as filtering is done through bookIsRelevant field
+                
+                # # skip entries without ISDN
+                # if isbnWithDashes is None:
+                #     continue
+                #
+                # # skip entries without expected publication date
+                # if projectedPublicationDate is None:
+                #     continue
+                #
+                # # skip entries whose projected publication date is too far in the future
+                # if projectedPublicationDate > firstDayOfNextMonth:
+                #     continue
 
                 # here we know that the book is a valid entry. So we can count it
                 bookCounter += 1

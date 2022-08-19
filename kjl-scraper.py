@@ -59,6 +59,10 @@ def scrape():
     #logbookManager.logMessage(logMessage)
     logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
 
+    # identify all the books that are relevant for playout
+    print("Updating book relevancies")
+    bookManager.identifyRelevantBooks()
+
     # create rss entries
     print("Creating RSS entries.")
     rssEntries = rssManager.generateRSSEntries()
@@ -84,11 +88,12 @@ def scrape():
 
     # transfer JSON file to KJL FTP server
     print("Transfering JSON to KJL FTP server.")
-    ftpCoordinator.transferFileViaFTP_SSL(jsonFilePath, config.kjlFtpSSLTargetDir) # KJL Bot Server    
+    ftpCoordinator.transferFileViaFTP_SSL(jsonFilePath, config.kjlFtpSSLTargetDir) # KJL Bot Server
 
 
 
     # bookManager.displayBookContent()
 
 if __name__ == '__main__':
+    #bookManager.identifyRelevantBooks()
     scrape()
