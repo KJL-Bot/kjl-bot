@@ -37,6 +37,10 @@ def createBooksTable():
         publicationYear VARCHAR(16),
 
         matchesRelevantPublisher MEDIUMINT,
+        publisherJLPNominated TINYINT,
+        publisherJLPAwarded TINYINT,        
+        publisherKimiAwarded TINYINT,
+
         logbookMessageId MEDIUMINT,
 
         INDEX(logbookMessageId)
@@ -74,7 +78,7 @@ def storeBook(book, logbookMessageId):
     isbnTermsOfAvailability = book.isbns[0].termsOfAvailability if len(book.isbns) > 0 else None
 
     # concatenate keywords in array to a string
-    keywords = ""
+    keywords = None
     if len(book.keywords) > 0:
         keywords = ','.join(book.keywords)
 

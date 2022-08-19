@@ -95,9 +95,8 @@ def generateRSSEntries():
 
                 # skip keywords if not present
                 if keywords is not None:
-                    if len(keywords) > 0:
-                        keywordString = ', '.join(keywords.split(','))
-                        entryLines.append(f"Schlagwörter: {keywordString}")
+                    keywordString = ', '.join(keywords.split(','))
+                    entryLines.append(f"Schlagwörter: {keywordString}")
 
                 # add publicationPlace, publisher, publicationYear
                 entryLines.append(f"{publicationPlace}: {publisher}, {publicationYear}")
