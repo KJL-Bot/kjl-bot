@@ -13,946 +13,244 @@
       <link>http://artisticengines.com/kjl/kjlbot.xml</link>
     </image>
     <language>de</language>
-    <lastBuildDate>Fri, 12 Aug 2022 13:04:30 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 19 Aug 2022 09:04:58 +0000</lastBuildDate>
     <item>
-      <title>12 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 12 Bücher wurden zur DNB hinzugefügt.<br>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
 <br>
-<b>Duke Vertrau mir</b><br>
-Von Kerstin Rachfahl<br>
-München: tolino media, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264548044">https://d-nb.info/1264548044</a><br>
-ISBN: 978-3-7546-6499-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Das Gutenachtwürmchen</b><br>
-Von Sabine Kittel<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264548028">https://d-nb.info/1264548028</a><br>
-ISBN: 978-3-7562-7638-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Der Warzenkönig & die Heilerin</b><br>
-Von Godafrid Books<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264547862">https://d-nb.info/1264547862</a><br>
-ISBN: 978-3-7562-7618-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Auf der Suche nach der Chinfeder</b><br>
-Von Franziska Barnert<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264547331">https://d-nb.info/1264547331</a><br>
-ISBN: 978-3-7562-2884-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Kimmis Traumfee</b><br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264547307">https://d-nb.info/1264547307</a><br>
-ISBN: 978-3-7562-3954-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mein XXL-Rätselspaß Peppa Pig</b><br>
-<i>Mit 24 riesigen, bunten Rätseln für Kinder ab 4 Jahren</i><br>
-Köln: Schwager & Steinlein, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264547277">https://d-nb.info/1264547277</a><br>
-ISBN: 978-3-8499-3194-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mein XXL-Rätselspaß PAW Patrol</b><br>
-<i>Mit 24 riesigen, bunten Rätseln für Kinder ab 4 Jahren</i><br>
-Köln: Schwager & Steinlein, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264546971">https://d-nb.info/1264546971</a><br>
-ISBN: 978-3-8499-3195-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Das rollschuhlaufende Dromedar</b><br>
-<i>mit Illustrationen von Dagmar Zehnel</i><br>
-Von Jutta Pillat<br>
-Leipzig: OsirisDruck, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264546815">https://d-nb.info/1264546815</a><br>
-ISBN: 978-3-949240-23-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>"WiBuKi" Wissensbuch für Kinder: Die Katzenfamilie</b><br>
-<i>Vielerlei über Katzen, die auf Samtpfoten die Welt durchstreifen</i><br>
-Von ALLEOVS Verlag ; Victoria Alexikova, Jörg Domberger, Edith Engleitner<br>
-Köln: ALLEOVS GmbH, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264546793">https://d-nb.info/1264546793</a><br>
-ISBN: 978-3-9822515-9-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mein XXL-Rätselblock Dinosaurier</b><br>
-<i>Mit 24 riesigen, bunten Rätseln für Kinder ab 4 Jahren</i><br>
-Köln: Schwager & Steinlein, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264546777">https://d-nb.info/1264546777</a><br>
-ISBN: 978-3-8499-3193-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mein XXL-Rätselspaß Zauberpferde</b><br>
-<i>Mit 24 riesigen bunten Rätseln für Kinder ab 4 Jahren</i><br>
-Köln: Schwager & Steinlein, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264546602">https://d-nb.info/1264546602</a><br>
-ISBN: 978-3-8499-3191-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mein XXL-Rätselspaß Fahrzeuge</b><br>
-<i>Mit 24 riesigen, bunten Rätseln für Kinder ab 4 Jahren</i><br>
-Köln: Schwager & Steinlein, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264546599">https://d-nb.info/1264546599</a><br>
-ISBN: 978-3-8499-3192-6<br>
+<b>Nachts im Töpferladen</b><br>
+<i>Das geheime Picknick – Ein Amrum-Abenteuer</i><br>
+Von Andrea Neseldreher<br>
+Schlagwörter: <br>
+Schöneiche: Biber & Butzemann, 2022<br>
+Erwartete Publikation laut DNB: 2022-07<br>
+DNB Link: <a href="https://d-nb.info/1265596948">https://d-nb.info/1265596948</a><br>
+ISBN: 978-3-95916-093-3<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>]]></description>
-      <guid isPermaLink="false">11583</guid>
-      <pubDate>Fri, 05 Aug 2022 09:15:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>12 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 12 Bücher wurden zur DNB hinzugefügt.<br>
-<br>
-<b>WORDLE Rätsel Junior</b><br>
-<i>Vier Buchstaben - Ein Versuch! Der Rätseltrend - jetzt auch für Kids</i><br>
-Von Stefan Heine<br>
-Stuttgart: Frech, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264668678">https://d-nb.info/1264668678</a><br>
-ISBN: 978-3-7358-9044-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>ChessPlanet - Edahcor's Geheimnis</b><br>
-Von Gabriella Gruber<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264668449">https://d-nb.info/1264668449</a><br>
-ISBN: 978-3-7562-7711-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Tisch-Adventskalender "24 Nostalgische Weihnachtskarten"</b><br>
-Gilching: Korsch Verlag, 2021<br>
-Erwartete Publikation laut DNB: 2021-06<br>
-DNB Link: <a href="https://d-nb.info/1264668384">https://d-nb.info/1264668384</a><br>
-ISBN: 978-3-7827-9757-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Oma liebte Libellen</b><br>
-Von Irene Epp<br>
-Kirchheim: Verlagshaus Schlosser, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264667906">https://d-nb.info/1264667906</a><br>
-ISBN: 978-3-96200-643-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Tisch-Adventskalender "24 Tage Winterzauber im Advent"</b><br>
-Gilching: Korsch Verlag, 2021<br>
-Erwartete Publikation laut DNB: 2021-06<br>
-DNB Link: <a href="https://d-nb.info/1264667515">https://d-nb.info/1264667515</a><br>
-ISBN: 978-3-7827-9756-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Zahlen lernen</b><br>
-<i>Das Mitmachbuch</i><br>
-Von Hedda Lang<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264667477">https://d-nb.info/1264667477</a><br>
-ISBN: 978-3-7562-4389-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Kindergeschichten mit Bildern</b><br>
-<i>Zum Lesen und Vorlesen</i><br>
-Von Melany de Isabeau<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264667019">https://d-nb.info/1264667019</a><br>
-ISBN: 978-3-7562-4820-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Adventskalender "Tiere am Winterteich"</b><br>
-Gilching: Korsch Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-06<br>
-DNB Link: <a href="https://d-nb.info/1264667000">https://d-nb.info/1264667000</a><br>
-ISBN: 978-3-7827-9855-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Adventskalender "Adventslaterne"</b><br>
-Gilching: Korsch Verlag, 2021<br>
-Erwartete Publikation laut DNB: 2021-06<br>
-DNB Link: <a href="https://d-nb.info/1264666799">https://d-nb.info/1264666799</a><br>
-ISBN: 978-3-7827-9754-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>the ELF on the SHELF</b><br>
-<i>Eine Weihnachtstradition</i><br>
-Von Carol V./Chanda A. Aebersold/Bell<br>
-[S.l.] @: The Lumistella Company, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/126466673X">https://d-nb.info/126466673X</a><br>
-ISBN: 978-0-9600665-0-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Wesen der Natur</b><br>
-Von Annika Geringer<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264666675">https://d-nb.info/1264666675</a><br>
-ISBN: 978-3-7565-1979-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Der purpurne Schmetterling</b><br>
-Von Werner Wirth<br>
-[S.l.] @: verlagkunstkonzertkultur., 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264666543">https://d-nb.info/1264666543</a><br>
-ISBN: 978-3-9525248-0-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>]]></description>
-      <guid isPermaLink="false">11679</guid>
-      <pubDate>Sat, 06 Aug 2022 09:15:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>2 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 2 Bücher wurden zur DNB hinzugefügt.<br>
-<br>
-<b>Emma und das kleine Monster</b><br>
-Von Angelika Kütz<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/126474840X">https://d-nb.info/126474840X</a><br>
-ISBN: 978-3-7565-1989-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Der kleine Pinguin entdeckt die Welt und mehr ...</b><br>
-Von Cathrin Zorer<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264748280">https://d-nb.info/1264748280</a><br>
-ISBN: 978-3-7565-1995-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>]]></description>
-      <guid isPermaLink="false">11773</guid>
-      <pubDate>Sun, 07 Aug 2022 09:15:16 +0000</pubDate>
+      <guid isPermaLink="false">12742</guid>
+      <pubDate>Wed, 17 Aug 2022 13:30:06 +0000</pubDate>
     </item>
     <item>
       <title>Ein neues Buch in DNB Datenbank</title>
       <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
 <br>
-<b>Raven Boys</b><br>
-Von Maggie Stiefvater<br>
-München: Knaur Taschenbuch, 2021-<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264372639">https://d-nb.info/1264372639</a><br>
-ISBN: 978-3-426-52897-6<br>
+<b>Das vierte Tier</b><br>
+Von Michael Weber<br>
+Schlagwörter: <br>
+Hamburg: Phloxic Productions, 2022<br>
+Erwartete Publikation laut DNB: 2022-09<br>
+DNB Link: <a href="https://d-nb.info/1265700729">https://d-nb.info/1265700729</a><br>
+ISBN: 978-3-9824424-1-9<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>]]></description>
-      <guid isPermaLink="false">11868</guid>
-      <pubDate>Mon, 08 Aug 2022 09:00:17 +0000</pubDate>
+      <guid isPermaLink="false">12821</guid>
+      <pubDate>Thu, 18 Aug 2022 09:15:06 +0000</pubDate>
     </item>
     <item>
-      <title>11 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 11 Bücher wurden zur DNB hinzugefügt.<br>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
 <br>
-<b>Klaus, die kleine Laus geht in die Welt hinaus</b><br>
-Von Silvia Beiser<br>
-Uelzen: Silvia Beiser, 2022<br>
-Erwartete Publikation laut DNB: 2022-07<br>
-DNB Link: <a href="https://d-nb.info/126481450X">https://d-nb.info/126481450X</a><br>
-ISBN: 978-3-00-072171-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Ganz Sicher Nicht</b><br>
-Von Sunil Mann<br>
-Werdenberg: da bux, 2022<br>
+<b>MOPF-MINI Nr. 7, 8, 9</b><br>
+<i>Mopf und sein dinosaurischer Freund Aaroon, Mopf zeigt uns Wege der Dankbarkeit, Mopf und der Zauberwurm</i><br>
+Schlagwörter: <br>
+Dipperz: Appel Verlag GmbH, 2022<br>
 Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264814259">https://d-nb.info/1264814259</a><br>
-ISBN: 978-3-906876-28-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Marla Rockt</b><br>
-Von Alice Gabathuler<br>
-Werdenberg: da bux, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264814186">https://d-nb.info/1264814186</a><br>
-ISBN: 978-3-906876-31-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Eine Million Dollar</b><br>
-Von Carlo Meier<br>
-Werdenberg: da bux, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264814127">https://d-nb.info/1264814127</a><br>
-ISBN: 978-3-906876-30-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Flabby Frosch hat Hunger!</b><br>
-<i>Vor dem Essen nicht verggessen, Hände waschen dass ist wichtig, aber bitte richtig!</i><br>
-Von Jeannette Vogel<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264814070">https://d-nb.info/1264814070</a><br>
-ISBN: 978-3-7565-2023-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Es war einmal in Afrika - Vogelgeschichten aus Namibia</b><br>
-Von Meik Führing<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264813910">https://d-nb.info/1264813910</a><br>
-ISBN: 978-3-7565-1996-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Die Dämonenpforte</b><br>
-Von Andreas Gößling<br>
-Falkensee: MayaMedia, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264813848">https://d-nb.info/1264813848</a><br>
-ISBN: 978-3-944488-60-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Love Day Zero</b><br>
-Von Mirjam H. Hüberli<br>
-Werdenberg: da bux, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264813791">https://d-nb.info/1264813791</a><br>
-ISBN: 978-3-906876-29-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Flabby Frosch/Flabby Frosch feiert Geburtstag!</b><br>
-<i>1,2,3,4 Kerzen auf dem Kuchen, das Geburtstagskind musst du erst Mal suchen!</i><br>
-Von Jeannette Vogel<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264813767">https://d-nb.info/1264813767</a><br>
-ISBN: 978-3-7565-2028-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Flabby Frosch muss Mal!</b><br>
-<i>Ob "Gross" oder "Klein", in die Toilette muss es rein!</i><br>
-Von Jeannette Vogel<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264813716">https://d-nb.info/1264813716</a><br>
-ISBN: 978-3-7565-2018-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Flabby Frosch/Flabby Frosch geht zu Bett!</b><br>
-<i>Nach dem Spielen und Toben muss dein Körper sich erholen.</i><br>
-Von Jeannette Vogel<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264813597">https://d-nb.info/1264813597</a><br>
-ISBN: 978-3-7565-2026-8<br>
+DNB Link: <a href="https://d-nb.info/1265700281">https://d-nb.info/1265700281</a><br>
+ISBN: 978-3-944756-25-7<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>]]></description>
-      <guid isPermaLink="false">11869</guid>
-      <pubDate>Mon, 08 Aug 2022 09:15:17 +0000</pubDate>
+      <guid isPermaLink="false">12823</guid>
+      <pubDate>Thu, 18 Aug 2022 09:45:05 +0000</pubDate>
     </item>
     <item>
-      <title>18 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 18 Bücher wurden zur DNB hinzugefügt.<br>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
 <br>
-<b>Tante Tandelei und der grüne Schimmel</b><br>
-<i>Roman für Kinder</i><br>
-Von Rolf Esser<br>
+<b>Frieda und das Eichhörnchen</b><br>
+Von Regina Schneider<br>
+Schlagwörter: <br>
 Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264946686">https://d-nb.info/1264946686</a><br>
-ISBN: 978-3-347-70665-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>GREAT WAR GAMES</b><br>
-<i>DAS SPIEL BEGINNT</i><br>
-Von The Warrior DK<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264946120">https://d-nb.info/1264946120</a><br>
-ISBN: 978-3-347-66227-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Eine tierische Reise - Aufbruch ins Abenteuer</b><br>
-Von Denise Bormann<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264945752">https://d-nb.info/1264945752</a><br>
-ISBN: 978-3-7562-2312-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Gut und Boese</b><br>
-<i>Im Bann der Sterne</i><br>
-Von Vivian M. Woodford<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264945744">https://d-nb.info/1264945744</a><br>
-ISBN: 978-3-7562-7679-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>GREAT WAR GAMES</b><br>
-<i>DAS SPIEL BEGINNT</i><br>
-Von The Warrior DK<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264945639">https://d-nb.info/1264945639</a><br>
-ISBN: 978-3-347-66243-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Die Hüter der vier Elemente</b><br>
-<i>Das Land der Schatten</i><br>
-Von Dagmar Winter<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/126494554X">https://d-nb.info/126494554X</a><br>
-ISBN: 978-3-7562-0326-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Radabar Teil4</b><br>
-<i>Die Bannzone</i><br>
-Von Erwin Sittig<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264945302">https://d-nb.info/1264945302</a><br>
-ISBN: 978-3-347-63990-4<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Gilbys Versprechen Band 3</b><br>
-<i>Ein Junge aus Midgard und die Horrorgeschichte von Ragnarök</i><br>
-Von Gisa Seeliger<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264945159">https://d-nb.info/1264945159</a><br>
-ISBN: 978-3-7562-7691-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Matti, Joke und die Waldlü</b><br>
-Von Silvia Gerbrand, Ingrid Tschorn<br>
-Werlte: Goldschmidt GmbH, 2022<br>
-Erwartete Publikation laut DNB: 2022-06<br>
-DNB Link: <a href="https://d-nb.info/1264945116">https://d-nb.info/1264945116</a><br>
-ISBN: 978-3-939772-66-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Radabar Teil4</b><br>
-<i>Die Bannzone</i><br>
-Von Erwin Sittig<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264945035">https://d-nb.info/1264945035</a><br>
-ISBN: 978-3-347-63991-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Tante Tandelei und der grüne Schimmel</b><br>
-<i>Roman für Kinder</i><br>
-Von Rolf Esser<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264944918">https://d-nb.info/1264944918</a><br>
-ISBN: 978-3-347-70666-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Unter dem Regenbogen</b><br>
-<i>Neun Stücke für Klavier</i><br>
-Von Günter Puzberg<br>
-Detmold: Geberg Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264944551">https://d-nb.info/1264944551</a><br>
-ISBN: 978-3-910436-00-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Vernügt wandert der Mond</b><br>
-<i>Đủng đỉnh trăng đi</i><br>
-Berlin: HORAMI Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264944195">https://d-nb.info/1264944195</a><br>
-ISBN: 978-3-9824396-9-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Ava - Die kleine Vogelfrau</b><br>
-Von Michaele Nöth<br>
-Berlin: epubli, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264944012">https://d-nb.info/1264944012</a><br>
-ISBN: 978-3-7565-2066-4<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Armstrong</b><br>
-<i>Die abenteuerliche Reise einer Maus zum Mond -Chuyến phiêu lưu đến Mặt Trăng của Chuột Nhỏ</i><br>
-Berlin: HORAMI Verlag, 2022<br>
 Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264943938">https://d-nb.info/1264943938</a><br>
-ISBN: 978-3-9824396-1-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Blätter vom Baum der Hoffnung</b><br>
-<i>Acht kleine Kompositionen für Klavier</i><br>
-Von Günter Puzberg<br>
-Detmold: Geberg Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264943776">https://d-nb.info/1264943776</a><br>
-ISBN: 978-3-910436-01-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Entdecke die Fledermäuse</b><br>
-Von Eckhard Grimmberger<br>
-Münster: Natur und Tier, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1264943490">https://d-nb.info/1264943490</a><br>
-ISBN: 978-3-86659-502-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>the ELF on the SHELF</b><br>
-<i>Eine Weihnachtstradition</i><br>
-Von Carol V./Chanda A. Aebersold/Bell<br>
-Atlanta: The Lumistella Company, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1264943466">https://d-nb.info/1264943466</a><br>
-ISBN: 978-0-9600665-2-0<br>
+DNB Link: <a href="https://d-nb.info/1265699933">https://d-nb.info/1265699933</a><br>
+ISBN: 978-3-347-69424-8<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>]]></description>
-      <guid isPermaLink="false">11964</guid>
-      <pubDate>Tue, 09 Aug 2022 09:15:16 +0000</pubDate>
+      <guid isPermaLink="false">12824</guid>
+      <pubDate>Thu, 18 Aug 2022 10:00:04 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
+<br>
+<b>Die Abenteuer des Odysseus</b><br>
+<i>Frei nach dem homerischen Epos >Odyssee<</i><br>
+Von JJ Platz<br>
+Schlagwörter: <br>
+Norderstedt: BoD – Books on Demand, 2022<br>
+Erwartete Publikation laut DNB: 2022-08<br>
+DNB Link: <a href="https://d-nb.info/1265699402">https://d-nb.info/1265699402</a><br>
+ISBN: 978-3-7568-0226-5<br>
+Dieser Verlag is laut Datenbank nicht relevant.<br>
+<br>]]></description>
+      <guid isPermaLink="false">12826</guid>
+      <pubDate>Thu, 18 Aug 2022 10:30:06 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
+<br>
+<b>Die Wolke Wolfgang</b><br>
+Von Michael Weber<br>
+Schlagwörter: <br>
+Hamburg: Phloxic Productions, 2022<br>
+Erwartete Publikation laut DNB: 2022-09<br>
+DNB Link: <a href="https://d-nb.info/1265699275">https://d-nb.info/1265699275</a><br>
+ISBN: 978-3-9824424-0-2<br>
+Dieser Verlag is laut Datenbank nicht relevant.<br>
+<br>]]></description>
+      <guid isPermaLink="false">12828</guid>
+      <pubDate>Thu, 18 Aug 2022 11:00:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
+<br>
+<b>Marie und das Rätsel der Elfen</b><br>
+Von Gerda Saliger<br>
+Schlagwörter: <br>
+Großebersdorf: myMorawa, 2022<br>
+Erwartete Publikation laut DNB: 2022-08<br>
+DNB Link: <a href="https://d-nb.info/1265697973">https://d-nb.info/1265697973</a><br>
+ISBN: 978-3-99139-179-1<br>
+Dieser Verlag is laut Datenbank nicht relevant.<br>
+<br>]]></description>
+      <guid isPermaLink="false">12829</guid>
+      <pubDate>Thu, 18 Aug 2022 11:15:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
+<br>
+<b>Wenn Livie träumt, ...</b><br>
+Von Astrid Wurzenreiner<br>
+Schlagwörter: <br>
+Großebersdorf: myMorawa, 2022<br>
+Erwartete Publikation laut DNB: 2022-08<br>
+DNB Link: <a href="https://d-nb.info/1265697949">https://d-nb.info/1265697949</a><br>
+ISBN: 978-3-99139-078-7<br>
+Dieser Verlag is laut Datenbank nicht relevant.<br>
+<br>]]></description>
+      <guid isPermaLink="false">12830</guid>
+      <pubDate>Thu, 18 Aug 2022 11:30:05 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
+<br>
+<b>Märchenwelt</b><br>
+<i>Märchen und Geschichten</i><br>
+Von Wolfgang Büttner<br>
+Schlagwörter: <br>
+Norderstedt: BoD – Books on Demand, 2022<br>
+Erwartete Publikation laut DNB: 2022-08<br>
+DNB Link: <a href="https://d-nb.info/1265789835">https://d-nb.info/1265789835</a><br>
+ISBN: 978-3-7568-1391-9<br>
+Dieser Verlag is laut Datenbank nicht relevant.<br>
+<br>]]></description>
+      <guid isPermaLink="false">12917</guid>
+      <pubDate>Fri, 19 Aug 2022 09:03:51 +0000</pubDate>
     </item>
     <item>
       <title>9 neue Bücher in DNB Datenbank</title>
       <description><![CDATA[Die folgenden 9 Bücher wurden zur DNB hinzugefügt.<br>
 <br>
-<b>Mein Gipfelbuch</b><br>
-<i>Wandertagebuch für Kinder</i><br>
-Von Daniela Layher<br>
-Vachendorf: Kampenwand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265042500">https://d-nb.info/1265042500</a><br>
-ISBN: 978-3-98660-096-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Alles für (m) einen Traum</b><br>
-Von Anastasia Midsjan<br>
+<b>Wintersternenhimmel</b><br>
+<i>Du gehst niemals allein</i><br>
+Von Mandy Domke<br>
+Schlagwörter: <br>
 Norderstedt: BoD – Books on Demand, 2022<br>
 Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/126504211X">https://d-nb.info/126504211X</a><br>
-ISBN: 978-3-7562-7539-7<br>
+DNB Link: <a href="https://d-nb.info/1265789746">https://d-nb.info/1265789746</a><br>
+ISBN: 978-3-7562-2724-2<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Hallo Gott jetzt bin ich da</b><br>
-Von Renate Reinagl-Messmann<br>
+<b>Übung macht den Reiner</b><br>
+Von Ingrid Rodinger<br>
+Schlagwörter: <br>
 Norderstedt: BoD – Books on Demand, 2022<br>
 Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265041776">https://d-nb.info/1265041776</a><br>
-ISBN: 978-3-7557-8579-8<br>
+DNB Link: <a href="https://d-nb.info/1265789738">https://d-nb.info/1265789738</a><br>
+ISBN: 978-3-7568-1403-9<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Der Fuchs</b><br>
-<i>Das Urvertrauen ist in dir</i><br>
-Von Sonja Kainzbauer<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265041431">https://d-nb.info/1265041431</a><br>
-ISBN: 978-3-7562-7423-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mein erstes Wandertagebuch</b><br>
-<i>Gipfelbuch | Tourenbuch | Reisetagebuch für Kinder | Format A5 | Zum Eintragen inkl Rätsel, Spiele & Witze</i><br>
-Von Daniela Layher<br>
-Vachendorf: Kampenwand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/126504113X">https://d-nb.info/126504113X</a><br>
-ISBN: 978-3-98660-097-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Römische Geschichte für Kinder</b><br>
-Von Krüßmann Jan<br>
-Kiedrich: BrainBook Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265040907">https://d-nb.info/1265040907</a><br>
-ISBN: 978-3-96890-127-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Besuch für Friedel und Flupsi</b><br>
-<i>ein veganes Kinderkochbuch</i><br>
-Von Moïra Himmelsbach<br>
-Köln: Der vegane Kinderbuchverlag Next Level, 2022<br>
+<b>Die Abenteuer von Fynn Eichhorn Teil 3</b><br>
+Von Stefan Orben<br>
+Schlagwörter: <br>
+Vachendorf: Feiyr, 2022<br>
 Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265039909">https://d-nb.info/1265039909</a><br>
-ISBN: 978-3-9823851-2-9<br>
+DNB Link: <a href="https://d-nb.info/1265789002">https://d-nb.info/1265789002</a><br>
+ISBN: 978-3-98756-122-1<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Luxi</b><br>
-<i>Der Traumtänzer</i><br>
-Von Sonja Stowasser<br>
+<b>VeggyFlow/Die Geschichten aus dem Veggy Town</b><br>
+Von THENKS ART<br>
+Schlagwörter: <br>
 Berlin: epubli, 2022<br>
 Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265039585">https://d-nb.info/1265039585</a><br>
-ISBN: 978-3-7565-2077-0<br>
+DNB Link: <a href="https://d-nb.info/1265788359">https://d-nb.info/1265788359</a><br>
+ISBN: 978-3-7565-2336-8<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Aus tiefster Not schrei ich zu dir</b><br>
-<i>Elegie - Konzertstürck für Violoncello und Streichorchester</i><br>
-Von Günter Puzberg<br>
-Detmold: Geberg Verlag, 2021<br>
-Erwartete Publikation laut DNB: 2021-12<br>
-DNB Link: <a href="https://d-nb.info/1265039380">https://d-nb.info/1265039380</a><br>
-ISBN: 978-3-910436-06-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>]]></description>
-      <guid isPermaLink="false">12060</guid>
-      <pubDate>Wed, 10 Aug 2022 09:15:15 +0000</pubDate>
-    </item>
-    <item>
-      <title>33 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 33 Bücher wurden zur DNB hinzugefügt.<br>
-<br>
-<b>Hampelfiguren für Kinder ab 4 Jahren</b><br>
-<i>Vorlagen zum Anmalen, Ausschneiden und Basteln</i><br>
-Von Vicky Bo ; Alexandra Schönfeld<br>
-Laufen, Salzach: Vicky Bo Verlag GmbH, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/126513734X">https://d-nb.info/126513734X</a><br>
-ISBN: 978-3-944956-94-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Die Zuckerbäckermaus</b><br>
-Von Rose Namalie<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/126513720X">https://d-nb.info/126513720X</a><br>
-ISBN: 978-3-7562-3302-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Der kleine Stern Fridolin</b><br>
-Von Brigitte Höfer<br>
-Dietzenbach: Höfer Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265137102">https://d-nb.info/1265137102</a><br>
-ISBN: 978-3-931103-98-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Porkis Fluch</b><br>
-<i>Ein spannendes und fantastisches Abenteuer ab 8 Jahren</i><br>
-Von Jana Paradigi<br>
-Vachendorf: Nova MD, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265136793">https://d-nb.info/1265136793</a><br>
-ISBN: 978-3-98595-360-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>In der Schule eingesperrt</b><br>
-<i>Schulausgabe</i><br>
-Von Judith Le Huray<br>
-München: Hase und Igel Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265136734">https://d-nb.info/1265136734</a><br>
-ISBN: 978-3-86316-237-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Eichhörnchenbrüder</b><br>
-<i>Eine Geschichte vom Abschiednehmen</i><br>
-Von Stefanie Steenken<br>
-Mannheim: bad project, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265136726">https://d-nb.info/1265136726</a><br>
-ISBN: 978-3-949294-56-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Alles für (m) einen Traum</b><br>
-<i>Mystery Roman</i><br>
-Von Anastasia Midsjan<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265136440">https://d-nb.info/1265136440</a><br>
-ISBN: 978-3-7562-4070-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Wissens-Malbuch für Kinder - EUROPA</b><br>
-<i>Landschaften, Tiere und typische Dinge zum Ausmalen. 6-12 Jahre</i><br>
-Von Vicky Bo<br>
-Laufen, Salzach: Vicky Bo Verlag GmbH, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265136211">https://d-nb.info/1265136211</a><br>
-ISBN: 978-3-944956-95-4<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Oma erzählt ihren Enkelkindern Tiergeschichten</b><br>
-Von Ulrike Hannig<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265135916">https://d-nb.info/1265135916</a><br>
-ISBN: 978-3-7562-3282-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Langarm-Shirt Grau Fuchs 134/140</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134979">https://d-nb.info/1265134979</a><br>
-ISBN: 0-13-097798-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Tom im Weltall</b><br>
-Von Emily Gaß<br>
+<b>Zauneidechse Freddy</b><br>
+Von Diana D. Lucke<br>
+Schlagwörter: <br>
 Berlin: epubli, 2022<br>
 Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265134928">https://d-nb.info/1265134928</a><br>
-ISBN: 978-3-7565-2092-3<br>
+DNB Link: <a href="https://d-nb.info/1265788294">https://d-nb.info/1265788294</a><br>
+ISBN: 978-3-7565-2335-1<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Globi Pyjama grau Tiere 134/140</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134731">https://d-nb.info/1265134731</a><br>
-ISBN: 0-13-097782-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Antonius Priemelmann macht Urlaub</b><br>
-Von Jochen Vahle<br>
-Bielefeld: tpk-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134537">https://d-nb.info/1265134537</a><br>
-ISBN: 978-3-936359-93-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi Pyjama grau Tiere 110/116</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134510">https://d-nb.info/1265134510</a><br>
-ISBN: 0-13-097780-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Sarah's Eichhörnchen-Familie aus dem Engadin</b><br>
-Von Meta Kollmar<br>
-St. Moritz: Gammeter Media AG, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265134448">https://d-nb.info/1265134448</a><br>
-ISBN: 978-3-9525338-7-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi Pyjama grau Tiere 98/104</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134375">https://d-nb.info/1265134375</a><br>
-ISBN: 0-13-097779-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Langarm-Shirt Grau Fuchs 122/128</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134324">https://d-nb.info/1265134324</a><br>
-ISBN: 0-13-097797-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi Langarm-Shirt Grau Delfin 98/104</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134316">https://d-nb.info/1265134316</a><br>
-ISBN: 0-13-097787-X<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Pyjama Grau rennt 134/140</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134227">https://d-nb.info/1265134227</a><br>
-ISBN: 0-13-097794-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Langarm-Shirt Grau Fuchs 110/116</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265134081">https://d-nb.info/1265134081</a><br>
-ISBN: 0-13-097796-9<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi Pyjama grau Tiere 122/128</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/126513393X">https://d-nb.info/126513393X</a><br>
-ISBN: 0-13-097781-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi T-Shirt gestreift Einrad 122/128</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133921">https://d-nb.info/1265133921</a><br>
-ISBN: 0-13-097783-7<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi T-Shirt gestreift Einrad 134/140</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133891">https://d-nb.info/1265133891</a><br>
-ISBN: 0-13-097786-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Pyjama Grau rennt 110/116</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133867">https://d-nb.info/1265133867</a><br>
-ISBN: 0-13-097792-6<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi Langarm-Shirt Grau Delfin 110/116</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133808">https://d-nb.info/1265133808</a><br>
-ISBN: 0-13-097788-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Der rotgoldene Planet Neyron</b><br>
+<b>Teddy Puck und seine kleine Freundin Peggy</b><br>
 Von Mari- Wall<br>
+Schlagwörter: <br>
 Berlin: epubli, 2022<br>
 Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265133662">https://d-nb.info/1265133662</a><br>
-ISBN: 978-3-7565-2113-5<br>
+DNB Link: <a href="https://d-nb.info/1265788286">https://d-nb.info/1265788286</a><br>
+ISBN: 978-3-7565-2342-9<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Globi Langarm-Shirt Grau Delfin 122/128</b><br>
-Zürich: Globi-Verlag, 2022<br>
+<b>Abenteuer mit der Gemüsebande</b><br>
+<i>Das Fußballspiel</i><br>
+Von Jeanette Eckert<br>
+Schlagwörter: <br>
+Chemnitz: net-Verlag, 2022<br>
 Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133611">https://d-nb.info/1265133611</a><br>
-ISBN: 0-13-097789-6<br>
+DNB Link: <a href="https://d-nb.info/1265788049">https://d-nb.info/1265788049</a><br>
+ISBN: 978-3-95720-364-9<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Globi T-Shirt gestreift Einrad 98/104</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133573">https://d-nb.info/1265133573</a><br>
-ISBN: 0-13-097784-5<br>
+<b>Märchen vom glücklichen Leben</b><br>
+Von Lisa Carma<br>
+Schlagwörter: <br>
+Stolzalpe: Hager, Wolfgang, 2022<br>
+Erwartete Publikation laut DNB: 2022-08<br>
+DNB Link: <a href="https://d-nb.info/1265787808">https://d-nb.info/1265787808</a><br>
+ISBN: 978-3-903443-05-1<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>
-<b>Globine Pyjama Grau rennt 122/128</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133352">https://d-nb.info/1265133352</a><br>
-ISBN: 0-13-097793-4<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi T-Shirt gestreift Einrad 110/116</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133344">https://d-nb.info/1265133344</a><br>
-ISBN: 0-13-097785-3<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globi Langarm-Shirt Grau Delfin 134/140</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133336">https://d-nb.info/1265133336</a><br>
-ISBN: 0-13-097790-X<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Pyjama Grau rennt 98/104</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133158">https://d-nb.info/1265133158</a><br>
-ISBN: 0-13-097791-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Globine Langarm-Shirt Grau Fuchs 98/104</b><br>
-Zürich: Globi-Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265133115">https://d-nb.info/1265133115</a><br>
-ISBN: 0-13-097795-0<br>
+<b>Bionik – in Wald und Flur</b><br>
+<i>Band 18</i><br>
+Von Bernd Hill<br>
+Schlagwörter: <br>
+Weimar: Knabe Verlag Weimar, 2022<br>
+Erwartete Publikation laut DNB: 2022-03<br>
+DNB Link: <a href="https://d-nb.info/1265787271">https://d-nb.info/1265787271</a><br>
+ISBN: 978-3-944575-47-6<br>
 Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>]]></description>
-      <guid isPermaLink="false">12155</guid>
-      <pubDate>Thu, 11 Aug 2022 09:15:18 +0000</pubDate>
-    </item>
-    <item>
-      <title>8 neue Bücher in DNB Datenbank</title>
-      <description><![CDATA[Die folgenden 8 Bücher wurden zur DNB hinzugefügt.<br>
-<br>
-<b>Zamondra</b><br>
-<i>Aufbruch ins Ungewisse</i><br>
-Von Goetz Markgraf<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265203229">https://d-nb.info/1265203229</a><br>
-ISBN: 978-3-7562-5681-5<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Aura von Thalos</b><br>
-<i>Am Pass</i><br>
-Von Britta Heinemeyer<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265203199">https://d-nb.info/1265203199</a><br>
-ISBN: 978-3-347-61630-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Jahreszeitengeschichten - Jahreszeitengedichte</b><br>
-<i>Beiträge zum Erzählteil im Hauptunterricht an Waldorfschulen</i><br>
-Von Gerhard Hallen<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265203024">https://d-nb.info/1265203024</a><br>
-ISBN: 978-3-7562-0120-4<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Aura von Thalos</b><br>
-<i>Am Pass</i><br>
-Von Britta Heinemeyer<br>
-Hamburg: tredition, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265202591">https://d-nb.info/1265202591</a><br>
-ISBN: 978-3-347-61631-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Tinka und Mia:Wir Katzen vom Fluss</b><br>
-<i>In einer Neuen Zeit</i><br>
-Von Maria Roth<br>
-Norderstedt: BoD – Books on Demand, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265201854">https://d-nb.info/1265201854</a><br>
-ISBN: 978-3-7562-5775-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Mumien küsst man nicht</b><br>
-Von Stephan Hähnel<br>
-Berlin: Periplaneta, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/1265200041">https://d-nb.info/1265200041</a><br>
-ISBN: 978-3-95996-249-0<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Hermännchen unterwegs in Lippe - Teil 1: Das Hermannsdenkmal</b><br>
-Detmold: Lippischer Heimatbund, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1265200009">https://d-nb.info/1265200009</a><br>
-ISBN: 978-3-941726-90-1<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>
-<b>Der Garten des Abdul Gasazi</b><br>
-Von Chris Van Allsburg<br>
-Berlin: Kraus Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-09<br>
-DNB Link: <a href="https://d-nb.info/126519954X">https://d-nb.info/126519954X</a><br>
-ISBN: 978-3-9823493-1-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>]]></description>
-      <guid isPermaLink="false">12251</guid>
-      <pubDate>Fri, 12 Aug 2022 09:15:16 +0000</pubDate>
-    </item>
-    <item>
-      <title>Ein neues Buch in DNB Datenbank</title>
-      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
-<br>
-<b>Teufelspakte in der Kinder-und Jugendliteratur. Das Beispiel von Timm Thaler oder Das verkaufte Lachen und Krabat</b><br>
-Von Teresa Simon<br>
-Schlagwörter: Jugendliteratur, Kind<br>
-München: GRIN Verlag, 2022<br>
-Erwartete Publikation laut DNB: 2022-08<br>
-DNB Link: <a href="https://d-nb.info/1250917204">https://d-nb.info/1250917204</a><br>
-ISBN: 978-3-346-58335-2<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>]]></description>
-      <guid isPermaLink="false">12263</guid>
-      <pubDate>Fri, 12 Aug 2022 12:35:46 +0000</pubDate>
+      <guid isPermaLink="false">12918</guid>
+      <pubDate>Fri, 19 Aug 2022 09:04:54 +0000</pubDate>
     </item>
   </channel>
 </rss>

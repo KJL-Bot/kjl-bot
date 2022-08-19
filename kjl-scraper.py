@@ -42,7 +42,7 @@ def scrape():
             newBookCounter += 1
 
             # log keywords if there are any
-            if len(book.keywords > 0):
+            if len(book.keywords) > 0:
                 message = f"Keywords for book detected: {book.linkToDataset} -> {book.keywords}"
                 logbookManager.logMessage(message)
 
