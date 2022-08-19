@@ -74,7 +74,7 @@ def scrape():
 
     # create JSON file recent valid books
     print("Generating JSON Feed.")
-    validBookEntries = jsonExporter.generateValidBookEntries(10000)
+    validBookEntries = jsonExporter.generateValidBookEntries(20000)
     jsonFilePath = jsonExporter.writeBookEntriesToJSONFile(validBookEntries)
 
     # transfer xml file to FTP server
