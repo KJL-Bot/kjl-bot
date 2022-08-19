@@ -1,4 +1,5 @@
 import ftplib
+import pysftp
 import os.path
 import os
 import datetime
@@ -6,95 +7,115 @@ import re
 import config
 
 import glob
-from peekaboo import ftpUsername, ftpPassword # peekaboo.py is gitignored -> create it yourself
+import peekaboo # peekaboo.py is gitignored -> create it yourself
 from pathlib import Path
 
+# regular FTP
+def transferFileViaFTP(fileName, ftpTargetFolder):
 
-def transferFile(fileName, ftpTargetFolder):
-     
     targetUrl = None
- 
+
     try:
- 
+
         with ftplib.FTP(config.ftpServer) as ftp:
-         
+
             # login
-            ftp.login(ftpUsername, ftpPassword)   
- 
+            ftp.login(peekaboo.ftpUsername, peekaboo.ftpPassword)
+
             # change to target dir
             ftp.cwd(ftpTargetFolder)
- 
+
             with open(fileName, 'rb') as fp:
-             
+
                 res = ftp.storbinary("STOR %s" % fileName.name, fp)
-                 
+
                 if not res.startswith('226 Transfer complete'):
-                     
+
                     print('Upload failed')
-             
+
             targetUrl = os.path.join(config.ftpServer, config.ftpTargetFolder, fileName)
-                   
+
     except Exception as e:
         print('FTP error:', e)
- 
+
     return targetUrl
 
+# used for KJL Bot Server
+def transferFileViaFTP_SSL(fileName, ftpSSLTargetDir):
 
-def transferMultipleFiles(folderPath, searchTerm, ftpTargetDir):
+    ftpSSLHostName = config.kjlFtpSSLHostName
+    ftpSSLPort = config.kjlFtpSSLPort
+    ftpSSLUsername = peekaboo.kjlFtpSSLUsername
+    ftpSSLPassword = peekaboo.kjlFtpSSLPassword
 
-    # get all files matching search term
-    matchingFiles = folderPath.glob(searchTerm)
+    client = ftplib.FTP_TLS(timeout=10)
+    client.connect(ftpSSLHostName, ftpSSLPort)
 
-    for fileName in matchingFiles:
-        print("\nTransfering file: %s" % fileName)
-        transferFile(fileName, ftpTargetDir)
+    # enable TLS
+    client.auth()
+    client.prot_p()
+
+    client.login(ftpSSLUsername,ftpSSLPassword)
+
+    targetUrl = None
+
+    try:
+
+        with ftplib.FTP_TLS(timeout=10) as ftp:
+
+            ftp.connect(ftpSSLHostName, ftpSSLPort)
+
+            # enable TLS
+            ftp.auth()
+            ftp.prot_p()
+
+            # login
+            ftp.login(ftpSSLUsername,ftpSSLPassword)
+
+            # change to target dir
+            ftp.cwd(ftpSSLTargetDir)
+
+            with open(fileName, 'rb') as fp:
+
+                res = ftp.storbinary("STOR %s" % fileName.name, fp)
+
+            targetUrl = os.path.join(ftpSSLHostName, ftpSSLTargetDir, fileName)
+
+    except Exception as e:
+        print('FTP error:', e)
+
+    return targetUrl
+
+# not used for KJL Bot
+def transferFileViaSFTP(fileName, sftpHostName, sftpPort, sftpUsername, sftpPassword, sftpTargetDir):
+
+    # early return if file does not exist
+    if not os.path.exists(fileName):
+        print(f"Local file {fileName} does not exist any more. Skipping transfer.")
+        return
+
+
+    # do not check host key
+    cnopts = pysftp.CnOpts()
+    cnopts.hostkeys = None
+
+    with pysftp.Connection(host = sftpHostName, username=sftpUsername, password=sftpPassword, port=sftpPort, cnopts=cnopts) as sftp:
+
+        with sftp.cd(sftpTargetDir):
+            sftp.put(fileName)
 
 
 
 
-def dateOfYoungestFTPFile(ftpDir):
-
-    # default answer
-    datetimeOfYoungestFile = None
-
-    with ftplib.FTP(hostname) as ftp:
-        
-
-        # login
-        ftp.login(ftpUsername, ftpPassword)   
-
-        # change to target dir
-        ftp.cwd(ftpDir)
-
-        fileList = ftp.nlst()
-
-        # youngest file at the end of the list
-        sortedFileList = sorted(fileList)
-
-        print(sortedFileList)
-
-        # grab youngest file
-        if len(sortedFileList) > 0:
-            youngestFile = sortedFileList[-1]
-
-            # extract date from filename
-            match = re.search(r'(.+)-(.+)-(.+)\..*', youngestFile)
-            year = int(match.group(1))
-            month = int(match.group(2))
-            day = int(match.group(3))
-    
-
-            # create datetime
-            datetimeOfYoungestFile = datetime.datetime(year=year, month=month, day=day)
-
-    # return result
-    return datetimeOfYoungestFile
-
-def removeFile(filePath):
-    os.remove(filePath)
 
 # Main file
 if __name__ == "__main__":
 
-    fileName = Path('kjlbot.xml')
-    transferFile(fileName, config.ftpTargetFolder)
+    # transfer to Artistic Engines FTP Server
+    # fileName = Path('kjlbot.xml')
+    # transferFileViaFTP(fileName, config.ftpTargetFolder)
+
+    # transfer to KJL Bot SFTP Server
+    #transferFileViaSFTP(fileName, sftpHostName = sftpHostName, sftpPort = sftpPort, sftpUsername = sftpUsername, sftpPassword = sftpPassword, sftpTargetDir = sftpTargetDir)
+    fileName = Path('recentBooks.json')
+    transferFileViaFTP_SSL(fileName, config.kjlFtpSSLTargetDir)

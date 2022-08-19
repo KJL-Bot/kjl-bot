@@ -28,5 +28,11 @@ rssFeedLanguage = 'de'
 recentBooksJsonFileName = "recentBooks.json"
 jsonFeedUrl = f'http://artisticengines.com/kjl/{recentBooksJsonFileName}'
 
+# Artistic Engines FTP
 ftpServer = 'ftp.artisticengines.com'
 ftpTargetFolder = 'kjl/'
+
+# KJL Server FTP-SSL
+kjlFtpSSLHostName = "kjl-bot.de"
+kjlFtpSSLPort = 21
+kjlFtpSSLTargetDir = "web/wp-content/uploads/kjl-data"

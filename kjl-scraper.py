@@ -69,7 +69,7 @@ def scrape():
 
     # transfer xml file to FTP server
     print("Transfering RSS to FTP server.")
-    ftpCoordinator.transferFile(rssFilePath, config.ftpTargetFolder)
+    ftpCoordinator.transferFileViaFTP(rssFilePath, config.ftpTargetFolder) # artistic engines
     print(f"Feed URL is: {config.rssFeedUrl}")
 
     # create JSON file recent valid books
@@ -77,10 +77,16 @@ def scrape():
     validBookEntries = jsonExporter.generateValidBookEntries(20000)
     jsonFilePath = jsonExporter.writeBookEntriesToJSONFile(validBookEntries)
 
-    # transfer xml file to FTP server
-    print("Transfering JSON to FTP server.")
-    ftpCoordinator.transferFile(jsonFilePath, config.ftpTargetFolder)
+    # transfer JSON file to Artistic Engines FTP server
+    print("Transfering JSON to Artistic Engines FTP server.")
+    ftpCoordinator.transferFileViaFTP(jsonFilePath, config.ftpTargetFolder)
     print(f"JSON URL is: {config.jsonFeedUrl}")
+
+    # transfer JSON file to KJL FTP server
+    print("Transfering JSON to KJL FTP server.")
+    ftpCoordinator.transferFileViaFTP_SSL(jsonFilePath, config.kjlFtpSSLTargetDir) # KJL Bot Server    
+
+
 
     # bookManager.displayBookContent()
 
