@@ -52,7 +52,8 @@ def generateRSSEntries():
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
         command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
-            "FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
+            ", publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded" +\
+            " FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
 
 
         try:
@@ -65,7 +66,8 @@ def generateRSSEntries():
             # count the number of valid books
             bookCounter = 0
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate,
+            addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # skip entries without ISDN
                 if isbnWithDashes is None:
@@ -116,24 +118,22 @@ def generateRSSEntries():
                 if matchesRelevantPublisher is not None:
                     entryLines.append(f"Relevanter Verlag identifiziert: Datenbank ID {matchesRelevantPublisher}")
 
-                    # get awards
-                    (jlpNominated, jlpAwarded, kimiAwarded) = publishers.getAwardsForPublisherWithID(cursor, matchesRelevantPublisher)
                     awardsMessage = ""
 
-                    if jlpNominated == 1:
-                        awardsMessage += "jlpNominated. "
+                    if publisherJLPNominated == 1:
+                        awardsMessage += "JLP nominiert. "
 
-                    if jlpAwarded == 1:
-                        awardsMessage += "jlpAwarded. "
+                    if publisherJLPAwarded == 1:
+                        awardsMessage += "JLP Preis. "
 
-                    if kimiAwarded == 1:
-                        awardsMessage += "kimiAwarded. "
+                    if publisherKimiAwarded == 1:
+                        awardsMessage += "KIMI Siegel. "
 
                     # Remove white spaces
                     awardsMessage = awardsMessage.strip()
 
                     # Add line to RSS Feed
-                    entryLines.append(f"Auszeichnungen: {awardsMessage}")
+                    entryLines.append(f"Verlag Auszeichnungen: {awardsMessage}")
 
                 else:
                     entryLines.append(f"Dieser Verlag is laut Datenbank nicht relevant.")

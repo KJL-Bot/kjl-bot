@@ -104,26 +104,23 @@ def storePublisher(name, webUrl, twitterUrl, jlpNominated, jlpAwarded, kimiAward
     connection.commit()
     connection.close()
 
-def findPublisherIDWithName(cursor, publisherName):
+def findPublisherDetailsWithName(cursor, publisherName):
 
     # replace double quotes by single quotes
     publisherName = publisherName.replace('"', "'")
 
     tableName = config.relevantPublishersTableName
 
-    command = f"""SELECT id FROM {tableName} WHERE name LIKE "%{publisherName}%" """
+    command = f"""SELECT id, jlpNominated, jlpAwarded, kimiAwarded FROM {tableName} WHERE name LIKE "%{publisherName}%" """
     cursor.execute(command)
     publishers = cursor.fetchall()
 
     if len(publishers) == 0:
         return None
 
-    if len(publishers) == 1:
-        return publishers[0][0]
-
-    if len(publishers) > 1:
-        #print(f"There are several publishers matching the name '{publisherName}'. This should not happen.")
-        return publishers[0][0]
+    if len(publishers) >= 1:
+        (id, jlpNominated, jlpAwarded, kimiAwarded) = publishers[0]
+        return (id, jlpNominated, jlpAwarded, kimiAwarded)
 
 def getAwardsForPublisherWithID(cursor, publisherId):
 
@@ -168,17 +165,20 @@ def matchBooksToPublishers():
             continue
 
         # do we find the publisher in our relevantPublisher table?
-        publisherId = findPublisherIDWithName(cursor, publisherName)
+        publisherDetails = findPublisherDetailsWithName(cursor, publisherName)
 
         # if we have a match
-        if publisherId is not None:
+        if publisherDetails is not None:
+
+            # unpack details
+            (publisherId, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) = publisherDetails
 
             # print(f"Found a relevant publisher: {publisherName} -> {publisherId}")
 
-            # update books table with relevantPublisher
-            command = f"UPDATE {booksTableName} SET matchesRelevantPublisher = ? WHERE idn = ?"
+            # update books table with relevantPublisher and awards
+            command = f"UPDATE {booksTableName} SET matchesRelevantPublisher = ?, publisherJLPNominated = ?, publisherJLPAwarded = ?, publisherKimiAwarded = ? WHERE idn = ?"
             try:
-                cursor.execute(command, (publisherId, idn))
+                cursor.execute(command, (publisherId, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded, idn))
             except Exception as e:
                 print(e)
 

@@ -32,7 +32,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
             "FROM books WHERE logbookMessageId = ? ORDER BY idn DESC"
 
         try:
@@ -40,7 +40,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
             books = cursor.fetchall()
 
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # skip entries without ISDN
                 if isbnWithDashes is None:
@@ -70,6 +70,10 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if linkToDataset is not None: book["linkToDataset"] = linkToDataset
                 if isbnWithDashes is not None: book["isbnWithDashes"] = isbnWithDashes
                 if addedToSql is not None: book["addedToSql"] = addedToSql.strftime('%Y-%m-%dT%H:%M:%SZ')
+                if matchesRelevantPublisher is not None: book["matchesRelevantPublisher"] = matchesRelevantPublisher
+                if publisherJLPNominated is not None: book["publisherJLPNominated"] = publisherJLPNominated
+                if publisherJLPAwarded is not None: book["publisherJLPAwarded"] = publisherJLPAwarded
+                if publisherKimiAwarded is not None: book["publisherKimiAwarded"] = publisherKimiAwarded
 
                 # add cover url
                 if isbnWithDashes is not None: book["coverUrl"] = utilities.coverUrl(isbnWithDashes=isbnWithDashes, size='l')
