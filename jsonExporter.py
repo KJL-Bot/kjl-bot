@@ -64,7 +64,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if title is not None: book["title"] = title
                 if subTitle is not None: book["subTitle"] = subTitle
                 if titleAuthor is not None: book["titleAuthor"] = titleAuthor
-                if keywords is not None: book["keywords"] = keywords
+                book["keywords"] = keywords if keywords is not None else ""
                 if publicationPlace is not None: book["publicationPlace"] = publicationPlace
                 if publisher is not None: book["publisher"] = publisher
                 if publicationYear is not None: book["publicationYear"] = publicationYear
@@ -73,9 +73,9 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if isbnWithDashes is not None: book["isbnWithDashes"] = isbnWithDashes
                 if addedToSql is not None: book["addedToSql"] = addedToSql.strftime('%Y-%m-%dT%H:%M:%SZ')
                 if matchesRelevantPublisher is not None: book["matchesRelevantPublisher"] = matchesRelevantPublisher
-                if publisherJLPNominated is not None: book["publisherJLPNominated"] = publisherJLPNominated
-                if publisherJLPAwarded is not None: book["publisherJLPAwarded"] = publisherJLPAwarded
-                if publisherKimiAwarded is not None: book["publisherKimiAwarded"] = publisherKimiAwarded
+                book["publisherJLPNominated"] = publisherJLPNominated if publisherJLPNominated is not None else 0
+                book["publisherJLPAwarded"] = publisherJLPAwarded if publisherJLPAwarded is not None else 0
+                book["publisherKimiAwarded"] = publisherKimiAwarded if publisherKimiAwarded is not None else 0
 
                 # add cover url
                 if isbnWithDashes is not None: book["coverUrl"] = utilities.coverUrl(isbnWithDashes=isbnWithDashes, size='l')
