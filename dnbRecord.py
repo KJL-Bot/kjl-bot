@@ -55,6 +55,9 @@ class DNBRecord:
         # authorName
         self.authorName,_ = self.extractProperty(fieldType='datafield', tagString='100', codeString='a', xml=xml, ns=ns)
 
+        # secondary authorName
+        self.secondaryAuthorName,_ = self.extractProperty(fieldType='datafield', tagString='700', codeString='a', xml=xml, ns=ns)
+
         # authorDescription 100 a+b+c
         # self.authorDescription = self.extractPersonDetails(record, '100', xml=xml, ns=ns)
 

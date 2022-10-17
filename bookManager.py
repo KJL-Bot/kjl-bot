@@ -30,6 +30,7 @@ def createBooksTable():
         titleAuthor VARCHAR(128),
 
         authorName VARCHAR(128),
+        secondaryAuthorName VARCHAR(128),
 
         keywords VARCHAR(1024),
 
@@ -66,10 +67,10 @@ def storeBook(book, logbookMessageId):
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
-            authorName, \
+            authorName, secondaryAuthorName,\
             keywords, \
             publicationPlace, publisher, publicationYear, logbookMessageId) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
     # by default, no new book was added
     newBookWasAdded = False
@@ -92,7 +93,7 @@ def storeBook(book, logbookMessageId):
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
-            book.authorName, \
+            book.authorName, book.secondaryAuthorName, \
             keywords, \
             book.publicationPlace, book.publisher, book.publicationYear, logbookMessageId)
             )
@@ -149,18 +150,22 @@ def identifyRelevantBooks():
     booksTableName = config.booksTableName
 
     # get fields to deternmine whether book is relevant
-    command = f"SELECT idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title FROM {booksTableName} ORDER BY idn DESC"
+    command = f"SELECT idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title, titleAuthor FROM {booksTableName} ORDER BY idn DESC"
     cursor.execute(command)
     books = cursor.fetchall()
 
     # go through all books int the DB
-    for (idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title) in books:
+    for (idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title, titleAuthor) in books:
 
         # default: book is relevant
         bookIsRelevant = True
 
         # skip entries without ISDN
         if isbnWithDashes is None:
+            bookIsRelevant = False
+
+        # skip entries that do not have a titleAuthor
+        if titleAuthor is None:
             bookIsRelevant = False
 
         # skip entries without expected publication date

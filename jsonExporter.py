@@ -32,7 +32,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
             "FROM books WHERE bookIsRelevant = 1 AND logbookMessageId = ? ORDER BY idn DESC"
 
         try:
@@ -40,7 +40,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
             books = cursor.fetchall()
 
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # filtering no longer necessary, as filtering is done through bookIsRelevant field
 
@@ -64,6 +64,8 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if title is not None: book["title"] = title
                 if subTitle is not None: book["subTitle"] = subTitle
                 if titleAuthor is not None: book["titleAuthor"] = titleAuthor
+                if authorName is not None: book["authorName"] = authorName
+                if secondaryAuthorName is not None: book["secondaryAuthorName"] = secondaryAuthorName
                 book["keywords"] = keywords if keywords is not None else ""
                 if publicationPlace is not None: book["publicationPlace"] = publicationPlace
                 if publisher is not None: book["publisher"] = publisher

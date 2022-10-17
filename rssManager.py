@@ -51,7 +51,7 @@ def generateRSSEntries():
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             ", publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded" +\
             " FROM books WHERE bookIsRelevant = 1 AND logbookMessageId = ? ORDER BY idn DESC"
 
@@ -66,11 +66,11 @@ def generateRSSEntries():
             # count the number of valid books
             bookCounter = 0
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate,
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate,
             addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # no longer necessary, as filtering is done through bookIsRelevant field
-                
+
                 # # skip entries without ISDN
                 # if isbnWithDashes is None:
                 #     continue
@@ -93,9 +93,17 @@ def generateRSSEntries():
                 if subTitle is not None:
                     entryLines.append(f"<i>{subTitle}</i>")
 
-                # skip author if not present
+                # skip titleAuthor if not present
                 if titleAuthor is not None:
-                    entryLines.append(f"Von {titleAuthor}")
+                    entryLines.append(f"<i>{titleAuthor}<i>")
+
+                # skip author name if not present
+                if authorName is not None:
+                    entryLines.append(f"Verfasser*in: {authorName}")
+
+                # skip 2nd author name if not present
+                if secondaryAuthorName is not None:
+                    entryLines.append(f"2. Verfasser*in: {secondaryAuthorName}")
 
                 # skip keywords if not present
                 if keywords is not None:
