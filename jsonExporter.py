@@ -5,6 +5,7 @@ import json
 import config
 from pathlib import Path
 import utilities
+import re
 
 def generateValidBookEntries(numberOfDesiredBooks):
 
@@ -42,26 +43,23 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
-                # filtering no longer necessary, as filtering is done through bookIsRelevant field
-
-                # # skip entries without ISDN
-                # if isbnWithDashes is None:
-                #     continue
-                #
-                # # skip entries without expected publication date
-                # if projectedPublicationDate is None:
-                #     continue
-                #
-                # # skip entries whose projected publication date is too far in the future
-                # if projectedPublicationDate > firstDayOfNextMonth:
-                #     continue
-
-                # here we know that the book is a valid entry. Create a book.
+                # Create a book.
                 book = {}
+
+                # for sorting, remove 'Der', 'Die', 'Das', 'The', 'A' from the beginning
+                sortingTitle = None
+                if title is not None:
+                    sortingTitle = title.strip().lower()
+                    sortingTitle = re.sub('^die ', '', sortingTitle)
+                    sortingTitle = re.sub('^der ', '', sortingTitle)
+                    sortingTitle = re.sub('^das ', '', sortingTitle)
+                    sortingTitle = re.sub('^the ', '', sortingTitle)
+                    sortingTitle = re.sub('^a ', '', sortingTitle)
 
                 # add to dictionary if data is available
                 book["idn"] = idn
                 if title is not None: book["title"] = title
+                if sortingTitle is not None: book["sortingTitle"] = sortingTitle                
                 if subTitle is not None: book["subTitle"] = subTitle
                 if titleAuthor is not None: book["titleAuthor"] = titleAuthor
                 if authorName is not None: book["authorName"] = authorName
