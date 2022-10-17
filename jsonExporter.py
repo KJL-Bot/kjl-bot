@@ -46,7 +46,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 # Create a book.
                 book = {}
 
-                # for sorting, remove 'Der', 'Die', 'Das', 'The', 'A' from the beginning
+                # for sorting, remove 'Der', 'Die', 'Das', 'The', 'A' from the beginning of the title
                 sortingTitle = None
                 if title is not None:
                     sortingTitle = title.strip().lower()
@@ -59,7 +59,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 # add to dictionary if data is available
                 book["idn"] = idn
                 if title is not None: book["title"] = title
-                if sortingTitle is not None: book["sortingTitle"] = sortingTitle                
+                if sortingTitle is not None: book["sortingTitle"] = sortingTitle
                 if subTitle is not None: book["subTitle"] = subTitle
                 if titleAuthor is not None: book["titleAuthor"] = titleAuthor
                 if authorName is not None: book["authorName"] = authorName
