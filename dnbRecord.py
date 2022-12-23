@@ -58,6 +58,9 @@ class DNBRecord:
         # secondary authorName
         self.secondaryAuthorName,_ = self.extractProperty(fieldType='datafield', tagString='700', codeString='a', xml=xml, ns=ns)
 
+        # sortingAuthor
+        self.sortingAuthor = self.extractSortingAuthor(record=record, xml=xml, ns=ns)
+
         # authorDescription 100 a+b+c
         # self.authorDescription = self.extractPersonDetails(record, '100', xml=xml, ns=ns)
 
@@ -169,6 +172,66 @@ class DNBRecord:
             pass
 
         return None
+
+    # combines names with roles 'aut' in datafields 100 and 700 and returns the first of the names
+    def extractSortingAuthor(self, record, xml, ns):
+
+        # all names from dataField 100
+        _, names100 = self.extractProperty(fieldType='datafield', tagString='100', codeString='a', xml=xml, ns=ns)
+
+        # all relatorCodes from dataField 100
+        _, relatorCodes100 = self.extractProperty(fieldType='datafield', tagString='100', codeString='4', xml=xml, ns=ns)
+
+        # all names from dataField 700
+        _, names700 = self.extractProperty(fieldType='datafield', tagString='700', codeString='a', xml=xml, ns=ns)
+
+        # all relatorCodes from dataField 700
+        _, relatorCodes700 = self.extractProperty(fieldType='datafield', tagString='700', codeString='4', xml=xml, ns=ns)
+
+        # reduce names to relatorCode = 'aut' -> only use authors
+        authorNames100 = self.reduceNamesToCode(names100, relatorCodes100, 'aut')
+        authorNames700 = self.reduceNamesToCode(names700, relatorCodes700, 'aut')
+
+        allNames100 = self.reduceNamesToCode(names100, relatorCodes100, None)
+        allNames700 = self.reduceNamesToCode(names700, relatorCodes700, None)
+
+        # make one list out of two
+        allAuthorNames = authorNames100
+        allAuthorNames.extend(authorNames700)
+
+        # if we did not find any author, extend the list by all the other names
+        if len(allAuthorNames) == 0:
+            allAuthorNames.extend(allNames100)
+            allAuthorNames.extend(allNames700)
+
+        # the first entry is the autor we want to return
+        sortingAuthor = None # default
+        if len(allAuthorNames) > 0:
+            sortingAuthor = allAuthorNames[0].strip()
+
+        return sortingAuthor
+
+    # goes through array of <codes>, finds the codes matching <wantedCode> and filters <names> accrding to the matching INDEX
+    # returns filtered <names>
+    def reduceNamesToCode(self, names, codes, wantedCode):
+
+        # result goes here
+        reducedNames = []
+
+        # go throug hall codes
+        for index, code in enumerate(codes):
+
+            # did we find the code we wanted? Or do we want all names (-> wantedCode is None)?
+            if (code == wantedCode) or (wantedCode is None):
+
+                # can we match a name?
+                if len(names) > index:
+
+                    # then grab name and add to results
+                    name = names[index]
+                    reducedNames.append(name)
+
+        return reducedNames
 
 
     def extractPersonDetails(self, tagString, record, xml, ns):

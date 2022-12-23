@@ -51,7 +51,7 @@ def generateRSSEntries():
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher " +\
             ", publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded" +\
             " FROM books WHERE bookIsRelevant = 1 AND logbookMessageId = ? ORDER BY idn DESC"
 
@@ -66,22 +66,8 @@ def generateRSSEntries():
             # count the number of valid books
             bookCounter = 0
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate,
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate,
             addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
-
-                # no longer necessary, as filtering is done through bookIsRelevant field
-
-                # # skip entries without ISDN
-                # if isbnWithDashes is None:
-                #     continue
-                #
-                # # skip entries without expected publication date
-                # if projectedPublicationDate is None:
-                #     continue
-                #
-                # # skip entries whose projected publication date is too far in the future
-                # if projectedPublicationDate > firstDayOfNextMonth:
-                #     continue
 
                 # here we know that the book is a valid entry. So we can count it
                 bookCounter += 1
@@ -104,6 +90,10 @@ def generateRSSEntries():
                 # skip 2nd author name if not present
                 if secondaryAuthorName is not None:
                     entryLines.append(f"2. Verfasser*in: {secondaryAuthorName}")
+
+                # skip sortingAuthor name if not present
+                if sortingAuthor is not None:
+                    entryLines.append(f"Sortier-Autor: {sortingAuthor}")
 
                 # skip keywords if not present
                 if keywords is not None:

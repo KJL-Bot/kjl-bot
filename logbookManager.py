@@ -6,7 +6,7 @@ from datetime import datetime
 def createLogbook():
     # Create logbook
     command = """
-    CREATE TABLE IF NOT EXISTS logbook (id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY, timestamp TIMESTAMP, description VARCHAR(128))
+    CREATE TABLE IF NOT EXISTS logbook (id MEDIUMINT NOT NULL AUTO_INCREMENT PRIMARY KEY, timestamp TIMESTAMP, description VARCHAR(512))
     """
     mariaDatabase.executeCommand(command)
 
@@ -77,7 +77,7 @@ def logMessage(logMessage):
     cursor = connection.cursor()
 
     try:
-        cursor.execute(command, (utctime, UUID, logMessage))
+        cursor.execute(command, (utctime, logMessage))
         print(f"Logged: {logMessage}")
     except Exception as e:
         print(e)

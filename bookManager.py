@@ -27,16 +27,17 @@ def createBooksTable():
 
         title VARCHAR(512),
         subTitle VARCHAR(512),
-        titleAuthor VARCHAR(128),
+        titleAuthor VARCHAR(512),
 
-        authorName VARCHAR(128),
+        authorName VARCHAR(256),
         secondaryAuthorName VARCHAR(128),
+        sortingAuthor VARCHAR(128),
 
         keywords VARCHAR(1024),
 
         publicationPlace VARCHAR(128),
-        publisher VARCHAR(128),
-        publicationYear VARCHAR(16),
+        publisher VARCHAR(256),
+        publicationYear VARCHAR(64),
 
         matchesRelevantPublisher MEDIUMINT,
         publisherJLPNominated TINYINT,
@@ -67,10 +68,10 @@ def storeBook(book, logbookMessageId):
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
-            authorName, secondaryAuthorName,\
+            authorName, secondaryAuthorName, sortingAuthor,\
             keywords, \
             publicationPlace, publisher, publicationYear, logbookMessageId) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
     # by default, no new book was added
     newBookWasAdded = False
@@ -93,7 +94,7 @@ def storeBook(book, logbookMessageId):
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
-            book.authorName, book.secondaryAuthorName, \
+            book.authorName, book.secondaryAuthorName, book.sortingAuthor,\
             keywords, \
             book.publicationPlace, book.publisher, book.publicationYear, logbookMessageId)
             )

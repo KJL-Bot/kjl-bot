@@ -15,7 +15,7 @@ def scrape():
 
 
     # create tables
-    bookManager.createBooksTable()
+    bookManager.createBooksTable() 
     logbookManager.createLogbook()
 
     # scrape DNB
