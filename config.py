@@ -1,4 +1,4 @@
-dnbSearchQuery = "sgt=K and jhr>=2020 and jhr<2023 and spr=ger and mat=books sortBy idn/sort.descending"
+#dnbSearchQuery = "sgt=K and jhr>=2020 and jhr<2023 and spr=ger and mat=books sortBy idn/sort.descending"
 #dnbSearchQuery = "idn=1250917204"
 #dnbSearchQuery = 'tit=Klimawandel and location=onlinefree'
 #dnbSearchQuery = "mat=books sortBy idn/sort.descending"
@@ -12,8 +12,10 @@ booksTableName = "books"
 logbookTableName = "logbook"
 relevantPublishersTableName = "relevantPublishers"
 
-numberOfRetrievedRecords = 30000
+numberOfYearsToScrape = 3
+numberOfRetrievedRecords = 50#30000
 maximumNumberOfRSSEntries = 10
+maximumNumberOfJSONEntries = 30000
 
 rssFeedId = 'com.artisticengines.kjlbot'
 rssFeedTitle = 'KJL Bot'

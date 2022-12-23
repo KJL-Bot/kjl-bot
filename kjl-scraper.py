@@ -15,24 +15,31 @@ def scrape():
 
 
     # create tables
-    bookManager.createBooksTable() 
+    bookManager.createBooksTable()
     logbookManager.createLogbook()
 
-    # scrape DNB
-    print("Scraping...")
+    # insert here. get year to scrape
+    nextScrapeYear = logbookManager.determineNextScrapeYear(numberOfYearsToScrape = config.numberOfYearsToScrape)
+    print(f"nextScrapeYear: {nextScrapeYear}")
 
-    dnbSearchQuery = config.dnbSearchQuery
+    # create query
+    dnbSearchQuery = dnbapi.createQuery(year=nextScrapeYear, numberOfRecords = config.numberOfRetrievedRecords)
+
+    # log scrape start
+    logbookMessageId = logbookManager.logScrapeStart(year=nextScrapeYear)
+
+    # get records from DNB
     records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
     #print(len(records), 'Ergebnisse')
+
+    # log number of retrieved records
+    logbookManager.logMessage(f"Retrieved {len(records)} DNB records")
 
     # convert to array of books
     books = []
     for record in records:
         book = DNBRecord(xmlRecord = record)
         books.append(book)
-
-    # prepare lookbook by creating an initial entry (to be updated later)
-    logbookMessageId = logbookManager.createInitialLogbookMessage()
 
     # store in db and associate each book with the logbookMessageId
     newBookCounter = 0
@@ -42,54 +49,56 @@ def scrape():
             newBookCounter += 1
 
             # log keywords if there are any
-            if len(book.keywords) > 0:
-                message = f"Keywords for book detected: {book.linkToDataset} -> {book.keywords}"
-                logbookManager.logMessage(message)
+            # if len(book.keywords) > 0:
+            #     message = f"Keywords for book detected: {book.linkToDataset} -> {book.keywords}"
+            #     logbookManager.logMessage(message)
+
+    # log
+    logbookManager.logMessage("Added books to database")
 
     # match all DB entries against relevant publishers
-    print("Matching to publishers...")
     publishers.matchBooksToPublishers()
+    logbookManager.logMessage("Matched to publishers")
 
-    # log activity using previously create logbookMessageId
-    if newBookCounter > 0:
-        logMessage = f"Added {newBookCounter} new book(s)."
-    else:
-        logMessage = f"Scraped DNB with no new results."
-
-    #logbookManager.logMessage(logMessage)
-    logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
+    # # log activity using previously create logbookMessageId
+    # if newBookCounter > 0:
+    #     logMessage = f"Added {newBookCounter} new book(s)."
+    # else:
+    #     logMessage = f"Scraped DNB with no new results."
+    #
+    # #logbookManager.logMessage(logMessage)
+    # logbookManager.updateLogbookMessageWithId(logbookMessageId, logMessage)
 
     # identify all the books that are relevant for playout
-    print("Updating book relevancies")
     bookManager.identifyRelevantBooks()
+    logbookManager.logMessage("Updated book relevancies")
 
     # create rss entries
-    print("Creating RSS entries.")
     rssEntries = rssManager.generateRSSEntries()
+    logbookManager.logMessage("Created RSS entries")
 
     # generate and store RSS feed locally
-    print("Generating RSS Feed.")
     rssFilePath = rssManager.generateFeed(rssEntries)
+    logbookManager.logMessage("Generated RSS Feed")
 
     # transfer xml file to FTP server
-    print("Transfering RSS to FTP server.")
     ftpCoordinator.transferFileViaFTP(rssFilePath, config.ftpTargetFolder) # artistic engines
-    print(f"Feed URL is: {config.rssFeedUrl}")
+    logbookManager.logMessage("Transferred RSS to Artistic Engines FTP server")
+    #print(f"Feed URL is: {config.rssFeedUrl}")
 
     # create JSON file recent valid books
-    print("Generating JSON Feed.")
-    validBookEntries = jsonExporter.generateValidBookEntries(20000)
+    validBookEntries = jsonExporter.generateValidBookEntries(config.maximumNumberOfJSONEntries)
     jsonFilePath = jsonExporter.writeBookEntriesToJSONFile(validBookEntries)
+    logbookManager.logMessage("Generated JSON Feed")
 
     # transfer JSON file to Artistic Engines FTP server
-    print("Transfering JSON to Artistic Engines FTP server.")
     ftpCoordinator.transferFileViaFTP(jsonFilePath, config.ftpTargetFolder)
-    print(f"JSON URL is: {config.jsonFeedUrl}")
+    logbookManager.logMessage("Transferred JSON to Artistic Engines FTP server")
+    #print(f"JSON URL is: {config.jsonFeedUrl}")
 
     # transfer JSON file to KJL FTP server
-    print("Transfering JSON to KJL FTP server.")
     ftpCoordinator.transferFileViaFTP_SSL(jsonFilePath, config.kjlFtpSSLTargetDir) # KJL Bot Server
-
+    logbookManager.logMessage("Transferred JSON to KJL FTP server")
 
 
     # bookManager.displayBookContent()
