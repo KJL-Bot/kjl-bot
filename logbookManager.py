@@ -34,7 +34,7 @@ def getLastScrapeYearFromLogbook():
     cursor = connection.cursor()
 
     # the parameter of the youngest {scrapeForYearCommand} is the lastScrapeYear
-    command = f"SELECT parameter FROM logbook WHERE command = '{scrapeForYearCommand}' ORDER BY timestamp DESC"
+    command = f"SELECT parameter FROM logbook WHERE command = '{scrapeForYearCommand}' ORDER BY id DESC"
     cursor.execute(command)
     result = cursor.fetchall()
 
@@ -80,7 +80,7 @@ def determineNextScrapeYear(numberOfYearsToScrape):
 # Log simple message
 def logMessage(description):
 
-    utctime = datetime.utcnow()
+    #utctime = datetime.utcnow()
     command = "logMessage"
     parameter = None
     description = description
