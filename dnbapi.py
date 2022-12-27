@@ -6,7 +6,7 @@ import time
 import datetime
 
 # creates query of the given year and the given number of records
-def createQuery(year, numberOfRecords):
+def createQuery(year):
 
     dnbSearchQuery = f"sgt=K and jhr>={year} and jhr<={year} and spr=ger and mat=books sortBy idn/sort.descending"
 

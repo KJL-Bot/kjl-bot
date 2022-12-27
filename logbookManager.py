@@ -78,8 +78,39 @@ def determineNextScrapeYear(numberOfYearsToScrape):
     # return result
     return nextYearToScrape
 
+def logRecordRetrieval(numberOfRecords):
+
+    command = "retrievedRecords"
+    parameter = numberOfRecords
+    relatesToIDN = None
+    description = f"Retrieved {numberOfRecords} DNB records"
+
+    messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
+    return messageId
+
+def logBooksAddition(numberOfBooks):
+
+    command = "addedBooks"
+    parameter = numberOfBooks
+    relatesToIDN = None
+    description = f"Added {numberOfBooks} books to database"
+
+    messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
+    return messageId
+
+def logBooksUpdate(numberOfBooks):
+
+    command = "updatedBooks"
+    parameter = numberOfBooks
+    relatesToIDN = None
+    description = "Updated {numberOfBooks} books in database"
+
+    messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
+    return messageId
+
+
 # Log simple message
-def logMessage(relatesToIDN=None, description=""):
+def logMessage(relatesToIDN, description):
 
     #utctime = datetime.utcnow()
     command = "logMessage"
@@ -90,7 +121,7 @@ def logMessage(relatesToIDN=None, description=""):
     return messageId
 
 # Main function to log message
-def createLogbookMessage(command, parameter, relatesToIDN=None, description=""):
+def createLogbookMessage(command, parameter, relatesToIDN, description):
 
     # current time
     utctime = datetime.utcnow()

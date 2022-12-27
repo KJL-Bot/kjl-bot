@@ -22,17 +22,20 @@ def scrape():
     nextScrapeYear = logbookManager.determineNextScrapeYear(numberOfYearsToScrape = config.numberOfYearsToScrape)
 
     # create query
-    dnbSearchQuery = dnbapi.createQuery(year=nextScrapeYear, numberOfRecords = config.numberOfRetrievedRecords)
+    dnbSearchQuery = dnbapi.createQuery(year=nextScrapeYear)
+
 
     # log scrape start
     logbookMessageId = logbookManager.logScrapeStart(year=nextScrapeYear)
 
     # get records from DNB
-    records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
+    #records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
+    records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=50)
     #print(len(records), 'Ergebnisse')
 
     # log number of retrieved records
-    logbookManager.logMessage(f"Retrieved {len(records)} DNB records")
+    logbookManager.logRecordRetrieval(numberOfRecords=len(records))
+    #logbookManager.logMessage(relatesToIDN=None, description=f"Retrieved {len(records)} DNB records")
 
     # convert to array of books
     books = []
@@ -53,10 +56,12 @@ def scrape():
 
     # log
     if insertedBookCounter > 0:
-        logbookManager.logMessage(f"Added {insertedBookCounter} books to database")
+        #logbookManager.logMessage(relatesToIDN=None, description=f"Added {insertedBookCounter} books to database")
+        logbookManager.logBooksAddition(numberOfBooks=insertedBookCounter)
 
     if updatedCounter > 0:
-        logbookManager.logMessage(f"Updated {updatedCounter} books in database")
+        #logbookManager.logMessage(relatesToIDN=None, description=f"Updated {updatedCounter} books in database")
+        logbookManager.logBooksUpdate(numberOfBooks=updatedCounter)
 
     # match all DB entries against relevant publishers
     publishers.matchBooksToPublishers()
@@ -91,7 +96,7 @@ def scrape():
 
     # transfer JSON file to KJL FTP server
     ftpCoordinator.transferFileViaFTP_SSL(jsonFilePath, config.kjlFtpSSLTargetDir) # KJL Bot Server
-    logbookManager.logMessage("Transferred JSON to KJL FTP server")
+    logbookManager.logMessage(relatesToIDN=None, description="Transferred JSON to KJL FTP server")
 
 
     # bookManager.displayBookContent()
