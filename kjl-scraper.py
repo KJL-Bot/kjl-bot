@@ -29,8 +29,7 @@ def scrape():
     logbookMessageId = logbookManager.logScrapeStart(year=nextScrapeYear)
 
     # get records from DNB
-    #records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
-    records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=50)
+    records = dnbapi.dnb_sru(dnbSearchQuery, numberOfRecords=config.numberOfRetrievedRecords)
     #print(len(records), 'Ergebnisse')
 
     # log number of retrieved records
