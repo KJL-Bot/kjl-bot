@@ -13,6 +13,7 @@ def createLogbook():
         timestamp TIMESTAMP,
         command VARCHAR(64),
         parameter VARCHAR(64),
+        relatesToIDN VARCHAR(10),
         description VARCHAR(512))
     """
     mariaDatabase.executeCommand(command)
@@ -23,7 +24,7 @@ def logScrapeStart(year):
     parameter = year
     description = ""
 
-    messageId = createLogbookMessage(command=command, parameter=parameter, description=description)
+    messageId = createLogbookMessage(command=command, parameter=parameter,  relatesToIDN=None, description=description)
     return messageId
 
 # retrieves the year of the youngest scrape
@@ -78,27 +79,27 @@ def determineNextScrapeYear(numberOfYearsToScrape):
     return nextYearToScrape
 
 # Log simple message
-def logMessage(description):
+def logMessage(relatesToIDN=None, description=""):
 
     #utctime = datetime.utcnow()
     command = "logMessage"
     parameter = None
     description = description
 
-    messageId = createLogbookMessage(command=command, parameter=parameter, description=description)
+    messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
     return messageId
 
 # Main function to log message
-def createLogbookMessage(command, parameter, description):
+def createLogbookMessage(command, parameter, relatesToIDN=None, description=""):
 
     # current time
     utctime = datetime.utcnow()
 
     # print
-    print(f"{utctime}\t{command}\t{parameter}\t{description}")
+    print(f"{utctime}\t{command}\t{parameter}\t{relatesToIDN}\t{description}")
 
     # command
-    sqlCommand = "INSERT INTO logbook (timestamp, command, parameter, description) VALUES (?, ?, ?, ?)"
+    sqlCommand = "INSERT INTO logbook (timestamp, command, parameter, relatesToIDN, description) VALUES (?, ?, ?, ?, ?)"
 
     # connect
     connection = mariaDatabase.getDatabaseConnection()
@@ -106,9 +107,9 @@ def createLogbookMessage(command, parameter, description):
 
     # add new message
     try:
-        cursor.execute(sqlCommand, (utctime, command, parameter, description))
+        cursor.execute(sqlCommand, (utctime, command, parameter, relatesToIDN, description))
     except Exception as e:
-        print(e)
+        print(f"createLogbookMessage: {e}")
 
     connection.commit()
 

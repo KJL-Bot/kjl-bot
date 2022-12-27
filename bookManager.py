@@ -17,7 +17,7 @@ def createBooksTable():
 
         isbnWithDashes VARCHAR(20),
         isbnNoDashes VARCHAR(20),
-        isbnTermsOfAvailability VARCHAR(256),
+        isbnTermsOfAvailability VARCHAR(512),
 
         addedToSql TIMESTAMP,
         updatedInSql TIMESTAMP,
@@ -25,9 +25,9 @@ def createBooksTable():
         lastDnbTransaction TIMESTAMP,
         projectedPublicationDate TIMESTAMP,
 
-        title VARCHAR(512),
-        subTitle VARCHAR(512),
-        titleAuthor VARCHAR(512),
+        title VARCHAR(1024),
+        subTitle VARCHAR(1024),
+        titleAuthor VARCHAR(1024),
 
         authorName VARCHAR(256),
         secondaryAuthorName VARCHAR(128),
@@ -69,15 +69,15 @@ def insertOrUpdateBook(book, logbookMessageId):
 
         # write to logbook
         if success:
-            logbookManager.logMessage(f"Added new book with title: '{book.title}'")
+            logbookManager.logMessage(relatesToIDN=book.idn, description=f"Added new book with title: '{book.title}'")
             returnValue = "inserted"
         else:
-            logbookManager.logMessage(f"Failed to add new book with IDN: '{book.idn}'")
+            logbookManager.logMessage(relatesToIDN=book.idn, description=f"Failed to add new book with IDN: '{book.idn}'")
 
     # if not, update entry
     else:
 
-        # where any of the fields updated?
+        # were any of the fields updated?
         numberOfUpdatedFields = identifyUpdatedFields(book, matchingDBEntry)
 
         # if so...
@@ -88,10 +88,10 @@ def insertOrUpdateBook(book, logbookMessageId):
 
             # write to logbook
             if success:
-                logbookManager.logMessage(f"Updated {numberOfUpdatedFields} fields for book with title: '{book.title}'")
+                logbookManager.logMessage(relatesToIDN=book.idn, description=f"Updated {numberOfUpdatedFields} fields for book with title: '{book.title}'")
                 returnValue = "updated"
             else:
-                logbookManager.logMessage(f"Failed to update book with IDN: '{book.idn}'")
+                logbookManager.logMessage(relatesToIDN=book.idn, description=f"Failed to update book with IDN: '{book.idn}'")
 
     return returnValue
 
@@ -99,7 +99,7 @@ def insertOrUpdateBook(book, logbookMessageId):
 def logFieldMismatch(idn, fieldName, dbValue, bookValue):
     if dbValue != bookValue:
         message = f"IDN {idn}: {fieldName}: {dbValue} -> {bookValue}"
-        logbookManager.logMessage(message)
+        logbookManager.logMessage(relatesToIDN=idn, description=message)
         return 1
 
     else:
@@ -256,6 +256,7 @@ def storeBook(book, logbookMessageId):
     # other errors
     except Exception as e:
         print(f"{type(e).__name__} was raised with error number: {e}")
+        logbookManager.logMessage(relatesToIDN=book.idn, description=f"storeBook: {type(e).__name__} was raised with error number: {e}")
         print("Error while inserting new book:")
         print(book.linkToDataset)
         print(book.publicationYear)
@@ -319,6 +320,7 @@ def updateBook(book, logbookMessageId):
 
     except Exception as e:
         print(f"{type(e).__name__} was raised with error number: {e}")
+        logbookManager.logMessage(relatesToIDN=book.idn, description=f"updateBook: {type(e).__name__} was raised with error number: {e}")
         print("Error while updating book:")
         print(book.linkToDataset)
         print(book.publicationYear)
