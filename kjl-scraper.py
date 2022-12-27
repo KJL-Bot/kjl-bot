@@ -19,7 +19,7 @@ def scrape():
     logbookManager.createLogbook()
 
     # insert here. get year to scrape
-    nextScrapeYear = 2022#logbookManager.determineNextScrapeYear(numberOfYearsToScrape = config.numberOfYearsToScrape)
+    nextScrapeYear = logbookManager.determineNextScrapeYear(numberOfYearsToScrape = config.numberOfYearsToScrape)
 
     # create query
     dnbSearchQuery = dnbapi.createQuery(year=nextScrapeYear, numberOfRecords = config.numberOfRetrievedRecords)
