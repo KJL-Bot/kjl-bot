@@ -13,7 +13,7 @@
       <link>http://artisticengines.com/kjl/kjlbot.xml</link>
     </image>
     <language>de</language>
-    <lastBuildDate>Tue, 27 Dec 2022 11:21:59 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 27 Dec 2022 12:09:58 +0000</lastBuildDate>
     <item>
       <title>12 neue Bücher in DNB Datenbank</title>
       <description><![CDATA[Die folgenden 12 Bücher wurden zur DNB hinzugefügt.<br>
@@ -542,23 +542,6 @@ Dieser Verlag is laut Datenbank nicht relevant.<br>
       <pubDate>Mon, 26 Dec 2022 23:00:02 +0000</pubDate>
     </item>
     <item>
-      <title>Ein neues Buch in DNB Datenbank</title>
-      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
-<br>
-<b>Wenn nicht wir, wer dann</b><br>
-<i>Nash Libra<i><br>
-Verfasser*in: Libra, Nash<br>
-Sortier-Autor: Libra, Nash<br>
-Rostock: Nele Frankenberg, 2023<br>
-Erwartete Publikation laut DNB: 2023-01<br>
-DNB Link: <a href="https://d-nb.info/1276616600">https://d-nb.info/1276616600</a><br>
-ISBN: 978-3-00-074352-8<br>
-Dieser Verlag is laut Datenbank nicht relevant.<br>
-<br>]]></description>
-      <guid isPermaLink="false">34825</guid>
-      <pubDate>Tue, 27 Dec 2022 00:00:02 +0000</pubDate>
-    </item>
-    <item>
       <title>7 neue Bücher in DNB Datenbank</title>
       <description><![CDATA[Die folgenden 7 Bücher wurden zur DNB hinzugefügt.<br>
 <br>
@@ -684,6 +667,23 @@ Dieser Verlag is laut Datenbank nicht relevant.<br>
 <br>]]></description>
       <guid isPermaLink="false">34929</guid>
       <pubDate>Tue, 27 Dec 2022 11:05:46 +0000</pubDate>
+    </item>
+    <item>
+      <title>Ein neues Buch in DNB Datenbank</title>
+      <description><![CDATA[Das folgende Buch wurde zur DNB hinzugefügt.<br>
+<br>
+<b>Wenn nicht wir, wer dann</b><br>
+<i>Nash Libra<i><br>
+Verfasser*in: Libra, Nash<br>
+Sortier-Autor: Libra, Nash<br>
+Rostock: Nele Frankenberg, 2023<br>
+Erwartete Publikation laut DNB: 2023-01<br>
+DNB Link: <a href="https://d-nb.info/1276616600">https://d-nb.info/1276616600</a><br>
+ISBN: 978-3-00-074352-8<br>
+Dieser Verlag is laut Datenbank nicht relevant.<br>
+<br>]]></description>
+      <guid isPermaLink="false">34936</guid>
+      <pubDate>Tue, 27 Dec 2022 12:05:06 +0000</pubDate>
     </item>
   </channel>
 </rss>
