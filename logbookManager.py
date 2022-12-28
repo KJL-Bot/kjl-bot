@@ -103,7 +103,7 @@ def logBooksUpdate(numberOfBooks):
     command = "updatedBooks"
     parameter = numberOfBooks
     relatesToIDN = None
-    description = "Updated {numberOfBooks} books in database"
+    description = f"Updated {numberOfBooks} books in database"
 
     messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
     return messageId
