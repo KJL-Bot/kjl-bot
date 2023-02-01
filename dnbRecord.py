@@ -189,13 +189,13 @@ class DNBRecord:
         _, relatorCodes700 = self.extractProperty(fieldType='datafield', tagString='700', codeString='4', xml=xml, ns=ns)
 
         # reduce names to relatorCode = 'aut' -> only use authors
-        authorNames100 = self.reduceNamesToCode(names100, relatorCodes100, 'aut')
-        authorNames700 = self.reduceNamesToCode(names700, relatorCodes700, 'aut')
+        authorNames100 = self.reduceNamesToCode(names100, relatorCodes100, 'aut') # main author
+        authorNames700 = self.reduceNamesToCode(names700, relatorCodes700, 'aut') # secondary author
 
         allNames100 = self.reduceNamesToCode(names100, relatorCodes100, None)
         allNames700 = self.reduceNamesToCode(names700, relatorCodes700, None)
 
-        # make one list out of two
+        # make one list out of three
         allAuthorNames = authorNames100
         allAuthorNames.extend(authorNames700)
 

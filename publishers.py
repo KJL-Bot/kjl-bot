@@ -87,7 +87,7 @@ def storePublisher(name, webUrl, twitterUrl, jlpNominated, jlpAwarded, kimiAward
 
         cursor.execute(command, \
             (name, webUrl, twitterUrl, \
-            jlpNominated,jlpAwarded, jlpNominated)
+            jlpNominated, jlpAwarded, kimiAwarded)
         )
 
         print(f"Added new publisher: {name}")
@@ -198,9 +198,9 @@ if __name__ == '__main__':
     publisherName = "FISCHER"
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
-    publisherId = findPublisherIDWithName(cursor, publisherName)
+    publisherId = findPublisherDetailsWithName(cursor, publisherName)
     print(f"The publisher {publisherName} has the ID {publisherId}.")
     connection.close()
 
-    # whatch whole database to relevant publishers
+    # match whole database to relevant publishers
     matchBooksToPublishers()

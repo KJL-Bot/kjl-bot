@@ -363,12 +363,12 @@ def identifyRelevantBooks():
     booksTableName = config.booksTableName
 
     # get fields to deternmine whether book is relevant
-    command = f"SELECT idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title, titleAuthor FROM {booksTableName} ORDER BY idn DESC"
+    command = f"SELECT idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title, sortingAuthor FROM {booksTableName} ORDER BY idn DESC"
     cursor.execute(command)
     books = cursor.fetchall()
 
     # go through all books int the DB
-    for (idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title, titleAuthor) in books:
+    for (idn, isbnWithDashes, projectedPublicationDate, matchesRelevantPublisher, title, sortingAuthor) in books:
 
         # default: book is relevant
         bookIsRelevant = True
@@ -377,8 +377,8 @@ def identifyRelevantBooks():
         if isbnWithDashes is None:
             bookIsRelevant = False
 
-        # skip entries that do not have a titleAuthor
-        if titleAuthor is None:
+        # skip entries that do not have a sortingAuthor
+        if sortingAuthor is None:
             bookIsRelevant = False
 
         # skip entries without expected publication date
