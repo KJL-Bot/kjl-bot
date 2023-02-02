@@ -13,8 +13,28 @@ Die Skripte werden alle 60 Minuten automatisch über einen cron job aufgerufen. 
 
 ## Was machen die Skripte?
 ### Diagram
-<img width="800" alt="image" src="https://user-images.githubusercontent.com/5444043/165967473-2c85368d-04ae-4185-b2b2-99ffc8a0eda2.png">
 
+```mermaid
+  flowchart LR
+    dnb((DNB))
+    scraper(Scraper)
+    cronjob(Cron Job ever 60 minutes)
+    database([Database])
+    rssFeedCreator(RSS Feed Creator)
+    rssFeed(RSS Feed)
+    RSSUploader(RSS Uploader)
+    artisticEngines(artisticEngines.com)
+    
+    jsonFeedCreator(JSON Feed Creator)
+    jsonFeed(JSON Feed)
+    jsonUploader(JSON Uploader)
+    kjl-bot(kjl-bot.de)
+    
+    dnb-->scraper-->database-->rssFeedCreator-->rssFeed-->RSSUploader-->artisticEngines
+    cronjob-->scraper
+    database-->jsonFeedCreator-->jsonFeed-->jsonUploader-->kjl-bot
+    jsonUploader-->artisticEngines
+ ```
 
 ### Beschreibung
 
