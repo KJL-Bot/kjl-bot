@@ -20,19 +20,21 @@ Die Skripte werden alle 60 Minuten automatisch über einen cron job aufgerufen. 
     scraper(Scraper)
     cronjob(Cron Job ever 60 minutes)
     database([Database])
+    matchBooksToPublishers(Match books to publishers)
+    identifyRelevantBooks(Identify relevant books)
     rssFeedCreator(RSS Feed Creator)
-    rssFeed(RSS Feed)
+    rssFeed{{RSS Feed}}
     RSSUploader(RSS Uploader)
     artisticEngines(artisticEngines.com)
     
     jsonFeedCreator(JSON Feed Creator)
-    jsonFeed(JSON Feed)
+    jsonFeed{{JSON Feed}}
     jsonUploader(JSON Uploader)
     kjl-bot(kjl-bot.de)
     
-    dnb-->scraper-->database-->rssFeedCreator-->rssFeed-->RSSUploader-->artisticEngines
+    dnb-->scraper-->database-->matchBooksToPublishers-->identifyRelevantBooks-->rssFeedCreator--->rssFeed-->RSSUploader-->artisticEngines
     cronjob-->scraper
-    database-->jsonFeedCreator-->jsonFeed-->jsonUploader-->kjl-bot
+    identifyRelevantBooks-->jsonFeedCreator-->jsonFeed-->jsonUploader-->kjl-bot
     jsonUploader-->artisticEngines
  ```
 
