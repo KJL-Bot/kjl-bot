@@ -52,7 +52,7 @@ sgt=K and jhr<2023 and jhr>2020 and spr=ger and mat=books sortBy idn/sort.descen
 
 | Feld  | Beschreibung |
 | ------------- | ------------- |
-| `sgt=K | Suche über alle Sachgruppen nach Kinder- und Jugendbuchliteratur |
+| `sgt=K` | Suche über alle Sachgruppen nach Kinder- und Jugendbuchliteratur |
 | `jhr` | Erscheinungsjahr |
 | `spr` | Sprache |
 | `mat` | Materialart |
