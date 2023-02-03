@@ -352,9 +352,9 @@ def displayBookContent():
 def identifyRelevantBooks():
 
     # get data limit
-    now = datetime.utcnow()
-    firstDayOfLastValidMonth = now.replace(day=1) + relativedelta(months=1)
-    firstDayOfFirstValidMonth = now.replace(day=1) - relativedelta(months=3)
+    firstDayOfThisMonth = datetime.utcnow().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
+    firstDayOfLastValidMonth = firstDayOfThisMonth + relativedelta(months=1)
+    firstDayOfFirstValidMonth = firstDayOfThisMonth - relativedelta(months=3)
 
     # connect to DB
     connection = mariaDatabase.getDatabaseConnection()
