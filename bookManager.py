@@ -353,7 +353,8 @@ def identifyRelevantBooks():
 
     # get data limit
     now = datetime.utcnow()
-    firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
+    firstDayOfLastValidMonth = now.replace(day=1) + relativedelta(months=1)
+    firstDayOfFirstValidMonth = now.replace(day=1) - relativedelta(months=3)
 
     # connect to DB
     connection = mariaDatabase.getDatabaseConnection()
@@ -386,7 +387,7 @@ def identifyRelevantBooks():
             bookIsRelevant = False
 
         # skip entries whose projected publication date is too far in the future
-        if projectedPublicationDate is None or projectedPublicationDate > firstDayOfNextMonth:
+        if (projectedPublicationDate is None) or (projectedPublicationDate > firstDayOfLastValidMonth) or (projectedPublicationDate < firstDayOfFirstValidMonth):
             bookIsRelevant = False
 
         # write to DB
