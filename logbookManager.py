@@ -152,33 +152,3 @@ def createLogbookMessage(command, parameter, relatesToIDN, description):
 
     # return the id of the log message we just created
     return lastRowId
-
-
-# def createInitialLogbookMessage(command, parameter, description):
-#
-#     command = None
-#     parameter = None
-#     description = "Scraping DNB"
-#
-#     createLogbookMessage(command=command, parameter=parameter, description=description)
-
-# # Updates log message text for given messageId.
-# def updateLogbookMessageWithId(messageId, command, parameter, description):
-#
-#     utctime = datetime.utcnow()
-#
-#     command = "UPDATE logbook SET timestamp = ?, command = ?, parameter = ?, description = ? WHERE id = ?"
-#
-#     # connect
-#     connection = mariaDatabase.getDatabaseConnection()
-#     cursor = connection.cursor()
-#
-#     try:
-#         cursor.execute(command, (utctime, command, parameter, description, messageId))
-#         #print(f"Logged: {logMessage}")
-#     except Exception as e:
-#         print(e)
-#
-#     # close
-#     connection.commit()
-#     connection.close()
