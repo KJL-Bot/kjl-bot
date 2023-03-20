@@ -34,6 +34,11 @@ def createBooksTable():
         sortingAuthor VARCHAR(128),
 
         keywords VARCHAR(1024),
+        keywords653 VARCHAR(4096),
+
+        genre655_0 VARCHAR(128),
+        genre655_a VARCHAR(256),
+        genre655_2 VARCHAR(128),
 
         publicationPlace VARCHAR(128),
         publisher VARCHAR(256),
@@ -160,6 +165,24 @@ def identifyUpdatedFields(book, matchingDBEntry):
         keywords = ','.join(book.keywords)
     counter += logFieldMismatch(idn = book.idn, fieldName = "keywords", dbValue = matchingDBEntry["keywords"], bookValue = keywords)
 
+    # keywords653
+    keywords653 = None
+    if len(book.keywords653) > 0:
+        keywords653 = ','.join(book.keywords653)
+    counter += logFieldMismatch(idn = book.idn, fieldName = "keywords653", dbValue = matchingDBEntry["keywords653"], bookValue = keywords653)
+
+    # genre655_0
+    genre655_0 = book.genre655_0
+    counter += logFieldMismatch(idn = book.idn, fieldName = "genre655_0", dbValue = matchingDBEntry["genre655_0"], bookValue = genre655_0)
+
+    # genre655_a
+    genre655_a = book.genre655_a
+    counter += logFieldMismatch(idn = book.idn, fieldName = "genre655_a", dbValue = matchingDBEntry["genre655_a"], bookValue = genre655_a)
+
+    # genre655_2
+    genre655_2 = book.genre655_2
+    counter += logFieldMismatch(idn = book.idn, fieldName = "genre655_2", dbValue = matchingDBEntry["genre655_2"], bookValue = genre655_2)
+
     # book.publicationPlace
     publicationPlace = book.publicationPlace
     counter += logFieldMismatch(idn = book.idn, fieldName = "publicationPlace", dbValue = matchingDBEntry["publicationPlace"], bookValue = publicationPlace)
@@ -220,13 +243,18 @@ def storeBook(book, logbookMessageId):
     if len(book.keywords) > 0:
         keywords = ','.join(book.keywords)
 
+    keywords653 = None
+    if len(book.keywords653) > 0:
+        keywords653 = ','.join(book.keywords653)
+
+
     command = "INSERT INTO books (idn, linkToDataset, \
             isbnWithDashes, isbnNoDashes, isbnTermsOfAvailability, \
             addedToSql, \
             lastDnbTransaction, projectedPublicationDate, \
             title, subTitle, titleAuthor, \
             authorName, secondaryAuthorName, sortingAuthor,\
-            keywords, \
+            keywords, keywords653, genre655_0, genre655_a, genre655_2,\
             publicationPlace, publisher, publicationYear, logbookMessageId) \
             VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
@@ -242,7 +270,7 @@ def storeBook(book, logbookMessageId):
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
             book.authorName, book.secondaryAuthorName, book.sortingAuthor,\
-            keywords, \
+            keywords, keywords653, book.genre655_0, book.genre655_a, book.genre655_2,\
             book.publicationPlace, book.publisher, book.publicationYear, logbookMessageId)
             )
 
@@ -288,6 +316,9 @@ def updateBook(book, logbookMessageId):
     if len(book.keywords) > 0:
         keywords = ','.join(book.keywords)
 
+    keywords653 = None
+    if len(book.keywords653) > 0:
+        keywords653 = ','.join(book.keywords653)
 
     command = "UPDATE books SET \
             isbnWithDashes = ?, isbnNoDashes = ?, isbnTermsOfAvailability = ?, \
@@ -295,7 +326,7 @@ def updateBook(book, logbookMessageId):
             lastDnbTransaction = ?, projectedPublicationDate = ?, \
             title = ?, subTitle = ?, titleAuthor = ?, \
             authorName = ?, secondaryAuthorName = ?, sortingAuthor = ?,\
-            keywords = ?, \
+            keywords = ?, keywords653 = ?, genre655_0 = ?, genre655_a = ?, genre655_2 = ?, \
             publicationPlace = ?, publisher = ?, publicationYear = ?, \
             logbookMessageId = ? \
             WHERE idn = ?"
@@ -310,7 +341,7 @@ def updateBook(book, logbookMessageId):
             book.lastDnbTransaction, book.projectedPublicationDate, \
             book.title, book.subTitle, book.titleAuthor, \
             book.authorName, book.secondaryAuthorName, book.sortingAuthor,\
-            keywords, \
+            keywords, keywords653, book.genre655_0, book.genre655_a, book.genre655_2,\
             book.publicationPlace, book.publisher, book.publicationYear, \
             logbookMessageId,
             book.idn)

@@ -33,7 +33,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
             "FROM books WHERE bookIsRelevant = 1 AND logbookMessageId = ? ORDER BY idn DESC"
 
         try:
@@ -41,7 +41,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
             books = cursor.fetchall()
 
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # Create a book.
                 book = {}
@@ -64,8 +64,10 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if titleAuthor is not None: book["titleAuthor"] = titleAuthor
                 if authorName is not None: book["authorName"] = authorName
                 if secondaryAuthorName is not None: book["secondaryAuthorName"] = secondaryAuthorName
-                if sortingAuthor is not None: book["sortingAuthor"] = sortingAuthor                
+                if sortingAuthor is not None: book["sortingAuthor"] = sortingAuthor
                 book["keywords"] = keywords if keywords is not None else ""
+                book["keywords653"] = keywords653 if keywords653 is not None else ""
+                if genre655_a is not None: book["genre655_a"] = genre655_0
                 if publicationPlace is not None: book["publicationPlace"] = publicationPlace
                 if publisher is not None: book["publisher"] = publisher
                 if publicationYear is not None: book["publicationYear"] = publicationYear

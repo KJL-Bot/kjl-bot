@@ -73,9 +73,26 @@ class DNBRecord:
         # publicationYear
         self.publicationYear,_ = self.extractProperty(fieldType='datafield', tagString='264', codeString='c', xml=xml, ns=ns)
 
-        # keywords
-        self.keywords = self.extractKeywords(record, xml=xml, ns=ns)
+        # keywords650 - Subject Added Entry - Topical Term
+        _, self.keywords = self.extractProperty(fieldType='datafield', tagString='650', codeString='a', xml=xml, ns=ns)
+        self.keywords = self.eleminateTerms(self.keywords, '(') # remove terms starting with open bracket
 
+        # keywords653 -  Index Term - Uncontrolled
+        _, self.keywords653 = self.extractProperty(fieldType='datafield', tagString='653', codeString='a', xml=xml, ns=ns)
+        self.keywords653 = self.eleminateTerms(self.keywords653, '(') # remove terms starting with open bracket
+
+        # genre655_0,a,2 -  Index Term-Genre/Form
+        self.genre655_0,_ = self.extractProperty(fieldType='datafield', tagString='655', codeString='0', xml=xml, ns=ns)
+        self.genre655_a,_ = self.extractProperty(fieldType='datafield', tagString='655', codeString='a', xml=xml, ns=ns)
+        self.genre655_2,_ = self.extractProperty(fieldType='datafield', tagString='655', codeString='2', xml=xml, ns=ns)
+
+    # returns all elements from incoming list if they do not start with <firstCharacter>
+    def eleminateTerms(self, termsArray, firstCharacter):
+        newArray = []
+        for term in termsArray:
+            if not term.startswith(firstCharacter):
+                newArray.append(term)
+        return newArray
 
 
     # fieldType can be 'controlfield' or 'datafield'
@@ -250,12 +267,12 @@ class DNBRecord:
         personString = f"{authorName} ({authorRelatorTerm})"
 
 
-    def extractKeywords(self, record, xml, ns):
+    #def extractKeywords(self, record, xml, ns):
 
         # SUBJECT ADDED ENTRY--TOPICAL TERM: MARC=650, codeString = a
         # there can be several entries of type MARC 650
 
         # authorName 100 a
-        _,keywords = self.extractProperty(fieldType='datafield', tagString='650', codeString='a', xml=xml, ns=ns)
+        #_,keywords = self.extractProperty(fieldType='datafield', tagString='650', codeString='a', xml=xml, ns=ns)
 
-        return keywords
+        #return keywords

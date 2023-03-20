@@ -10,6 +10,7 @@ import rssManager
 import ftpCoordinator
 import publishers
 import jsonExporter
+import sys
 
 def scrape():
 
@@ -23,7 +24,7 @@ def scrape():
 
     # create query
     dnbSearchQuery = dnbapi.createQuery(year=nextScrapeYear)
-
+    print(dnbSearchQuery)
 
     # log scrape start
     logbookMessageId = logbookManager.logScrapeStart(year=nextScrapeYear)
