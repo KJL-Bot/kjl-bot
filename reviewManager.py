@@ -122,6 +122,8 @@ def fuzzyNameMatch(author, author2):
     return numberOfCommonWords > 0
 
 if __name__ == '__main__':
+
+    # remove old table an replace with new and empty one
     #createReviewsTable()
 
     # addReview(
