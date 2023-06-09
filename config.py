@@ -11,6 +11,7 @@ databaseHost="localhost"
 booksTableName = "books"
 logbookTableName = "logbook"
 relevantPublishersTableName = "relevantPublishers"
+reviewsTableName = "reviews"
 
 numberOfYearsToScrape = 3
 numberOfRetrievedRecords = 30000
