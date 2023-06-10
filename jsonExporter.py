@@ -37,7 +37,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
         (logBookTimestamp, logBookId, logBookDescription) = logbookEntry
 
-        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
+        command = "SELECT idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, lastDnbTransaction, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded " +\
             "FROM books WHERE bookIsRelevant = 1 AND logbookMessageId = ? ORDER BY idn DESC"
 
         try:
@@ -45,7 +45,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
             books = cursor.fetchall()
 
 
-            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
+            for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, lastDnbTransaction, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # Create a book.
                 book = {}
@@ -75,10 +75,17 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if publicationPlace is not None: book["publicationPlace"] = publicationPlace
                 if publisher is not None: book["publisher"] = publisher
                 if publicationYear is not None: book["publicationYear"] = publicationYear
-                if projectedPublicationDate is not None: book["projectedPublicationDate"] = projectedPublicationDate.strftime('%Y-%m-%d')
+
+                # note: if there is not projected publication date, use the date of the last dnb transaction instead
+                if projectedPublicationDate is not None:
+                    book["projectedPublicationDate"] = projectedPublicationDate.strftime('%Y-%m-%d')
+                else:
+                    book["projectedPublicationDate"] = lastDnbTransaction.strftime('%Y-%m-%d')
+
                 if linkToDataset is not None: book["linkToDataset"] = linkToDataset
                 if isbnWithDashes is not None: book["isbnWithDashes"] = isbnWithDashes
                 if addedToSql is not None: book["addedToSql"] = addedToSql.strftime('%Y-%m-%dT%H:%M:%SZ')
+                if lastDnbTransaction is not None: book["lastDnbTransaction"] = lastDnbTransaction.strftime('%Y-%m-%dT%H:%M:%SZ')
                 if matchesRelevantPublisher is not None: book["matchesRelevantPublisher"] = matchesRelevantPublisher
                 book["publisherJLPNominated"] = publisherJLPNominated if publisherJLPNominated is not None else 0
                 book["publisherJLPAwarded"] = publisherJLPAwarded if publisherJLPAwarded is not None else 0
