@@ -104,6 +104,7 @@ def matchReviews():
 
     connection.close()
 
+# updates review table to relate review to a book
 def updateReview(reviewId, bookIdn):
 
     # connect to DB
