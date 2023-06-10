@@ -26,14 +26,11 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
     # get the all available reviews from database
     availableReviews = reviewManager.getReviews(cursor)
-    print(availableReviews)
 
     # get logbook entries that where logged against the scrapeForYearCommand
     command = f"SELECT timestamp, id, description  FROM logbook WHERE command = '{config.scrapeForYearCommand}' ORDER BY id DESC"
     cursor.execute(command)
     logbookEntries = cursor.fetchall()
-
-    print(f"Fetched {len(logbookEntries)} entries.")
 
     # go through each entry
     for logbookEntry in logbookEntries:

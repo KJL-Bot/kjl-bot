@@ -8,12 +8,16 @@ import reviewManager
 from datetime import datetime
 import string
 
+
 def parseFeed():
 
     reviewSite = "FAZ"
     rssFeed = "https://www.faz.net/rss/aktuell/feuilleton/buecher/rezensionen/kinderbuch/"
 
     d = feedparser.parse(rssFeed)
+
+    # count how many reviews were retrieved
+    reviewCounter = 0
 
     for n in range(0,len(d.entries)):
 
@@ -27,7 +31,9 @@ def parseFeed():
         # print()
 
         (published, author, title) = extractBookDetails(pageUrl)
-        print(f"Storing Review: {published} -> {author}: {title}")
+
+        # print(f"Storing Review: {published} -> {author}: {title}")
+
         reviewManager.addReview(
                 published = published,
                 scraper = "fazScraper",
@@ -38,6 +44,10 @@ def parseFeed():
                 url=pageUrl
         )
 
+        # count
+        reviewCounter += 1
+
+    return reviewCounter
 
 def extractBookDetails(pageUrl):
 
@@ -89,4 +99,5 @@ def extractBookDetails(pageUrl):
 
 
 if __name__ == '__main__':
-    parseFeed()
+    numberOfRetrievedReviews = parseFeed()
+    print(f"Retrieved {numberOfRetrievedReviews} FAZ reviews")

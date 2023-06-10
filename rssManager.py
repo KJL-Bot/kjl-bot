@@ -6,6 +6,7 @@ from pathlib import Path
 from dateutil.relativedelta import relativedelta
 import mariaDatabase
 import publishers
+import reviewManager
 
 
 class RSSEntry:
@@ -42,7 +43,7 @@ def generateRSSEntries():
     cursor = connection.cursor()
 
     # get the all available reviews from database
-    availableReviews = getReviews(cursor)
+    availableReviews = reviewManager.getReviews(cursor)
 
     # get logbook entries
     command = f"SELECT timestamp, id, description  FROM logbook WHERE command = '{config.scrapeForYearCommand}' ORDER BY id DESC"
@@ -142,7 +143,7 @@ def generateRSSEntries():
                     entryLines.append(f"Dieser Verlag is laut Datenbank nicht relevant.")
 
                 # Add reviews if present
-                matchingReviews = matchingReviewsForIdn(idn, availableReviews)
+                matchingReviews = reviewManager.matchingReviewsForIdn(idn, availableReviews)
                 if len(matchingReviews) > 0:
                     reviewLine = "Rezensionen: "
                     for (reviewSite, url) in matchingReviews:

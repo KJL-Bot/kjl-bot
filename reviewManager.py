@@ -6,6 +6,7 @@ import config
 import logbookManager
 from datetime import datetime
 import string
+import fazParser
 
 def createReviewsTable():
 
@@ -27,6 +28,14 @@ def createReviewsTable():
 
     mariaDatabase.executeCommand(command)
 
+# put all reviews to be scraped here
+def scrapeReviews():
+
+    totalNumberOfReviews = 0
+
+    totalNumberOfReviews += fazParser.parseFeed()
+
+    return totalNumberOfReviews
 
 def addReview(published, scraper, reviewSite, author, title, isbnWithDashes, url):
 
@@ -71,14 +80,17 @@ def matchReviews():
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
 
-    # get all reviews without matched idn from reivews table
-    command = f"SELECT id, isbnWithDashes, author, title FROM {config.reviewsTableName} WHERE matchingBookIdn IS NULL"
+    # get all reviews from reviews table
+    command = f"SELECT id, isbnWithDashes, author, title FROM {config.reviewsTableName}"
     cursor.execute(command)
     reviews = cursor.fetchall()
 
+    # counter the number of matched reviews
+    matchedReviewCounter = 0
+
     # go through each review
     for (reviewId, isbnWithDashes, author, title) in reviews:
-        print(f"\n{author}: {title}")
+        #print(f"\n{author}: {title}")
 
         # convert author into tokens
         authorTokenList = author.replace(',', '').split()
@@ -95,14 +107,26 @@ def matchReviews():
         cursor.execute(command)
         matchedBook = cursor.fetchone()
 
-        # the most likely match is the first returned result
-        (matchedIdn, matchedAuthor, matchedTitle) = matchedBook
-        print(f"Match: {matchedIdn} -> {matchedAuthor}: {matchedTitle}")
+        if len(matchedBook) > 0:
 
-        # update the review accordingly
-        updateReview(reviewId, matchedIdn)
+            # the most likely match is the first returned result
+            (matchedIdn, matchedAuthor, matchedTitle) = matchedBook
+            #print(f"Match: {matchedIdn} -> {matchedAuthor}: {matchedTitle}")
+
+            # update the review accordingly
+            updateReview(reviewId, matchedIdn)
+
+            # count
+            matchedReviewCounter += 1
+
+        else:
+            # there is no match. Log.
+            logbookManager.logUnmatchedReview(reviewId)
+
 
     connection.close()
+
+    return matchedReviewCounter
 
 # updates review table to relate review to a book
 def updateReview(reviewId, bookIdn):
@@ -144,7 +168,7 @@ def matchingReviewsForIdn(bookIdn, availableReviews):
     # we get here if no match took place
     return matchingReviews
 
-    
+
 # def matchReviewsOld():
 #     # connect to DB
 #     connection = mariaDatabase.getDatabaseConnection()
@@ -204,4 +228,5 @@ if __name__ == '__main__':
     #     url="https://www.apple.com"
     # )
 
-    matchReviews()
+    numberOfMatchedReviews = matchReviews()
+    print(f"Matched {numberOfMatchedReviews} reviews.")

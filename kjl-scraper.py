@@ -10,7 +10,9 @@ import rssManager
 import ftpCoordinator
 import publishers
 import jsonExporter
+import reviewManager
 import sys
+
 
 def scrape():
 
@@ -35,7 +37,7 @@ def scrape():
 
     # log number of retrieved records
     logbookManager.logRecordRetrieval(numberOfRecords=len(records))
-    #logbookManager.logMessage(relatesToIDN=None, description=f"Retrieved {len(records)} DNB records")
+    logbookManager.logMessage(relatesToIDN=None, description=f"Retrieved {len(records)} DNB records")
 
     # convert to array of books
     books = []
@@ -56,42 +58,47 @@ def scrape():
 
     # log
     if insertedBookCounter > 0:
-        #logbookManager.logMessage(relatesToIDN=None, description=f"Added {insertedBookCounter} books to database")
         logbookManager.logBooksAddition(numberOfBooks=insertedBookCounter)
 
     if updatedCounter > 0:
-        #logbookManager.logMessage(relatesToIDN=None, description=f"Updated {updatedCounter} books in database")
         logbookManager.logBooksUpdate(numberOfBooks=updatedCounter)
 
     # match all DB entries against relevant publishers
     publishers.matchBooksToPublishers()
-    #logbookManager.logMessage("Matched to publishers")
+
+    # scrape review sites
+    numberOfRetrievedReviews = reviewManager.scrapeReviews()
+    logbookManager.logMessage(None, f"Scraped {numberOfRetrievedReviews} reviews")
+
+    # match reviews against books
+    numberOfMatchedReviews = reviewManager.matchReviews()
+    logbookManager.logMessage(None, f"Matched {numberOfMatchedReviews} reviews")
 
     # identify all the books that are relevant for playout
     bookManager.identifyRelevantBooks()
-    #logbookManager.logMessage("Updated book relevancies")
+    logbookManager.logMessage(None, "Updated book relevancies")
 
     # create rss entries
     rssEntries = rssManager.generateRSSEntries()
-    #logbookManager.logMessage("Created RSS entries")
+    logbookManager.logMessage(None, "Created RSS entries")
 
     # generate and store RSS feed locally
     rssFilePath = rssManager.generateFeed(rssEntries)
-    #logbookManager.logMessage("Generated RSS Feed")
+    logbookManager.logMessage(None, "Generated RSS Feed")
 
     # transfer xml file to FTP server
     ftpCoordinator.transferFileViaFTP(rssFilePath, config.ftpTargetFolder) # artistic engines
-    #logbookManager.logMessage("Transferred RSS to Artistic Engines FTP server")
+    logbookManager.logMessage(None, "Transferred RSS to Artistic Engines FTP server")
     #print(f"Feed URL is: {config.rssFeedUrl}")
 
     # create JSON file recent valid books
     validBookEntries = jsonExporter.generateValidBookEntries(config.maximumNumberOfJSONEntries)
     jsonFilePath = jsonExporter.writeBookEntriesToJSONFile(validBookEntries)
-    #logbookManager.logMessage("Generated JSON Feed")
+    logbookManager.logMessage(None, "Generated JSON Feed")
 
     # transfer JSON file to Artistic Engines FTP server
     ftpCoordinator.transferFileViaFTP(jsonFilePath, config.ftpTargetFolder)
-    #logbookManager.logMessage("Transferred JSON to Artistic Engines FTP server")
+    logbookManager.logMessage(None, "Transferred JSON to Artistic Engines FTP server")
     #print(f"JSON URL is: {config.jsonFeedUrl}")
 
     # transfer JSON file to KJL FTP server

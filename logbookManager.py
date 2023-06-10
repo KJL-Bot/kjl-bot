@@ -110,6 +110,15 @@ def logBooksUpdate(numberOfBooks):
     messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
     return messageId
 
+def logReviewNotMatched(reviewId):
+
+    command = "retrievedRecords"
+    parameter = numberOfRecords
+    relatesToIDN = None
+    description = f"Retrieved {numberOfRecords} DNB records"
+
+    messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
+    return messageId
 
 # Log simple message
 def logMessage(relatesToIDN, description):
