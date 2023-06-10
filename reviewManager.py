@@ -13,6 +13,7 @@ def createReviewsTable():
     command = f"CREATE OR REPLACE TABLE {config.reviewsTableName} ( \
         id INT AUTO_INCREMENT primary key, \
         matchingBookIdn VARCHAR(10), \
+        excludeReview BOOL DEFAULT False, \
         addedToSql TIMESTAMP, \
         published TIMESTAMP, \
         scraper VARCHAR(128), \
@@ -63,7 +64,9 @@ def addReview(published, scraper, reviewSite, author, title, isbnWithDashes, url
     connection.commit()
     connection.close()
 
+# goes through each unmatched rewview and matched iit to the most likely book
 def matchReviews():
+
     # connect to DB
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
@@ -77,20 +80,28 @@ def matchReviews():
     for (reviewId, isbnWithDashes, author, title) in reviews:
         print(f"\n{author}: {title}")
 
-        # match title
-        command = f"SELECT idn, sortingAuthor FROM {config.booksTableName} WHERE title LIKE '%{title}%'"
+        # convert author into tokens
+        authorTokenList = author.replace(',', '').split()
+        authorTokens = ','.join(authorTokenList)
+
+        # convert title into tokens
+        titleTokenList = title.replace(',', '').split()
+        titleTokens = ','.join(titleTokenList)
+
+        # match command
+        command = f"SELECT idn, sortingAuthor, title FROM {config.booksTableName} WHERE MATCH(sortingAuthor) AGAINST('{authorTokens}') \
+            AND MATCH(title) AGAINST('{titleTokens}')"
+        # print(command)
         cursor.execute(command)
-        matchedBooks = cursor.fetchall()
-        for bookIdn, sortingAuthor in matchedBooks:
-            if fuzzyNameMatch(author, sortingAuthor) == True:
-                print(f"Match: {bookIdn} -> {sortingAuthor}: {title}")
+        matchedBook = cursor.fetchone()
 
-                # update review table
-                updateReview(reviewId, bookIdn)
+        # the most likely match is the first returned result
+        (matchedIdn, matchedAuthor, matchedTitle) = matchedBook
+        print(f"Match: {matchedIdn} -> {matchedAuthor}: {matchedTitle}")
 
+        # update the review accordingly
+        updateReview(reviewId, matchedIdn)
 
-    # close
-    #connection.commit()
     connection.close()
 
 def updateReview(reviewId, bookIdn):
@@ -106,20 +117,49 @@ def updateReview(reviewId, bookIdn):
     connection.close()
 
 
-
-def fuzzyNameMatch(author, author2):
-
-    # extract author first nad last names into a set
-    authorWords1 = set([word.strip(string.punctuation) for word in author.split()])
-    authorWords2 = set([word.strip(string.punctuation) for word in author2.split()])
-
-    #print(f"set1: {authorWords1}")
-    #print(f"set2: {authorWords2}")
-
-    numberOfCommonWords = len(authorWords1.intersection(authorWords2))
-
-    # return True if at least one of the words match
-    return numberOfCommonWords > 0
+# def matchReviewsOld():
+#     # connect to DB
+#     connection = mariaDatabase.getDatabaseConnection()
+#     cursor = connection.cursor()
+#
+#     # get all reviews without matched idn from reivews table
+#     command = f"SELECT id, isbnWithDashes, author, title FROM {config.reviewsTableName} WHERE matchingBookIdn IS NULL"
+#     cursor.execute(command)
+#     reviews = cursor.fetchall()
+#
+#     # go through each review
+#     for (reviewId, isbnWithDashes, author, title) in reviews:
+#         print(f"\n{author}: {title}")
+#
+#         # match title
+#         command = f"SELECT idn, sortingAuthor FROM {config.booksTableName} WHERE title LIKE '%{title}%'"
+#         cursor.execute(command)
+#         matchedBooks = cursor.fetchall()
+#         for bookIdn, sortingAuthor in matchedBooks:
+#             if fuzzyNameMatch(author, sortingAuthor) == True:
+#                 print(f"Match: {bookIdn} -> {sortingAuthor}: {title}")
+#
+#                 # update review table
+#                 updateReview(reviewId, bookIdn)
+#
+#
+#     # close
+#     #connection.commit()
+#     connection.close()
+#
+# def fuzzyNameMatch(author, author2):
+#
+#     # extract author first nad last names into a set
+#     authorWords1 = set([word.strip(string.punctuation) for word in author.split()])
+#     authorWords2 = set([word.strip(string.punctuation) for word in author2.split()])
+#
+#     #print(f"set1: {authorWords1}")
+#     #print(f"set2: {authorWords2}")
+#
+#     numberOfCommonWords = len(authorWords1.intersection(authorWords2))
+#
+#     # return True if at least one of the words match
+#     return numberOfCommonWords > 0
 
 if __name__ == '__main__':
 
