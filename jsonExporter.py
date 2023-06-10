@@ -6,6 +6,7 @@ import config
 from pathlib import Path
 import utilities
 import re
+import reviewManager
 
 def generateValidBookEntries(numberOfDesiredBooks):
 
@@ -23,10 +24,16 @@ def generateValidBookEntries(numberOfDesiredBooks):
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
 
-    # get logbook entries
-    command = "SELECT timestamp, id, description  FROM logbook ORDER BY timestamp DESC"
+    # get the all available reviews from database
+    availableReviews = reviewManager.getReviews(cursor)
+    print(availableReviews)
+
+    # get logbook entries that where logged against the scrapeForYearCommand
+    command = f"SELECT timestamp, id, description  FROM logbook WHERE command = '{config.scrapeForYearCommand}' ORDER BY id DESC"
     cursor.execute(command)
     logbookEntries = cursor.fetchall()
+
+    print(f"Fetched {len(logbookEntries)} entries.")
 
     # go through each entry
     for logbookEntry in logbookEntries:
@@ -67,7 +74,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
                 if sortingAuthor is not None: book["sortingAuthor"] = sortingAuthor
                 book["keywords"] = keywords if keywords is not None else ""
                 book["keywords653"] = keywords653 if keywords653 is not None else ""
-                if genre655_a is not None: book["genre655_a"] = genre655_0
+                if genre655_a is not None: book["genre655_a"] = genre655_a
                 if publicationPlace is not None: book["publicationPlace"] = publicationPlace
                 if publisher is not None: book["publisher"] = publisher
                 if publicationYear is not None: book["publicationYear"] = publicationYear
@@ -82,6 +89,17 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
                 # add cover url
                 if isbnWithDashes is not None: book["coverUrl"] = utilities.coverUrl(isbnWithDashes=isbnWithDashes, size='l')
+
+                # Add reviews if present
+                matchingReviews = reviewManager.matchingReviewsForIdn(idn, availableReviews)
+                if len(matchingReviews) > 0:
+                    reviews = []
+                    for (reviewSite, reviewUrl) in matchingReviews:
+                        reviewDict = {"reviewSite": reviewSite, "reviewUrl": reviewUrl}
+                        reviews.append(reviewDict)
+
+                    print(f"Adding reviews: {reviews}")
+                    book["reviews"] = reviews
 
                 # count the book.
                 bookCounter += 1

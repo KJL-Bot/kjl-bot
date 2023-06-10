@@ -1,6 +1,7 @@
 import mariaDatabase
 import uuid
 from datetime import datetime
+import config
 
 # use this message command to log a scrape for a particular year
 scrapeForYearCommand = config.scrapeForYearCommand
