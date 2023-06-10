@@ -31,6 +31,9 @@ rssFeedLanguage = 'de'
 recentBooksJsonFileName = "recentBooks.json"
 jsonFeedUrl = f'http://artisticengines.com/kjl/{recentBooksJsonFileName}'
 
+# logBook: the id of this command is used to group imported booked together, as they are imported together, associated with the same logbookId
+scrapeForYearCommand = "scrapeForYear"
+
 # Artistic Engines FTP
 ftpServer = 'ftp.artisticengines.com'
 ftpTargetFolder = 'kjl/'

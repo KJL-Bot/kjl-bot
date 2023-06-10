@@ -27,6 +27,33 @@ class RSSEntry:
 
         return description
 
+# gets relevant reviews and returns them as an array of tuples (matchingBookIdn, reviewSite, url)
+def getReviews(cursor):
+        # get all available matched reviews that are marked not to be excluded
+        command = f"SELECT matchingBookIdn, reviewSite, url FROM {config.reviewsTableName} WHERE matchingBookIdn IS NOT NULL AND excludeReview=0"
+        cursor.execute(command)
+        reviewResult = cursor.fetchall()
+
+        # transfer to local array
+        reviews = []
+        for (matchingBookIdn, reviewSite, url) in reviewResult:
+            reviews.append((matchingBookIdn, reviewSite, url))
+
+        return reviews
+
+# finds the bookReviews that match the given bookIdn. Returns an array of matching reviews with tuples (reviewSite, url)
+def matchingReviewsForIdn(bookIdn, availableReviews):
+
+    matchingReviews = []
+
+    for (matchingBookIdn, reviewSite, url) in availableReviews:
+        if bookIdn == matchingBookIdn:
+            matchingReview = (reviewSite, url)
+            matchingReviews.append(matchingReview)
+
+    # we get here if no match took place
+    return matchingReviews
+
 def generateRSSEntries():
 
     # result are stored here
@@ -41,8 +68,11 @@ def generateRSSEntries():
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
 
+    # get the all available reviews from database
+    availableReviews = getReviews(cursor)
+
     # get logbook entries
-    command = "SELECT timestamp, id, description  FROM logbook ORDER BY timestamp DESC"
+    command = f"SELECT timestamp, id, description  FROM logbook WHERE command = '{config.scrapeForYearCommand}' ORDER BY id DESC"
     cursor.execute(command)
     logbookEntries = cursor.fetchall()
 
@@ -138,6 +168,16 @@ def generateRSSEntries():
                 else:
                     entryLines.append(f"Dieser Verlag is laut Datenbank nicht relevant.")
 
+                # Add reviews if present
+                matchingReviews = matchingReviewsForIdn(idn, availableReviews)
+                if len(matchingReviews) > 0:
+                    reviewLine = "Rezensionen: "
+                    for (reviewSite, url) in matchingReviews:
+                         reviewLine += f"<a href=\"{url}\">{reviewSite}</a> "
+
+                    print(f"Adding reviewline: {reviewLine}")
+                    entryLines.append(reviewLine)
+
                 # empty line at the end
                 entryLines.append(f"")
 
@@ -222,4 +262,4 @@ def generateFeed(rssEntries):
 
 if __name__ == '__main__':
     rssEntries = generateRSSEntries()
-    generateFeed()
+    generateFeed(rssEntries)

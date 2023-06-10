@@ -258,7 +258,7 @@ def storeBook(book, logbookMessageId):
             authorName, secondaryAuthorName, sortingAuthor,\
             keywords, keywords653, genre655_0, genre655_a, genre655_2,\
             publicationPlace, publisher, publicationYear, logbookMessageId) \
-            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
+            VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)"
 
 
     success = False

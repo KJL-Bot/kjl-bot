@@ -3,7 +3,7 @@ import uuid
 from datetime import datetime
 
 # use this message command to log a scrape for a particular year
-scrapeForYearCommand = "scrapeForYear"
+scrapeForYearCommand = config.scrapeForYearCommand
 
 ########## Logbook
 def createLogbook():
@@ -14,7 +14,8 @@ def createLogbook():
         command VARCHAR(64),
         parameter VARCHAR(64),
         relatesToIDN VARCHAR(10),
-        description VARCHAR(512))
+        description VARCHAR(512),
+        INDEX command (command))
     """
     mariaDatabase.executeCommand(command)
 
