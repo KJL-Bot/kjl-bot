@@ -138,22 +138,30 @@ def updateReview(reviewId, bookIdn):
     command = f"UPDATE {config.reviewsTableName} SET matchingBookIdn = '{bookIdn}' WHERE id={reviewId}"
     cursor.execute(command)
 
-    connection.commit()
-    connection.close()
+    connection = mariaDatabase.getDatabaseConnection()
+    cursor = connection.cursor()
 
 # gets relevant reviews and returns them as an array of tuples (matchingBookIdn, reviewSite, url)
-def getReviews(cursor):
-        # get all available matched reviews that are marked not to be excluded
-        command = f"SELECT matchingBookIdn, reviewSite, url FROM {config.reviewsTableName} WHERE matchingBookIdn IS NOT NULL AND excludeReview=0"
-        cursor.execute(command)
-        reviewResult = cursor.fetchall()
+def getReviews():
 
-        # transfer to local array
-        reviews = []
-        for (matchingBookIdn, reviewSite, url) in reviewResult:
-            reviews.append((matchingBookIdn, reviewSite, url))
+    # connect to DB
+    connection = mariaDatabase.getDatabaseConnection()
+    cursor = connection.cursor()
 
-        return reviews
+    # get all available matched reviews that are marked not to be excluded
+    command = f"SELECT matchingBookIdn, reviewSite, url FROM {config.reviewsTableName} WHERE matchingBookIdn IS NOT NULL AND excludeReview=0"
+    cursor.execute(command)
+    reviewResult = cursor.fetchall()
+
+    # transfer to local array
+    reviews = []
+    for (matchingBookIdn, reviewSite, url) in reviewResult:
+        reviews.append((matchingBookIdn, reviewSite, url))
+
+    return reviews
+
+    connection = mariaDatabase.getDatabaseConnection()
+    cursor = connection.cursor()
 
 # finds the bookReviews that match the given bookIdn. Returns an array of matching reviews with tuples (reviewSite, url)
 def matchingReviewsForIdn(bookIdn, availableReviews):

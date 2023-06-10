@@ -20,12 +20,12 @@ def generateValidBookEntries(numberOfDesiredBooks):
     now = datetime.utcnow()
     firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
 
+    # get the all available reviews from database
+    availableReviews = reviewManager.getReviews()
+
     # connect
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
-
-    # get the all available reviews from database
-    availableReviews = reviewManager.getReviews(cursor)
 
     # get logbook entries that where logged against the scrapeForYearCommand
     command = f"SELECT timestamp, id, description  FROM logbook WHERE command = '{config.scrapeForYearCommand}' ORDER BY id DESC"

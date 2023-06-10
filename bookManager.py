@@ -4,6 +4,7 @@ from datetime import datetime, timedelta
 import logbookManager
 from dateutil.relativedelta import relativedelta
 import config
+import reviewManager
 
 ######## Books
 
@@ -389,6 +390,9 @@ def identifyRelevantBooks():
     firstDayOfLastValidMonth = firstDayOfThisMonth + relativedelta(months=1)
     firstDayOfFirstValidMonth = firstDayOfThisMonth - relativedelta(months=1)
 
+    # get all available reviews from dB
+    availableReviews = reviewManager.getReviews()
+
     # connect to DB
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
@@ -415,13 +419,20 @@ def identifyRelevantBooks():
         if sortingAuthor is None:
             bookIsRelevant = False
 
-        # skip entries without expected publication date
+        # if there is no projectedPublicationDate...
         if projectedPublicationDate is None:
             bookIsRelevant = False
 
         # skip entries whose projected publication date is too far in the future
         if (projectedPublicationDate is None) or (projectedPublicationDate > firstDayOfLastValidMonth) or (projectedPublicationDate < firstDayOfFirstValidMonth):
             bookIsRelevant = False
+
+        ###### Override #####
+
+        # if there is a review, overide everything and mark the book as relevant
+        numberOfMatchingReviews = matchingReviewsForIdn(idn, availableReviews):
+        if numberOfMatchingReviews > 0:
+            bookIsRelevant = True
 
         # write to DB
         command = f"UPDATE {booksTableName} SET bookIsRelevant = ? WHERE idn = ?"

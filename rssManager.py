@@ -37,13 +37,13 @@ def generateRSSEntries():
     now = datetime.utcnow()
     firstDayOfNextMonth = now.replace(day=1) + relativedelta(months=1)
 
+    # get the all available reviews from database
+    availableReviews = reviewManager.getReviews()
+    
     # connect
     # connection = mariadb.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
     connection = mariaDatabase.getDatabaseConnection()
     cursor = connection.cursor()
-
-    # get the all available reviews from database
-    availableReviews = reviewManager.getReviews(cursor)
 
     # get logbook entries
     command = f"SELECT timestamp, id, description  FROM logbook WHERE command = '{config.scrapeForYearCommand}' ORDER BY id DESC"
