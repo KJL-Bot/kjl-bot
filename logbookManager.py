@@ -110,12 +110,12 @@ def logBooksUpdate(numberOfBooks):
     messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
     return messageId
 
-def logReviewNotMatched(reviewId):
+def logUnmatchedReview(reviewId):
 
-    command = "retrievedRecords"
-    parameter = numberOfRecords
+    command = "unmatchedReview"
+    parameter = reviewId
     relatesToIDN = None
-    description = f"Retrieved {numberOfRecords} DNB records"
+    description = f"Unable to match review with id {reviewId}"
 
     messageId = createLogbookMessage(command=command, parameter=parameter, relatesToIDN=relatesToIDN, description=description)
     return messageId
