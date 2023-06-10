@@ -430,7 +430,7 @@ def identifyRelevantBooks():
         ###### Override #####
 
         # if there is a review, overide everything and mark the book as relevant
-        numberOfMatchingReviews = matchingReviewsForIdn(idn, availableReviews):
+        numberOfMatchingReviews = reviewManager.matchingReviewsForIdn(idn, availableReviews)
         if numberOfMatchingReviews > 0:
             bookIsRelevant = True
 
