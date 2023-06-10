@@ -52,7 +52,9 @@ def createBooksTable():
         bookIsRelevant TINYINT,
         logbookMessageId MEDIUMINT,
 
-        INDEX(logbookMessageId)
+        INDEX(logbookMessageId),
+        INDEX(isbnWithDashes),
+        INDEX(title)
 
     );"""
 
