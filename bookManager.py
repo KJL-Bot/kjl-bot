@@ -10,54 +10,97 @@ import reviewManager
 
 def createBooksTable():
 
-    # Create books table
+    # Create books table. Copied from Sequel Pro on 2023-06-16
     command = """
-    CREATE TABLE IF NOT EXISTS books (
-        idn VARCHAR(10) PRIMARY KEY,
-        linkToDataset VARCHAR(128),
+CREATE TABLE `books` (
+  `idn` varchar(10) NOT NULL,
+  `linkToDataset` varchar(128) DEFAULT NULL,
+  `isbnWithDashes` varchar(20) DEFAULT NULL,
+  `isbnNoDashes` varchar(20) DEFAULT NULL,
+  `isbnTermsOfAvailability` varchar(512) DEFAULT NULL,
+  `addedToSql` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
+  `updatedInSql` timestamp NULL DEFAULT NULL,
+  `lastDnbTransaction` timestamp NULL DEFAULT NULL,
+  `projectedPublicationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `title` varchar(1024) DEFAULT NULL,
+  `subTitle` varchar(1024) DEFAULT NULL,
+  `titleAuthor` varchar(1024) DEFAULT NULL,
+  `authorName` varchar(256) DEFAULT NULL,
+  `secondaryAuthorName` varchar(256) DEFAULT NULL,
+  `sortingAuthor` varchar(256) DEFAULT NULL,
+  `keywords` varchar(1024) DEFAULT NULL,
+  `keywords653` varchar(8192) DEFAULT NULL,
+  `genre655_0` varchar(128) DEFAULT NULL,
+  `genre655_a` varchar(256) DEFAULT NULL,
+  `genre655_2` varchar(128) DEFAULT NULL,
+  `publicationPlace` varchar(128) DEFAULT NULL,
+  `publisher` varchar(256) DEFAULT NULL,
+  `publicationYear` varchar(64) DEFAULT NULL,
+  `matchesRelevantPublisher` mediumint(11) DEFAULT NULL,
+  `publisherJLPNominated` tinyint(1) DEFAULT NULL,
+  `publisherJLPAwarded` tinyint(1) DEFAULT NULL,
+  `publisherKimiAwarded` tinyint(1) DEFAULT NULL,
+  `bookIsRelevant` tinyint(1) DEFAULT NULL,
+  `logbookMessageId` mediumint(9) DEFAULT NULL,
+  PRIMARY KEY (`idn`),
+  KEY `logbookMessageId` (`logbookMessageId`),
+  KEY `isbnWithDashes` (`isbnWithDashes`),
+  FULLTEXT KEY `sortingAuthor` (`sortingAuthor`),
+  FULLTEXT KEY `titleIndex` (`title`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+    """
 
-        isbnWithDashes VARCHAR(20),
-        isbnNoDashes VARCHAR(20),
-        isbnTermsOfAvailability VARCHAR(512),
 
-        addedToSql TIMESTAMP,
-        updatedInSql TIMESTAMP,
 
-        lastDnbTransaction TIMESTAMP,
-        projectedPublicationDate TIMESTAMP,
 
-        title VARCHAR(1024),
-        subTitle VARCHAR(1024),
-        titleAuthor VARCHAR(1024),
+    #command = """
+    #CREATE TABLE IF NOT EXISTS books (
+    #    idn VARCHAR(10) PRIMARY KEY,
+    #   linkToDataset VARCHAR(128),
 
-        authorName VARCHAR(256),
-        secondaryAuthorName VARCHAR(128),
-        sortingAuthor VARCHAR(128),
+    #    isbnWithDashes VARCHAR(20),
+    #    isbnNoDashes VARCHAR(20),
+    #    isbnTermsOfAvailability VARCHAR(512),
 
-        keywords VARCHAR(1024),
-        keywords653 VARCHAR(4096),
+    #    addedToSql TIMESTAMP,
+    #    updatedInSql TIMESTAMP,
 
-        genre655_0 VARCHAR(128),
-        genre655_a VARCHAR(256),
-        genre655_2 VARCHAR(128),
+    #    lastDnbTransaction TIMESTAMP,
+    #    projectedPublicationDate TIMESTAMP,
 
-        publicationPlace VARCHAR(128),
-        publisher VARCHAR(256),
-        publicationYear VARCHAR(64),
+    #    title VARCHAR(1024),
+    #    subTitle VARCHAR(1024),
+    #    titleAuthor VARCHAR(1024),
 
-        matchesRelevantPublisher MEDIUMINT,
-        publisherJLPNominated TINYINT,
-        publisherJLPAwarded TINYINT,
-        publisherKimiAwarded TINYINT,
+    #    authorName VARCHAR(256),
+    #    secondaryAuthorName VARCHAR(128),
+    #    sortingAuthor VARCHAR(128),
 
-        bookIsRelevant TINYINT,
-        logbookMessageId MEDIUMINT,
+    #    keywords VARCHAR(1024),
+    #    keywords653 VARCHAR(4096),
 
-        INDEX(logbookMessageId),
-        INDEX(isbnWithDashes),
-        INDEX(title)
+    #    genre655_0 VARCHAR(128),
+    #    genre655_a VARCHAR(256),
+    #    genre655_2 VARCHAR(128),
 
-    );"""
+    #    publicationPlace VARCHAR(128),
+    #    publisher VARCHAR(256),
+    #    publicationYear VARCHAR(64),
+
+    #    matchesRelevantPublisher MEDIUMINT,
+    #    publisherJLPNominated TINYINT,
+    #    publisherJLPAwarded TINYINT,
+    #    publisherKimiAwarded TINYINT,
+
+    #    bookIsRelevant TINYINT,
+    #    logbookMessageId MEDIUMINT,
+
+    #    INDEX(logbookMessageId),
+    #    INDEX(isbnWithDashes),
+    #    INDEX(title)
+
+    #);"""
+
 
     mariaDatabase.executeCommand(command)
 
