@@ -39,7 +39,7 @@ def generateRSSEntries():
 
     # get the all available reviews from database
     availableReviews = reviewManager.getReviews()
-    
+
     # connect
     # connection = mariadb.connect(databaseName, detect_types=sqlite3.PARSE_DECLTYPES | sqlite3.PARSE_COLNAMES)
     connection = mariaDatabase.getDatabaseConnection()
@@ -149,7 +149,7 @@ def generateRSSEntries():
                     for (reviewSite, url) in matchingReviews:
                          reviewLine += f"<a href=\"{url}\">{reviewSite}</a> "
 
-                    print(f"Adding reviewline: {reviewLine}")
+                    #print(f"Adding reviewline: {reviewLine}")
                     entryLines.append(reviewLine)
 
                 # empty line at the end

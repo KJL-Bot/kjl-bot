@@ -107,7 +107,7 @@ def matchReviews():
         cursor.execute(command)
         matchedBook = cursor.fetchone()
 
-        if len(matchedBook) > 0:
+        if matchedBook is not None:
 
             # the most likely match is the first returned result
             (matchedIdn, matchedAuthor, matchedTitle) = matchedBook
@@ -136,10 +136,15 @@ def updateReview(reviewId, bookIdn):
     cursor = connection.cursor()
 
     command = f"UPDATE {config.reviewsTableName} SET matchingBookIdn = '{bookIdn}' WHERE id={reviewId}"
-    cursor.execute(command)
 
-    connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()
+    try:
+        cursor.execute(command)
+        connection.commit()
+    except mariadb.Error as e:
+        print(f"Error: {e}")
+
+    cursor.close()
+    connection.close()
 
 # gets relevant reviews and returns them as an array of tuples (matchingBookIdn, reviewSite, url)
 def getReviews():
@@ -158,10 +163,11 @@ def getReviews():
     for (matchingBookIdn, reviewSite, url) in reviewResult:
         reviews.append((matchingBookIdn, reviewSite, url))
 
+    connection.close()
+
     return reviews
 
-    connection = mariaDatabase.getDatabaseConnection()
-    cursor = connection.cursor()
+
 
 # finds the bookReviews that match the given bookIdn. Returns an array of matching reviews with tuples (reviewSite, url)
 def matchingReviewsForIdn(bookIdn, availableReviews):
@@ -177,49 +183,7 @@ def matchingReviewsForIdn(bookIdn, availableReviews):
     return matchingReviews
 
 
-# def matchReviewsOld():
-#     # connect to DB
-#     connection = mariaDatabase.getDatabaseConnection()
-#     cursor = connection.cursor()
-#
-#     # get all reviews without matched idn from reivews table
-#     command = f"SELECT id, isbnWithDashes, author, title FROM {config.reviewsTableName} WHERE matchingBookIdn IS NULL"
-#     cursor.execute(command)
-#     reviews = cursor.fetchall()
-#
-#     # go through each review
-#     for (reviewId, isbnWithDashes, author, title) in reviews:
-#         print(f"\n{author}: {title}")
-#
-#         # match title
-#         command = f"SELECT idn, sortingAuthor FROM {config.booksTableName} WHERE title LIKE '%{title}%'"
-#         cursor.execute(command)
-#         matchedBooks = cursor.fetchall()
-#         for bookIdn, sortingAuthor in matchedBooks:
-#             if fuzzyNameMatch(author, sortingAuthor) == True:
-#                 print(f"Match: {bookIdn} -> {sortingAuthor}: {title}")
-#
-#                 # update review table
-#                 updateReview(reviewId, bookIdn)
-#
-#
-#     # close
-#     #connection.commit()
-#     connection.close()
-#
-# def fuzzyNameMatch(author, author2):
-#
-#     # extract author first nad last names into a set
-#     authorWords1 = set([word.strip(string.punctuation) for word in author.split()])
-#     authorWords2 = set([word.strip(string.punctuation) for word in author2.split()])
-#
-#     #print(f"set1: {authorWords1}")
-#     #print(f"set2: {authorWords2}")
-#
-#     numberOfCommonWords = len(authorWords1.intersection(authorWords2))
-#
-#     # return True if at least one of the words match
-#     return numberOfCommonWords > 0
+
 
 if __name__ == '__main__':
 
@@ -235,6 +199,9 @@ if __name__ == '__main__':
     #     isbnWithDashes = "978-3-95470-276-3",
     #     url="https://www.apple.com"
     # )
+
+    #numberOfRetrievedReviews = scrapeReviews()
+    #print(f"Scraped {numberOfRetrievedReviews} reviews.")
 
     numberOfMatchedReviews = matchReviews()
     print(f"Matched {numberOfMatchedReviews} reviews.")

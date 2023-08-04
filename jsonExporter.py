@@ -102,7 +102,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
                         reviewDict = {"reviewSite": reviewSite, "reviewUrl": reviewUrl}
                         reviews.append(reviewDict)
 
-                    print(f"Adding reviews: {reviews}")
+                    #print(f"Adding reviews: {reviews}")
                     book["reviews"] = reviews
 
                 # count the book.

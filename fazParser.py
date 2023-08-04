@@ -25,6 +25,9 @@ def parseFeed():
         pageUrl = d.entries[n].link
         description = d.entries[n].description
 
+        # add option to pageURL that instructs the server to deliver the entire page
+        pageUrl += "?printPagedArticle=true"
+
         # print (title) # code 1
         # print (pageUrl) # code 2
         # print (description) # code 3

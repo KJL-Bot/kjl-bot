@@ -12,7 +12,7 @@ def createBooksTable():
 
     # Create books table. Copied from Sequel Pro on 2023-06-16
     command = """
-CREATE TABLE `books` (
+CREATE TABLE IF NOT EXISTS `books` (
   `idn` varchar(10) NOT NULL,
   `linkToDataset` varchar(128) DEFAULT NULL,
   `isbnWithDashes` varchar(20) DEFAULT NULL,
