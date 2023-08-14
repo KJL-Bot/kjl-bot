@@ -430,7 +430,7 @@ def identifyRelevantBooks():
 
     # get data limit
     firstDayOfThisMonth = datetime.utcnow().replace(day=1, hour=0, minute=0, second=0, microsecond=0)
-    firstDayOfLastValidMonth = firstDayOfThisMonth + relativedelta(months=1)
+    firstDayOfNextMonth = firstDayOfThisMonth + relativedelta(months=1)
     firstDayOfFirstValidMonth = firstDayOfThisMonth - relativedelta(months=1)
 
     # get all available reviews from dB
@@ -467,7 +467,7 @@ def identifyRelevantBooks():
             bookIsRelevant = False
 
         # skip entries whose projected publication date is too far in the future
-        if (projectedPublicationDate is None) or (projectedPublicationDate > firstDayOfLastValidMonth) or (projectedPublicationDate < firstDayOfFirstValidMonth):
+        if (projectedPublicationDate is None) or (projectedPublicationDate >= firstDayOfNextMonth) or (projectedPublicationDate < firstDayOfFirstValidMonth):
             bookIsRelevant = False
 
         ###### Override #####

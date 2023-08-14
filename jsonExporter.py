@@ -44,7 +44,6 @@ def generateValidBookEntries(numberOfDesiredBooks):
             cursor.execute(command, (logBookId, ))
             books = cursor.fetchall()
 
-
             for (idn, isbnWithDashes, title, subTitle, titleAuthor, authorName, secondaryAuthorName, sortingAuthor, keywords, keywords653, genre655_a, publicationPlace, publisher, publicationYear, projectedPublicationDate, addedToSql, lastDnbTransaction, linkToDataset, matchesRelevantPublisher, publisherJLPNominated, publisherJLPAwarded, publisherKimiAwarded) in books:
 
                 # Create a book.
@@ -131,6 +130,6 @@ def writeBookEntriesToJSONFile(bookEntries):
     return Path(config.recentBooksJsonFileName)
 
 if __name__ == '__main__':
-    validBookEntries = generateValidBookEntries(1000)
+    validBookEntries = generateValidBookEntries(30000)
     jsonFileName = writeBookEntriesToJSONFile(validBookEntries)
     print(f"JSON data written to {jsonFileName}")

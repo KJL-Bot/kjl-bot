@@ -13,7 +13,7 @@ logbookTableName = "logbook"
 relevantPublishersTableName = "relevantPublishers"
 reviewsTableName = "reviews"
 
-numberOfYearsToScrape = 3
+numberOfYearsToScrape = 2
 numberOfRetrievedRecords = 30000
 maximumNumberOfRSSEntries = 10
 maximumNumberOfJSONEntries = 30000
