@@ -112,9 +112,6 @@ def insertOrUpdateBook(book, logbookMessageId):
     # is the book already in the DB?
     matchingDBEntry = findMatchingBookInDB(book)
 
-    if book.idn == "1258894815":
-        print(book)
-
     # if not, store it
     if matchingDBEntry is None:
 
@@ -379,8 +376,6 @@ def updateBook(book, logbookMessageId):
             publicationPlace = ?, publisher = ?, publicationYear = ?, \
             logbookMessageId = ? \
             WHERE idn = ?"
-
-    print(f"Updating projectedPublicationDate to: {book.projectedPublicationDate}")
 
     success = False
 
