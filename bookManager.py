@@ -21,7 +21,7 @@ CREATE TABLE IF NOT EXISTS `books` (
   `addedToSql` timestamp NULL DEFAULT NULL ON UPDATE current_timestamp(),
   `updatedInSql` timestamp NULL DEFAULT NULL,
   `lastDnbTransaction` timestamp NULL DEFAULT NULL,
-  `projectedPublicationDate` timestamp NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `projectedPublicationDate` timestamp NULL DEFAULT NULL,
   `title` varchar(1024) DEFAULT NULL,
   `subTitle` varchar(1024) DEFAULT NULL,
   `titleAuthor` varchar(1024) DEFAULT NULL,
@@ -112,6 +112,9 @@ def insertOrUpdateBook(book, logbookMessageId):
     # is the book already in the DB?
     matchingDBEntry = findMatchingBookInDB(book)
 
+    if book.idn == "1258894815":
+        print(book)
+
     # if not, store it
     if matchingDBEntry is None:
 
@@ -149,7 +152,7 @@ def insertOrUpdateBook(book, logbookMessageId):
 # if field values change, log a message to logbook
 def logFieldMismatch(idn, fieldName, dbValue, bookValue):
     if dbValue != bookValue:
-        message = f"IDN {idn}: {fieldName}: {dbValue} -> {bookValue}"
+        message = f"IDN {idn}: {fieldName}: (XML) {bookValue} -> (DB) {dbValue}"
         logbookManager.logMessage(relatesToIDN=idn, description=message)
         return 1
 
@@ -377,6 +380,8 @@ def updateBook(book, logbookMessageId):
             logbookMessageId = ? \
             WHERE idn = ?"
 
+    print(f"Updating projectedPublicationDate to: {book.projectedPublicationDate}")
+
     success = False
 
     # try updating book
@@ -467,7 +472,7 @@ def identifyRelevantBooks():
             bookIsRelevant = False
 
         # skip entries whose projected publication date is too far in the future
-        if (projectedPublicationDate is None) or (projectedPublicationDate >= firstDayOfNextMonth) or (projectedPublicationDate < firstDayOfFirstValidMonth):
+        if (projectedPublicationDate is None) or (projectedPublicationDate > firstDayOfNextMonth) or (projectedPublicationDate < firstDayOfFirstValidMonth):
             bookIsRelevant = False
 
         ###### Override #####
