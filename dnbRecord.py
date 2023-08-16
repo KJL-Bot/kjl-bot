@@ -186,6 +186,8 @@ class DNBRecord:
 
                 return projectedPublicationDate
         except:
+            print("Could not decode projectedPublicationDateString.")
+            print(xml)
             pass
 
         return None

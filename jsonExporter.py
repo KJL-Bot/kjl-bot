@@ -77,9 +77,7 @@ def generateValidBookEntries(numberOfDesiredBooks):
 
                 # note: if there is not projected publication date, publish an empty string
                 if projectedPublicationDate is not None:
-                    book["projectedPublicationDate"] = projectedPublicationDate.strftime('%Y-%m-%d')
-                else:
-                    book["projectedPublicationDate"] = ""#lastDnbTransaction.strftime('%Y-%m-%d')
+                    book["projectedPublicationDate"] = projectedPublicationDate.strftime('%Y-%m')
 
                 if linkToDataset is not None: book["linkToDataset"] = linkToDataset
                 if isbnWithDashes is not None: book["isbnWithDashes"] = isbnWithDashes
