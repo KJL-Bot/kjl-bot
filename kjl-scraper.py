@@ -87,7 +87,7 @@ def scrape():
     logbookManager.logMessage(None, "Generated RSS Feed")
 
     # transfer xml file to FTP server
-    ftpCoordinator.transferFileViaFTP(rssFilePath, config.ftpTargetFolder) # artistic engines
+    ftpCoordinator.transferFileViaFTP_SSL_toArtisticEnginesServer(rssFilePath, config.aeFtpTargetFolder) # artistic engines
     logbookManager.logMessage(None, "Transferred RSS to Artistic Engines FTP server")
     #print(f"Feed URL is: {config.rssFeedUrl}")
 
@@ -97,7 +97,7 @@ def scrape():
     logbookManager.logMessage(None, "Generated JSON Feed")
 
     # transfer JSON file to Artistic Engines FTP server
-    ftpCoordinator.transferFileViaFTP(jsonFilePath, config.ftpTargetFolder)
+    ftpCoordinator.transferFileViaFTP_SSL_toArtisticEnginesServer(jsonFilePath, config.aeFtpTargetFolder)
     logbookManager.logMessage(None, "Transferred JSON to Artistic Engines FTP server")
     #print(f"JSON URL is: {config.jsonFeedUrl}")
 

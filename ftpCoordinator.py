@@ -10,7 +10,7 @@ import glob
 import peekaboo # peekaboo.py is gitignored -> create it yourself
 from pathlib import Path
 
-# regular FTP
+# regular FTP. Obsolete, as it is not supported by HostEuerope any more
 def transferFileViaFTP(fileName, ftpTargetFolder):
 
     targetUrl = None
@@ -86,6 +86,53 @@ def transferFileViaFTP_SSL(fileName, ftpSSLTargetDir):
 
     return targetUrl
 
+# used for Artistic Engines Web Server
+def transferFileViaFTP_SSL_toArtisticEnginesServer(fileName, ftpSSLTargetDir):
+
+    ftpSSLHostName = config.aeFtpServer
+    ftpSSLPort = config.aeFtpSSLPort
+    ftpSSLUsername = peekaboo.aeFtpUsername
+    ftpSSLPassword = peekaboo.aeFtpPassword
+
+    client = ftplib.FTP_TLS(timeout=10)
+    client.connect(ftpSSLHostName, ftpSSLPort)
+
+    # enable TLS
+    client.auth()
+    client.prot_p()
+
+    client.login(ftpSSLUsername,ftpSSLPassword)
+
+    targetUrl = None
+
+    try:
+
+        with ftplib.FTP_TLS(timeout=10) as ftp:
+
+            ftp.connect(ftpSSLHostName, ftpSSLPort)
+
+            # enable TLS
+            ftp.auth()
+            ftp.prot_p()
+
+            # login
+            ftp.login(ftpSSLUsername,ftpSSLPassword)
+
+            # change to target dir
+            ftp.cwd(ftpSSLTargetDir)
+
+            with open(fileName, 'rb') as fp:
+
+                res = ftp.storbinary("STOR %s" % fileName.name, fp)
+
+            targetUrl = os.path.join(ftpSSLHostName, ftpSSLTargetDir, fileName)
+
+    except Exception as e:
+        print('FTP error:', e)
+
+    return targetUrl
+
+
 # not used for KJL Bot
 def transferFileViaSFTP(fileName, sftpHostName, sftpPort, sftpUsername, sftpPassword, sftpTargetDir):
 
@@ -112,10 +159,10 @@ def transferFileViaSFTP(fileName, sftpHostName, sftpPort, sftpUsername, sftpPass
 if __name__ == "__main__":
 
     # transfer to Artistic Engines FTP Server
-    # fileName = Path('kjlbot.xml')
-    # transferFileViaFTP(fileName, config.ftpTargetFolder)
+    fileName = Path('recentBooks.json')
+    transferFileViaFTP_SSL_toArtisticEnginesServer(fileName, config.aeFtpTargetFolder)
 
     # transfer to KJL Bot SFTP Server
     #transferFileViaSFTP(fileName, sftpHostName = sftpHostName, sftpPort = sftpPort, sftpUsername = sftpUsername, sftpPassword = sftpPassword, sftpTargetDir = sftpTargetDir)
-    fileName = Path('recentBooks.json')
-    transferFileViaFTP_SSL(fileName, config.kjlFtpSSLTargetDir)
+#    fileName = Path('recentBooks.json')
+#    transferFileViaFTP_SSL(fileName, config.kjlFtpSSLTargetDir)

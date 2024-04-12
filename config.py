@@ -35,8 +35,14 @@ jsonFeedUrl = f'http://artisticengines.com/kjl/{recentBooksJsonFileName}'
 scrapeForYearCommand = "scrapeForYear"
 
 # Artistic Engines FTP
-ftpServer = 'ftp.artisticengines.com'
-ftpTargetFolder = 'kjl/'
+aeFtpServer = 'ftp.artisticengines.com'
+aeFtpTargetFolder = 'kjl/'
+aeFtpSSLPort = 21
+
+# Artistic Engines Server FTP-SSL
+#aeFtpSSLHostName = "ftp.artisticengines.com"
+#aeFtpSSLPort = 21
+#aeFtpSSLTargetDir = "kjl/"
 
 # KJL Server FTP-SSL
 kjlFtpSSLHostName = "kjl-bot.de"
