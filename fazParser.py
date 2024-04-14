@@ -66,30 +66,32 @@ def extractBookDetails(pageUrl):
     for paragraph in paragraphs:
         strongTag = paragraph.strong
         if strongTag is not None:
+
             strongText = strongTag.get_text()
-            #print(strongText)
 
             # format: author(s): title
             match = re.search("(.+): (.+)", strongText)
 
-            # author
-            author = match.group(1)
+            if match is not None:
 
-            # replace 'und' with ','
-            #author = author.replace(" und", ',')
+                # author
+                author = match.group(1)
 
-            # title
-            title = match.group(2)
+                # replace 'und' with ','
+                #author = author.replace(" und", ',')
 
-            # remove quotes
-            title = title.replace('„', '')
-            title = title.replace('“', '')
+                # title
+                title = match.group(2)
 
-            # strip punctuation
-            title = title.strip(string.punctuation)
+                # remove quotes
+                title = title.replace('„', '')
+                title = title.replace('“', '')
 
-            #print(f"Author: {author}")
-            #print(f"Title: {title}")
+                # strip punctuation
+                title = title.strip(string.punctuation)
+
+                print(f"Author: {author}")
+                print(f"Title: {title}")
 
     # published
     timeParagraph = soup.find("time")

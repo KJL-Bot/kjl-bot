@@ -200,8 +200,8 @@ if __name__ == '__main__':
     #     url="https://www.apple.com"
     # )
 
-    #numberOfRetrievedReviews = scrapeReviews()
-    #print(f"Scraped {numberOfRetrievedReviews} reviews.")
+    numberOfRetrievedReviews = scrapeReviews()
+    print(f"Scraped {numberOfRetrievedReviews} reviews.")
 
     numberOfMatchedReviews = matchReviews()
     print(f"Matched {numberOfMatchedReviews} reviews.")
